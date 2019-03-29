@@ -10,6 +10,7 @@ export const TestComponent = () => (
 );
 
 const Wrapper = styled.div`
+  margin: auto;
   width: 400px;
   height: 400px;
   display: flex;
