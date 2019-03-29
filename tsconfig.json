@@ -1,5 +1,46 @@
 {
   "compilerOptions": {
+    "paths": {
+      "src": [
+        "src/"
+      ],
+      "context": [
+        "context"
+      ],
+      "atoms": [
+        "components/atoms"
+      ],
+      "molecules": [
+        "components/molecules"
+      ],
+      "organisms": [
+        "components/organisms"
+      ],
+      "infrastructure": [
+        "infrastructure"
+      ],
+      "interfaces": [
+        "interfaces"
+      ],
+      "core": [
+        "core"
+      ],
+      "actionConstants": [
+        "redux/actionConstants"
+      ],
+      "reducers": [
+        "redux/reducers"
+      ],
+      "sagas": [
+        "redux/sagas"
+      ],
+      "views": [
+        "sections/views"
+      ],
+      "helpers": [
+        "helpers"
+      ],
+    },
     "baseUrl": "src/",
     "outDir": "build/dist",
     "module": "esnext",

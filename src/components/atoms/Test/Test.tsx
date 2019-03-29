@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { colors, textConstants } from '../../../context'; // Use alias
+import { colors, textConstants } from 'context';
 
 export const TestComponent = () => (
   <Wrapper>
