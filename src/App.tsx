@@ -1,12 +1,12 @@
 import * as React from 'react';
 import './App.css';
 
-import { TestComponent } from 'atoms';
+import { Routing } from './routing/Routing';
 
 class App extends React.Component {
   public render() {
     return (
-      <TestComponent/>
+      <Routing/>
     );
   }
 }
