@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import { colors } from 'context';
 
-interface INavItem {
+export interface INavItem {
   value: string;
   isActive: boolean;
 }

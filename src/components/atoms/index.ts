@@ -1,3 +1,6 @@
 export { TestComponent } from './Test';
-export { HeaderNav } from './HeaderNav';
+export { HeaderNav, INavItem } from './HeaderNav';
+export { HeaderWatch } from './HeaderWatch';
+export { MenuNav } from './MenuNav';
+ 
 
