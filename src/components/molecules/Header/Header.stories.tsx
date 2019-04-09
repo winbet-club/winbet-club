@@ -1,5 +1,6 @@
 import { storiesOf } from '@storybook/react';
 import React from 'react';
+import { action } from '@storybook/addon-actions';
 
 import { Header } from 'molecules';
 import { headerNavList } from 'context';
@@ -11,5 +12,6 @@ storiesOf('Molecules', module)
     minutes='00'
     seconds='00'
     navList={headerNavList}
+    onNavClick={action('onClick')}
   />
 ))

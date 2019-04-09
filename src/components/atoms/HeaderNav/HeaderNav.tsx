@@ -10,19 +10,28 @@ export interface INavItem {
 
 interface IProps {
   navList: INavItem[];
+  onNavClick: (value: string) => void;
 }
-
+g
 export const HeaderNav = (
-  { navList }: IProps
-) => (
-<Wrapper>
-  <Nav>
-    {
-      navList.map(({value, isActive}: INavItem) => <NavItem key={value} isActive={isActive} >{value.toUpperCase()}</NavItem> )
-    }
-  </Nav>
-</Wrapper>
-);
+  { navList, onNavClick }: IProps
+) => {
+  const onNavItemClick = (event: React.MouseEvent<HTMLElement>) => {
+    console.log('event', event.target);
+    // return onNavClick(value)
+  }; 
+
+  return (
+    <Wrapper>
+      <Nav>
+        {
+          navList.map(({value, isActive}: INavItem) =>
+            <NavItem key={value} isActive={isActive} onClick={onNavItemClick} value={value} >{value.toUpperCase()}</NavItem> )
+        }
+      </Nav>
+    </Wrapper>
+  )
+};
 
 const Wrapper = styled.div`
 
