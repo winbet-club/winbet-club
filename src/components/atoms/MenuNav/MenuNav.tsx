@@ -3,22 +3,29 @@ import styled from 'styled-components';
 
 import { colors } from 'context';
 
-interface IMenuNavItem {
+export interface IMenuNavItem {
   value: string;
   isActive: boolean;
 }
 
 interface IProps {
   menuNavItemsList: IMenuNavItem[];
+  onMenuClick: (value: string) => void;
 }
 
 export const MenuNav = (
-  { menuNavItemsList }: IProps
+  { menuNavItemsList, onMenuClick }: IProps
 ) => (
 <Wrapper>
   <Ul>
     {
-      menuNavItemsList.map(({value, isActive}: IMenuNavItem) => <NavItem key={value} isActive={isActive}>{value.toUpperCase()}</NavItem>)
+      menuNavItemsList.map(({value, isActive}: IMenuNavItem) => {
+        const onItemClick = () => onMenuClick(value);
+        
+        return (
+          <NavItem key={value} isActive={isActive} onClick={onItemClick} >{value.toUpperCase()}</NavItem>
+        )
+      })
     }
   </Ul>
 </Wrapper>

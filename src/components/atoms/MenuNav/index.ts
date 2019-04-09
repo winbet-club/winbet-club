@@ -1,2 +1,2 @@
-export { MenuNav } from './MenuNav';
+export { MenuNav, IMenuNavItem } from './MenuNav';
  
