@@ -16,7 +16,7 @@
             "app-constants": "./src/infrastructure/app-constants",
             "interfaces": "./src/interfaces",
             "images": "./src/assets/images",
-            "core": "./src/core"
+            "core": "./src/core",
           }
         }
       ]
