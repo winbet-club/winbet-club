@@ -41,7 +41,7 @@ const Ul = styled.ul`
 `;
 
 const NavItem = styled.li<{isActive: boolean}>`
-  color: ${({isActive}) => isActive ? `${colors.yellow}` : `${colors.black}`};
+  color: ${({isActive}) => isActive ? `${colors.yellow}` : `${colors.white}`};
   list-style-type: none;
   margin-right: 15px;
   font-weight: bold;

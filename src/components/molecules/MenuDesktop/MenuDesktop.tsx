@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { IMenuNavItem } from 'atoms';
+import { colors } from 'context';
 
 interface IProps {
   menuNavItemsList: IMenuNavItem[];
@@ -21,6 +22,8 @@ export const MenuDesktop = (
 
 const Wrapper = styled.div`
   display: flex;
-  justify-content:space-between;   
+  justify-content:space-between;
+  align-items: center;
+  background: ${colors.oil}; 
 `;
  
