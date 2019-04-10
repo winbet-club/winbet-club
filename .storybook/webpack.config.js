@@ -14,7 +14,7 @@ module.exports = {
         include
       },
       {
-        test: /\.(gif|svg|woff|woff2)$/,
+        test: /\.(gif|svg|woff|woff2|png)$/,
         loader: 'file-loader',
         exclude: /node_modules/,
         include
