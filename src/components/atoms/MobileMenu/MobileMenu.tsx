@@ -1,38 +1,33 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { colors } from 'context';
-
-interface IProps {
-  onMobileMenuClick: () => void;
+interface INavElem {
+  value: string;
+  isActive: boolean;
 }
 
-import { textConstants } from 'context';
-
-const { menu } = textConstants;
+interface IProps {
+  itemsList: INavElem[];
+}
 
 export const MobileMenu = (
-  { onMobileMenuClick }: IProps
+  { itemsList }: IProps
 ) => (
-<Wrapper onClick={onMobileMenuClick} >
-  <Icon/>
-  {menu.toUpperCase()}
+<Wrapper>
+  {
+    itemsList.map(({value, isActive}) => <NavItem key={value} isActive={isActive}>{value}</NavItem>)
+  }
 </Wrapper>
 );
 
 const Wrapper = styled.div`
-  width: 66px;
-  height: 18px;
-  background: ${colors.red};
-  border-bottom-left-radius: 10px;
-  padding: 10px;
-  color: ${colors.white};
-  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 
-const Icon = styled.span`
-  &::before {
-    content: "\f0c9";
-  }
+const NavItem = styled.div<{isActive: boolean}>`
+
 `;
  
