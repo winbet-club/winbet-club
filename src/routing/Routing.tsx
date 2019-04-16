@@ -1,14 +1,12 @@
 import * as React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { TestComponent } from 'atoms';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 export const Routing = () => (
       <Router>
         <React.Fragment>
             {/* <Route exact={true} path='/' component={TestComponent}/> */}
-            <Switch> 
-              <Route exact={true} path='/TestComponent' component={TestComponent}/>
-            </Switch>
+            {/* <Switch> 
+            </Switch> */}
         </React.Fragment>
       </Router>
 );

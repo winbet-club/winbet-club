@@ -1,10 +1,10 @@
 import { storiesOf } from '@storybook/react';
 import React from 'react';
 
-import { TestComponent } from 'atoms';
+import { MobileMenu } from 'atoms';
 
 storiesOf('Atoms', module)
-.add('TestComponent', () => (
-  <TestComponent/>
+.add('MobileMenu', () => (
+  <MobileMenu/>
 ))
 
