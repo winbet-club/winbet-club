@@ -1,3 +1,4 @@
 import * as mainLogo from './main-logo.png';
+import { banner_1, banner_2 } from './banners';
 
-export default mainLogo;
+export { mainLogo, banner_1, banner_2 };

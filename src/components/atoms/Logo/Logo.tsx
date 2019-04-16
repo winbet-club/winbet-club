@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import mainLogo from 'images';
+import { mainLogo } from 'images';
 
 export const Logo = () => (
   <Wrapper/>
