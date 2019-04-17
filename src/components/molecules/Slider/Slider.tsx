@@ -14,7 +14,7 @@ export const Slider = (
 ) => (
 <Wrapper>
   <SimpleImageSlider
-    width={100}
+    width={1000}
     height={200}
     images={imagesArr}
   />
