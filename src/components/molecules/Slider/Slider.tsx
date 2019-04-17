@@ -1,26 +1,24 @@
 import React from 'react';
 import styled from 'styled-components';
-import SimpleImageSlider from "react-simple-image-slider";
+import ImageGallery from 'react-image-gallery';
+import "react-image-gallery/styles/css/image-gallery.css";
 
 import { banner_1, banner_2 } from 'images';
 
 const imagesArr = [
-  { url: banner_1 },
-  { url: banner_2 },
+  { original: banner_1 },
+  { original: banner_2 },
 ]
 
 export const Slider = (
   {  }: any
 ) => (
 <Wrapper>
-  <SimpleImageSlider
-    width={100}
-    height={200}
-    images={imagesArr}
-  />
+  <ImageGallery items={imagesArr} />
 </Wrapper>
 );
 
 const Wrapper = styled.div`
-
+  width: 100%;
+  height: 200px;
 `;

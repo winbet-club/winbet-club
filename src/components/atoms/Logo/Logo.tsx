@@ -7,7 +7,7 @@ export const Logo = () => (
 );
 
 const Wrapper = styled.div`
-  background-image: url(${mainLogo});
+  background: url(${mainLogo});
   width: 150px;
   height: 31px;
 `;

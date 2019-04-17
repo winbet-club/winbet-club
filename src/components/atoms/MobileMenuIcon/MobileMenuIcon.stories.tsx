@@ -5,7 +5,7 @@ import { action } from '@storybook/addon-actions';
 import { MobileMenuIcon } from 'atoms';
 
 storiesOf('Atoms', module)
-.add('MobileMenu', () => (
+.add('MobileMenuIcon', () => (
   <MobileMenuIcon
     onMobileMenuClick={action('onClick')}
   />

@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { colors } from 'context';
+import { menuIcon } from 'images';
 
 interface IProps {
   onMobileMenuClick: () => void;
@@ -28,11 +29,15 @@ const Wrapper = styled.div`
   padding: 10px;
   color: ${colors.white};
   font-size: 16px;
+  display: flex;
 `;
 
 const Icon = styled.span`
-  &::before {
-    content: "\f0c9";
-  }
+  background: url(${menuIcon});
+  background-size: 14px 16px;
+  width: 14px;
+  height: 16px;
+  color: ${colors.white};
+  margin-right: 8px;
 `;
  
