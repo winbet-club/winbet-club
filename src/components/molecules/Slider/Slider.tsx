@@ -10,11 +10,17 @@ const imagesArr = [
   { original: banner_2 },
 ]
 
-export const Slider = (
-  {  }: any
-) => (
+export const Slider = () => (
 <Wrapper>
-  <ImageGallery items={imagesArr} />
+  <ImageGallery
+    items={imagesArr}
+    showFullscreenButton={false}
+    showPlayButton={false}
+    showBullets={true}
+    autoPlay={true}
+    slideInterval={5000}
+    showThumbnails={false}
+  />
 </Wrapper>
 );
 
