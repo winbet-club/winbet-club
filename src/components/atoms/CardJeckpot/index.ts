@@ -1,0 +1,2 @@
+export { CardJeckpot } from './CardJeckpot';
+ 
