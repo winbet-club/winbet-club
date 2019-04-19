@@ -10,8 +10,10 @@ export const colors = {
   cadetGray: '#d3d3d3',
   lightGray: '#6d6d6d',
   darkGray: '#5c5c5c',
+  silver: '#a9a9a9',
 
   yellow: '#e8c11c',
+  gold: '#b2975f',
 
   red: '#e3000f',
 }
