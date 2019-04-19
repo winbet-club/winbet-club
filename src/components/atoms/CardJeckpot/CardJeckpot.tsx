@@ -42,6 +42,8 @@ const Currency = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 6px;
+  border-left: 1px solid #1d1a15;
 `;
 
 const CurrencyLetter = styled.span`
