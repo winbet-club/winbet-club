@@ -35,6 +35,7 @@ const Wrapper = styled.div`
   border-radius: 3px;
   background-color: rgba(0, 0, 0, 0);
   background-image: linear-gradient(0deg, rgb(38, 38, 38) 10%, rgb(20, 20, 20) 90%);
+  width: 26%;
 `;
 
 const Currency = styled.div`
