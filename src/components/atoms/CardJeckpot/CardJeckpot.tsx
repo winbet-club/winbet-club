@@ -35,6 +35,16 @@ const Wrapper = styled.div`
   border-radius: 3px;
   background-color: rgba(0, 0, 0, 0);
   background-image: linear-gradient(0deg, rgb(38, 38, 38) 10%, rgb(20, 20, 20) 90%);
+  width: 20%;
+
+
+  @media screen and (max-width: 992px) {
+    width: calc(50% - 4px);
+    margin-bottom: 10px;
+  }
+  @media screen and (max-width: 580px) {
+    width: 100%;
+  }
 `;
 
 const Currency = styled.div`
@@ -62,6 +72,6 @@ const JackpotValuesBlock =styled.div`
   align-items: center;
   justify-content: center;
   font-size: 30px;
-  color: ${colors.white}
+  color: ${colors.white};
 `;
 

@@ -1,0 +1,2 @@
+export { JackpotCardsList } from './JackpotCardsList';
+ 
