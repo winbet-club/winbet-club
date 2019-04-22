@@ -18,7 +18,7 @@ export const JackpotCardsList = (
   { cardJackpotData }: IProps
 ) => (
 <Wrapper>
-  <Logo image={jackpotcardsLogo}/>
+  <Logo/>
   {
     cardJackpotData.map((card: ICard, i) =>
       <CardJeckpot key={i} jackpotValue={card.jackpotValue} image={card.image}/> )
@@ -32,10 +32,10 @@ const Wrapper = styled.div`
   flex-wrap: wrap;
 `;
 
-const Logo = styled.div<{image: HTMLImageElement}>`
+const Logo = styled.div`
   width: 113px;
   height: 53px;
-  background: ${({image}) => `url(${image}) no-repeat`};
+  background: url(${jackpotcardsLogo}) no-repeat;
   background-position-y: center;
   background-size: contain;
   @media screen and (max-width: 992px) {
