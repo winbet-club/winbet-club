@@ -9,11 +9,17 @@ const { promo } = textConstants;
 
 export const Promo = () => (
 <Wrapper>
-  <Header>{promo.toUpperCase()}</Header>
-  <BannersField>
-    <Banner image={promo_1}/>
-    <Banner image={promo_2}/>
-  </BannersField>
+  <Container>
+    <Header>{promo.toUpperCase()}</Header>
+    <BannersField>
+      <Banner>
+        <BannerImg src={promo_1}/>
+      </Banner>
+      <Banner>
+        <BannerImg src={promo_2}/>
+      </Banner>
+    </BannersField>
+  </Container>
 </Wrapper>
 );
 
@@ -24,18 +30,47 @@ const Wrapper = styled.div`
   border-bottom: 40px solid ${colors.darkSilver};
 `;
 
-const Banner = styled.div<{image: HTMLImageElement}>`
+const Container = styled.div`
+  width: 1170px;
+  margin: auto;
+  @media screen and (max-width: 992px) {
+    width: 744px; 
+  }
+  @media (max-width: 768px) {
+
+  }
+`;
+
+const BannerImg = styled.img`
+
+`;
+
+const Banner = styled.div`
   width: 50%;
   height: 330px;
-  background: ${({image}) => `url(${image}) no-repeat`};
   background-size: contain;
+  @media screen and (max-width: 992px) {
+    width: 744px;
+    /* height: 425px; */
+  }
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const BannersField = styled.div`
   display: flex;
   width: 100%;
-  height: 330px;
-`;
+  /* height: 330px; */
+  margin-bottom: 20px;
+  @media screen and (max-width: 992px) {
+    display: flex;
+    flex-direction: column;
+  }
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+`
 
 const Header = styled.h2`
   width: 35%;
