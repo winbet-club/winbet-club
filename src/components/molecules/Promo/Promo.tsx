@@ -8,19 +8,19 @@ import { textConstants } from 'context';
 const { promo } = textConstants;
 
 export const Promo = () => (
-<Wrapper>
-  <Container>
-    <Header>{promo.toUpperCase()}</Header>
-    <BannersField>
-      <Banner>
-        <BannerImg src={promo_1}/>
-      </Banner>
-      <Banner>
-        <BannerImg src={promo_2}/>
-      </Banner>
-    </BannersField>
-  </Container>
-</Wrapper>
+  <Wrapper>
+    <Container>
+      <Header>{promo.toUpperCase()}</Header>
+      <BannersField>
+        <Banner>
+          <BannerImg src={promo_1}/>
+        </Banner>
+        <Banner>
+          <BannerImg src={promo_2}/>
+        </Banner>
+      </BannersField>
+    </Container>
+  </Wrapper>
 );
 
 const Wrapper = styled.div`
@@ -33,27 +33,22 @@ const Wrapper = styled.div`
 const Container = styled.div`
   width: 1170px;
   margin: auto;
-  @media screen and (max-width: 992px) {
-    width: 744px; 
-  }
-  @media (max-width: 768px) {
-
+  @media screen and (max-width: 1250px) {
+    width: 100%; 
+    padding: 0 30px;
+    box-sizing: border-box;
   }
 `;
 
 const BannerImg = styled.img`
-
+  width: 100%;
 `;
 
 const Banner = styled.div`
   width: 50%;
-  height: 330px;
   background-size: contain;
+
   @media screen and (max-width: 992px) {
-    width: 744px;
-    /* height: 425px; */
-  }
-  @media (max-width: 768px) {
     width: 100%;
   }
 `;
@@ -61,14 +56,14 @@ const Banner = styled.div`
 const BannersField = styled.div`
   display: flex;
   width: 100%;
-  /* height: 330px; */
   margin-bottom: 20px;
   @media screen and (max-width: 992px) {
     display: flex;
     flex-direction: column;
   }
-  @media (max-width: 768px) {
-    width: 100%;
+  &:nth-child(1) {
+    background: red;
+    display: none;
   }
 `
 
