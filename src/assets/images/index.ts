@@ -7,6 +7,7 @@ import * as clubs from './clubs.png';
 import * as jackpotcardsLogo from './jackpotcards-logo.png';
 import * as jackpotcardsLogoMobi from './jackpotcards-logo-mobile.png';
 import { banner_1, banner_2 } from './banners';
+import {  promo_1, promo_2 } from './promo';
 
 export { mainLogo, menuIcon, banner_1, banner_2, hearts, spades,
-  diamonds, clubs, jackpotcardsLogo, jackpotcardsLogoMobi };
+  diamonds, clubs, jackpotcardsLogo, jackpotcardsLogoMobi, promo_1, promo_2 };

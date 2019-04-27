@@ -11,6 +11,7 @@ export const colors = {
   lightGray: '#6d6d6d',
   darkGray: '#5c5c5c',
   silver: '#a9a9a9',
+  darkSilver: '#242424',
 
   yellow: '#e8c11c',
   gold: '#b2975f',
