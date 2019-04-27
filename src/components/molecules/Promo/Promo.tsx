@@ -2,8 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { colors } from 'context';
-import { promo_1, promo_2 } from "images";
-import { textConstants } from 'context';
+import { textConstants, promoImgList } from 'context';
 
 const { promo } = textConstants;
 
@@ -12,12 +11,13 @@ export const Promo = () => (
     <Container>
       <Header>{promo.toUpperCase()}</Header>
       <BannersField>
-        <Banner>
-          <BannerImg src={promo_1}/>
-        </Banner>
-        <Banner>
-          <BannerImg src={promo_2}/>
-        </Banner>
+        {
+          promoImgList.map((img) => 
+            <Banner key={img}>
+              <BannerImg src={img}/>
+            </Banner>
+          )
+        }
       </BannersField>
     </Container>
   </Wrapper>
