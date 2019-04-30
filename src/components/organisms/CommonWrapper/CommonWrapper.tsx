@@ -9,13 +9,16 @@ const { footerText } = textConstants;
 
 interface ICommonWrapper {
   children: any;
+  navList: any;
+  onNavClick: (value: string) => void;
 }
 
 export const CommonWrapper = (
-  { children }: ICommonWrapper
+  { children, navList, onNavClick }: ICommonWrapper
 ) => (
 <Wrapper>
-  <Header  />
+  <Header navList={navList} seconds='12' minutes='12' hours='10'  onNavClick={onNavClick} />
+  
     {children}
   <Footer text={footerText} />
 </Wrapper>
