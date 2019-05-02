@@ -3,5 +3,6 @@ export const textConstants = {
   promo: 'Акции',
 
   currencyBYN: 'byn',
+  footerText: 'Copyright 2019, Casino Solutions Ltd. All rights reserved.',
 }
 

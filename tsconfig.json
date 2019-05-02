@@ -35,7 +35,7 @@
         "redux/sagas"
       ],
       "views": [
-        "sections/views"
+        "views"
       ],
       "helpers": [
         "helpers"
