@@ -18,7 +18,7 @@ export const CommonWrapper = (
 ) => (
 <Wrapper>
   <Header navList={navList} seconds='12' minutes='12' hours='10'  onNavClick={onNavClick} />
-  
+  {/* <MenuDesktop  /> */}
     {children}
   <Footer text={footerText} />
 </Wrapper>

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import { IStore } from 'reducers';
 import { CommonWrapper } from 'organisms';
-import { Slider } from 'molecules';
+import { Slider, Promo } from 'molecules';
 
 interface IProps extends IStore {
   changeHeaderNav: (value: string) => void;
@@ -23,6 +23,7 @@ export class HomePage extends React.Component<IProps> {
       <Wrapper>
         <CommonWrapper navList={navList} onNavClick={this.onNavClick}>
           <Slider/>
+          <Promo/>
         </CommonWrapper>
       </Wrapper>
     )
