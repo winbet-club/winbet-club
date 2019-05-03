@@ -1,7 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 import { colors } from 'context';
+import { linkTransformator } from 'helpers';
 
 export interface INavItem {
   value: string;
@@ -23,7 +25,15 @@ export const HeaderNav = (
           const onNavItemClick = () => onNavClick(value);
 
           return (
-            <NavItem key={value} isActive={isActive} onClick={onNavItemClick} value={value} >{value.toUpperCase()}</NavItem>
+            <Link to={`/${linkTransformator[value]}`} key={value}>
+              <NavItem
+                isActive={isActive}
+                onClick={onNavItemClick}
+                value={value}
+              >
+                {value.toUpperCase()}
+              </NavItem>
+            </Link>
           )
         }
           )
@@ -33,7 +43,9 @@ export const HeaderNav = (
 );
 
 const Wrapper = styled.div`
-
+  & a {
+    text-decoration: none;
+  }
 `;
 
 const Nav = styled.ul`
