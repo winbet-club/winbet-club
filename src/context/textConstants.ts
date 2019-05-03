@@ -3,7 +3,7 @@ export const textConstants = {
   promo: 'Акции',
 
   currencyBYN: 'byn',
-  footerText: 'Copyright 2019, Casino Solutions Ltd. All rights reserved.',\
+  footerText: 'Copyright 2019, Casino Solutions Ltd. All rights reserved.',
   aboutUsHeader: 'О нас',
   aboutUsText: `Вече близо десетилетие в концепцията за успех на верига казина WINBET е заложено 
   непрекъснатото усъвършенстване на продуктите и услугите, които предлагаме.Модерни, уютни, с игрални

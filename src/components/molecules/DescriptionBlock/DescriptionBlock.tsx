@@ -33,8 +33,27 @@ const Wrapper = styled.div`
 
 const Image = styled.img`
   margin: auto;
+  width: 100%;
+
 `;
 
 const Description = styled.div`
-
+  padding-left: 50px;
+  @media screen and (max-width: 992px) {
+    width: 750px;
+    padding: 0 0 30px;
+    margin: auto;
+  }
+  @media screen and (max-width: 780px) {
+    width: 100%;
+    padding: 0 15px 30px;
+    box-sizing: border-box;
+    & p {
+      font-size: 14px;
+    }
+    & h2 {
+      font-size: 30px;
+      padding: 45px 0 20px;
+    }
+  }
 `;
