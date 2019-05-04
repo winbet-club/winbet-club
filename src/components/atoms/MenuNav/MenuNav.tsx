@@ -32,7 +32,6 @@ export const MenuNav = (
 );
 
 const Wrapper = styled.div`
-  /* TODO Add styles */
 `;
 
 const Ul = styled.ul`

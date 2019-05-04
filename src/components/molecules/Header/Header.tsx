@@ -32,6 +32,7 @@ export const Header = (
 
 const Wrapper = styled.div`
   height: 33px;
+  padding: 0 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
