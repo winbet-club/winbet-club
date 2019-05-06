@@ -1,12 +1,12 @@
 import * as React from 'react';
 import './App.css';
 
-import { Routing } from './routing/Routing';
+import { ViewPage } from './views';
 
 class App extends React.Component {
   public render() {
     return (
-      <Routing/>
+      <ViewPage/>
     );
   }
 }
