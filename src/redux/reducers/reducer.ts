@@ -8,13 +8,13 @@ export const testAction = createAction(ACTIONS.TEST);
 export const changeHeaderNav = createAction(ACTIONS.CHANGE_HEADER_NAV);
 
 export interface IStore {
-  testProperty: string;
   navList: INavItem[],
+  // time: string;
 }
 
 const defaultState = {
-  testProperty: '',
   navList: [...headerNavList],
+  // time: '12:00:00'
 };
 
 export const mainReducer = handleActions<IStore, any> (
