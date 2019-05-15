@@ -10,5 +10,6 @@ storiesOf('Molecules', module)
   <MenuDesktop
     menuNavItemsList={menuItemsList}
     onMenuClick={action('onClick')}
+    onMobileMenuClick={action('onClick')}
   />
 ))

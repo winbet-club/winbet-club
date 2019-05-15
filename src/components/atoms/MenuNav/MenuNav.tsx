@@ -1,7 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 import { colors } from 'context';
+import { linkTransformator } from 'helpers';
 
 export interface IMenuNavItem {
   value: string;
@@ -23,7 +25,9 @@ export const MenuNav = (
         const onItemClick = () => onMenuClick(value);
         
         return (
-          <NavItem key={value} isActive={isActive} onClick={onItemClick} >{value.toUpperCase()}</NavItem>
+          <Link key={value} to={`/${linkTransformator[value]}`}>
+            <NavItem isActive={isActive} onClick={onItemClick} >{value.toUpperCase()}</NavItem>
+          </Link>
         )
       })
     }
@@ -32,6 +36,12 @@ export const MenuNav = (
 );
 
 const Wrapper = styled.div`
+  & a {
+    text-decoration: none;
+  };
+  @media screen and (max-width: 992px) {
+    display: none;
+  }
 `;
 
 const Ul = styled.ul`

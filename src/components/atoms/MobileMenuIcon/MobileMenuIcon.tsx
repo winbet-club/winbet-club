@@ -29,7 +29,10 @@ const Wrapper = styled.div`
   padding: 10px;
   color: ${colors.white};
   font-size: 16px;
-  display: flex;
+  display: none;
+  @media screen and (max-width: 992px) {
+    display: flex;
+  }
 `;
 
 const Icon = styled.span`
