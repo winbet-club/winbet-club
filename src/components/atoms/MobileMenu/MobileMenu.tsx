@@ -10,23 +10,28 @@ interface INavElem {
 
 interface IProps {
   itemsList: INavElem[];
+  isMobileMenuOpen: boolean;
 }
 
 export const MobileMenu = (
-  { itemsList }: IProps
+  { itemsList, isMobileMenuOpen }: IProps
 ) => (
-<Wrapper>
+<Wrapper isMobileMenuOpen={isMobileMenuOpen}>
   {
     itemsList.map(({value, isActive}) => <NavItem key={value} isActive={isActive}>{value.toUpperCase()}</NavItem>)
   }
 </Wrapper>
 );
 
-const Wrapper = styled.div`
-  display: flex;
+const Wrapper = styled.div<{isMobileMenuOpen: boolean}>`
+  display: ${({isMobileMenuOpen}) => isMobileMenuOpen ? `flex` : `none`};
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: -webkit-linear-gradient(90deg, #2e2e2e 10%, #4b4b4b 90%);
+  @media screen and (min-width: 998px) {
+    display: none;
+  }
 `;
 
 const NavItem = styled.div<{isActive: boolean}>`

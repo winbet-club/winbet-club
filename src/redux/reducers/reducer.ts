@@ -1,7 +1,7 @@
 import { createAction, handleActions, Action } from 'redux-actions';
 
 import { ACTIONS } from 'actionConstants';
-import { headerNavList } from 'context';
+import { headerNavList, menuItemsList, menuFullNavItemsList } from 'context';
 import { INavItem } from 'atoms';
 
 export const testAction = createAction(ACTIONS.TEST);
@@ -9,12 +9,16 @@ export const changeHeaderNav = createAction(ACTIONS.CHANGE_HEADER_NAV);
 
 export interface IStore {
   navList: INavItem[],
-  // time: string;
+  menuNavItemsList: INavItem[];
+  menuFullNavItemsList: any;
+  isMobileMenuOpen: boolean;
 }
 
 const defaultState = {
   navList: [...headerNavList],
-  // time: '12:00:00'
+  menuNavItemsList: [...menuItemsList],
+  menuFullNavItemsList: [...menuFullNavItemsList],
+  isMobileMenuOpen: true,
 };
 
 export const mainReducer = handleActions<IStore, any> (

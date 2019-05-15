@@ -6,8 +6,14 @@ import { changeHeaderNav, IStore } from 'reducers';
 
 const mapStateToProps = ({
   navList,
+  menuNavItemsList,
+  isMobileMenuOpen,
+  menuFullNavItemsList,
 }: IStore) => ({
   navList,
+  menuNavItemsList,
+  isMobileMenuOpen,
+  menuFullNavItemsList,
 });
 
 const mapDispatchProps = (dispatch: Dispatch) => ({

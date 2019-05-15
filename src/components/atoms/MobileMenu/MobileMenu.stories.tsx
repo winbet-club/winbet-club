@@ -8,6 +8,7 @@ storiesOf('Atoms', module)
 .add('MobileMenu', () => (
   <MobileMenu
     itemsList={menuItemsList}
+    isMobileMenuOpen={true}
   />
 ))
 

@@ -37,5 +37,8 @@ const Wrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   background: ${colors.black};
+  @media screen and (max-width: 570px) {
+    display: none;
+  }
 `;
  
