@@ -6,7 +6,6 @@ export const textConstants = {
   gamesDescription: 'ИГРАЙ BLACK JACK | ROULETTE | SLOTS | JACKPOTS',
   actions: 'события',
   contacts: 'контакты',
-  workTime: 'рабочее время',
   phones: 'телефоны',
 
   currencyBYN: 'byn',
@@ -16,6 +15,7 @@ export const textConstants = {
   gallary: 'Галерея',
   corrierHeader: 'Работа у нас',
   address: 'адрес',
+  workTime: 'Время работы',
 
   aboutUsText: `Вече близо десетилетие в концепцията за успех на верига казина WINBET е заложено 
   непрекъснатото усъвършенстване на продуктите и услугите, които предлагаме.Модерни, уютни, с игрални
