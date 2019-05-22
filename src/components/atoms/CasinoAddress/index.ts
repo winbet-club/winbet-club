@@ -1,1 +1,1 @@
-export { CasinoAddress } from './CasinoAddress';
+export { CasinoAddress, ICasinoAddress } from './CasinoAddress';

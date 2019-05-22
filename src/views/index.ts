@@ -12,6 +12,7 @@ const mapStateToProps = ({
   isMobileMenuOpen,
   menuFullNavItemsList,
   time,
+  casinosInfo,
 }: IStore) => ({
   activeCasino,
   casinosListNav,
@@ -20,6 +21,7 @@ const mapStateToProps = ({
   isMobileMenuOpen,
   menuFullNavItemsList,
   time,
+  casinosInfo,
 });
 
 const mapDispatchProps = (dispatch: Dispatch) => ({

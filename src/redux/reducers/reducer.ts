@@ -1,8 +1,8 @@
 import { createAction, handleActions, Action } from 'redux-actions';
 
 import { ACTIONS } from 'actionConstants';
-import { headerNavList, menuItemsList, menuFullNavItemsList, casinosListNav } from 'context';
-import { INavItem } from 'atoms';
+import { headerNavList, menuItemsList, menuFullNavItemsList, casinosInfo } from 'context';
+import { INavItem, ICasinoAddress } from 'atoms';
 
 export const testAction = createAction(ACTIONS.TEST);
 export const changeHeaderNav = createAction(ACTIONS.CHANGE_HEADER_NAV);
@@ -22,6 +22,7 @@ export interface IStore {
   menuFullNavItemsList: any;
   isMobileMenuOpen: boolean;
   time?: string; // TODO Check necessarily
+  casinosInfo: ICasinoAddress[];
 }
 
 const defaultState: IStore = {
@@ -32,6 +33,7 @@ const defaultState: IStore = {
   menuFullNavItemsList: [...menuFullNavItemsList],
   isMobileMenuOpen: true,
   time: '',
+  casinosInfo: [...casinosInfo],
 };
 
 export const mainReducer = handleActions<IStore, any> (

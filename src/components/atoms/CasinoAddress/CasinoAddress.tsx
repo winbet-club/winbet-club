@@ -5,7 +5,7 @@ import { textConstants } from 'context';
 
 const { address, workTime } = textConstants;
 
-interface ICasinoAddress {
+export interface ICasinoAddress {
   casinoName: string;
   casinoAddress: string;
   workDays: string;
@@ -15,21 +15,21 @@ interface ICasinoAddress {
 export const CasinoAddress = (
   { casinoName, casinoAddress, workDays, casinoWorkTime }: ICasinoAddress
 ) => (
-<Wrapper>
-  <Name>{casinoName}</Name>
+  <Wrapper>
+    <Name>{casinoName}</Name>
 
-  <Address>{address}</Address>
-  <Description>{casinoAddress}</Description>
+    <Address>{address}</Address>
+    <Description>{casinoAddress}</Description>
 
-  <WorkTime>{workTime}</WorkTime>
-  <Description>{workDays}</Description>
-  <Description>{casinoWorkTime}</Description>
+    <WorkTime>{workTime}</WorkTime>
+    <Description>{workDays}</Description>
+    <Description>{casinoWorkTime}</Description>
 
-</Wrapper>
+  </Wrapper>
 );
 
 const Wrapper = styled.div`
-
+  padding: 40px;
 `;
 
 const Name = styled.h2`

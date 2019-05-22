@@ -14,4 +14,4 @@ export { CasinoDescriptionNav } from './CasinoDescriptionNav';
 export { AboutCasino } from './AboutCasino';
 export { PromoNote, IPromoNote } from './PromoNote';
 export { Contacts } from './Contacts';
-export { CasinoAddress } from './CasinoAddress';
+export { CasinoAddress, ICasinoAddress } from './CasinoAddress';
