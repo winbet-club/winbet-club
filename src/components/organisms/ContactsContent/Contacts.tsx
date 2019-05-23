@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { CasinoAddress } from 'atoms';
+import { colors } from 'context';
 
 interface IProps {
   casinosInfo: ICasinosInfo[];
@@ -33,5 +34,7 @@ export const ContactsContent = (
 
 const Wrapper = styled.div`
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
+  background: ${colors.bgSilver};
 `;

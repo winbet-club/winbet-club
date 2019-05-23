@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { textConstants } from 'context';
+import { textConstants, colors } from 'context';
 
 const { address, workTime } = textConstants;
 
@@ -29,21 +29,27 @@ export const CasinoAddress = (
 );
 
 const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 40px;
+  color: ${colors.white};
+  font-size: 15px;
 `;
 
 const Name = styled.h2`
-
+  font-size: 31px;
+  margin-bottom: 15px;
 `;
 
 const Address = styled.h3`
-
+  margin-bottom: 15px;
 `;
 
 const WorkTime = styled.h3`
-
+  margin-bottom: 15px;
 `;
 
 const Description = styled.p`
-
+  margin-bottom: 15px;
 `;
