@@ -1,24 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
+import { YMaps, Map } from 'react-yandex-maps';
+
 
 import { CasinoAddress } from 'atoms';
 import { colors } from 'context';
 
-interface IProps {
-  casinosInfo: ICasinosInfo[];
-}
-
-interface ICasinosInfo {
-  casinoAddress: string;
-  casinoName: string;
-  casinoWorkTime: string;
-  workDays: string;
-}
 
 export const ContactsContent = (
-  { casinosInfo }: IProps
+  { casinosInfo }
 ) => (
 <Wrapper>
+  <YMaps>
+    <Map defaultState={{ center: [53.902496, 27.561481], zoom: 11 }} width='100%' height='400px' />
+  </YMaps>
   {
     casinosInfo.map(({casinoAddress, casinoName, casinoWorkTime, workDays}) =>
       <CasinoAddress
@@ -37,4 +32,8 @@ const Wrapper = styled.div`
   justify-content: center;
   flex-wrap: wrap;
   background: ${colors.bgSilver};
+`;
+
+const YandexMap = styled(Map)`
+  width: 1200px;
 `;

@@ -68,8 +68,12 @@
       "jest",
       "node"
     ],
+    "rules": {
+      "object-literal-sort-keys": false
+    },
     "typeRoots": [
-        "node_modules/@types"
+        "node_modules/@types",
+        "src/@types/alltypes.d"
     ]
   },
   "exclude": [
@@ -80,6 +84,6 @@
     "webpack",
     "jest",
     "src/setupTests.ts"
-  ]
+  ],
 }
 

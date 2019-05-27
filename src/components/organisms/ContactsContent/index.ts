@@ -1,1 +1,1 @@
-export { ContactsContent } from './Contacts';
+export { ContactsContent } from './Contacts.js';
