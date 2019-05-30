@@ -6,32 +6,36 @@ import { CasinoAddress } from "atoms";
 import { colors } from "context";
 
 const mapState = {
+  
   center: [53.902496, 27.561481],
+  coordinates: [[53.941675, 27.684289], [53.910256, 27.579699]],
   zoom: 11,
 };
 
 export const ContactsContent = ({ casinosInfo }) => (
   <Wrapper>
   <YMaps>
-    <Map defaultState={mapState} width='100%'>
+    <Map defaultState={mapState} width='100%' height='500px'>
       <GeoObject
         geometry={{
-          coordinates: mapState.center,
-          type: 'Point',
+          coordinates: mapState.coordinates[0],
+          type: 'Point', 
+        }}
+        properties={{
+          
+          balloonContent: 'balloonContent',
+          balloonContentHeader: 'balloonContentHeader',
+          hintContent: 'hintContent',
+          iconCaption: 'Описание',
+          iconContent: 'Казино',
+          
           
         }}
       />
       <GeoObject
         geometry={{
-          coordinates: [mapState.center, [53.941675, 27.684289]],
-          type: 'LineString',
-          
-        }}
-        options={{
-          geodesic: true,
-          strokeColor: '#F008',
-          strokeWidth: 5,
-          
+          coordinates: mapState.coordinates[1],
+          type: 'Point',
         }}
       />
     </Map>

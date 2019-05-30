@@ -63,6 +63,7 @@
     "suppressImplicitAnyIndexErrors": true,
     "noUnusedLocals": true,
     "allowSyntheticDefaultImports": true,
+
     "types": [
       "react",
       "jest",
