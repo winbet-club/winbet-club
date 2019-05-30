@@ -1,30 +1,54 @@
-import React from 'react';
-import styled from 'styled-components';
-import { YMaps, Map } from 'react-yandex-maps';
+import React from "react";
+import styled from "styled-components";
+import { YMaps, Map, GeoObject } from "react-yandex-maps";
 
+import { CasinoAddress } from "atoms";
+import { colors } from "context";
 
-import { CasinoAddress } from 'atoms';
-import { colors } from 'context';
+const mapState = {
+  center: [53.902496, 27.561481],
+  zoom: 11,
+};
 
-
-export const ContactsContent = (
-  { casinosInfo }
-) => (
-<Wrapper>
+export const ContactsContent = ({ casinosInfo }) => (
+  <Wrapper>
   <YMaps>
-    <Map defaultState={{ center: [53.902496, 27.561481], zoom: 11 }} width='100%' height='400px' />
-  </YMaps>
-  {
-    casinosInfo.map(({casinoAddress, casinoName, casinoWorkTime, workDays}) =>
-      <CasinoAddress
-        key={casinoAddress}
-        casinoAddress={casinoAddress}
-        casinoName={casinoName}
-        casinoWorkTime={casinoWorkTime}
-        workDays={workDays}
-      />)
-  }
-</Wrapper>
+    <Map defaultState={mapState} width='100%'>
+      <GeoObject
+        geometry={{
+          coordinates: mapState.center,
+          type: 'Point',
+          
+        }}
+      />
+      <GeoObject
+        geometry={{
+          coordinates: [mapState.center, [53.941675, 27.684289]],
+          type: 'LineString',
+          
+        }}
+        options={{
+          geodesic: true,
+          strokeColor: '#F008',
+          strokeWidth: 5,
+          
+        }}
+      />
+    </Map>
+  </YMaps> 
+  {/* ObjectManager */}
+    {casinosInfo.map(
+      ({ casinoAddress, casinoName, casinoWorkTime, workDays }) => (
+        <CasinoAddress
+          key={casinoAddress}
+          casinoAddress={casinoAddress}
+          casinoName={casinoName}
+          casinoWorkTime={casinoWorkTime}
+          workDays={workDays}
+        />
+      )
+    )}
+  </Wrapper>
 );
 
 const Wrapper = styled.div`

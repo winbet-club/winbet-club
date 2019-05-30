@@ -68,9 +68,6 @@
       "jest",
       "node"
     ],
-    "rules": {
-      "object-literal-sort-keys": false
-    },
     "typeRoots": [
         "node_modules/@types",
         "src/@types/alltypes.d"
