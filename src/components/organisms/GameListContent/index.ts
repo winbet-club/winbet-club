@@ -1,0 +1,2 @@
+export { GameListContent } from './GameListContent';
+ 
