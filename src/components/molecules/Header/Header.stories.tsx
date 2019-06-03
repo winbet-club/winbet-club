@@ -8,9 +8,7 @@ import { headerNavList } from 'context';
 storiesOf('Molecules', module)
 .add('Header', () => (
   <Header
-    hours='12'
-    minutes='00'
-    seconds='00'
+    time='10:00:00'
     navList={headerNavList}
     onNavClick={action('onClick')}
   />

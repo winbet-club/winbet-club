@@ -1,2 +1,2 @@
-export { mainReducer, testAction, changeHeaderNav, IStore } from './reducer';
+export { mainReducer, testAction, changeHeaderNav, IStore, saveNewTime } from './reducer';
 

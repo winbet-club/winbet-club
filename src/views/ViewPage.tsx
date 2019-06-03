@@ -6,7 +6,9 @@ import { CommonWrapper } from 'organisms';
 import { IStore } from 'reducers';
 
 interface IProps extends IStore {
+  time: string;
   changeHeaderNav: (value: string) => void;
+  saveNewTime: (time: string) => void;
 }
 
 export class ViewPage extends React.Component<IProps> {
@@ -14,6 +16,22 @@ export class ViewPage extends React.Component<IProps> {
     const { changeHeaderNav } = this.props;
     
     changeHeaderNav(value);
+  }
+
+  public componentDidMount() {
+    const { saveNewTime } = this.props;
+
+    setInterval(() => {
+      const date = new Date();
+
+      const hours = date.getHours() < 10 ? `0${date.getHours()}` : `${date.getHours()}`
+      const minutes = date.getMinutes() < 10 ? `0${date.getMinutes()}` : `${date.getMinutes()}`
+      const seconds = date.getSeconds() < 10 ? `0${date.getSeconds()}` : `${date.getSeconds()}`
+
+      const newTime = `${hours}:${minutes}:${seconds}`;
+
+      saveNewTime(newTime);
+    }, 1000)
   }
 
   public onMenuClick =(value: string) => {
@@ -29,10 +47,11 @@ export class ViewPage extends React.Component<IProps> {
   }
 
   public render() {
-    const { navList, menuNavItemsList, isMobileMenuOpen, menuFullNavItemsList } = this.props;
+    const { navList, menuNavItemsList, isMobileMenuOpen, menuFullNavItemsList, time } = this.props;
     return (
       <Router>
         <CommonWrapper
+          time={time}
           navList={navList}
           menuNavItemsList={menuNavItemsList}
           onNavClick={this.onNavClick}
