@@ -2,9 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { Slider } from 'molecules';
-import { textConstants, colors, gamesList } from 'context';
+import { textConstants, colors, gamesList, gamesNameColors } from 'context';
+import { Game } from 'atoms';
 
-const { winbetGames, gamesDescription } = textConstants;
+const { winbetGames, gamesDescription, gamesAttention } = textConstants;
 
 export const GameListContent = () => (
   <Wrapper>
@@ -15,9 +16,11 @@ export const GameListContent = () => (
     </Description>
     <GamesListWrapper>
       {
-        
+        gamesList.map(({name, description}, i) =>
+          <Game key={name} name={name} description={description} nameColor={gamesNameColors[i]}/>)
       }
     </GamesListWrapper>
+    <GameAttention>{gamesAttention}</GameAttention>
   </Wrapper>
 )
 const Wrapper = styled.div`
@@ -45,5 +48,12 @@ const Description = styled.div`
 `;
 
 const GamesListWrapper = styled.div`
-  
+  padding: 40px;
+  display: flex;
+  flex-wrap: wrap;
+`;
+
+const GameAttention = styled.div`
+  background: ${colors.lightGold};
+  padding: 40px;
 `;
