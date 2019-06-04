@@ -24,7 +24,6 @@ const Wrapper = styled.div`
 `;
 
 const H2 = styled.h2`
-<<<<<<< HEAD
   padding: 30px 0 30px;
   color: ${colors.lightGold};
   font-weight: 600;
@@ -48,12 +47,3 @@ const Description = styled.div`
 const GamesListWrapper = styled.div`
   
 `;
-=======
-  padding: 80px 0 30px;
-  color: ${colors.lightGold};
-  font-weight: 600;
-  font-size: 40px;
-`;
-
-// const Text = styled.p``;
->>>>>>> Started do game list page
