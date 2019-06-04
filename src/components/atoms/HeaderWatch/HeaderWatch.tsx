@@ -3,21 +3,18 @@ import styled from 'styled-components';
 
 import { colors } from 'context';
 
-interface IProps {
-  hours: string;
-  minutes: string;
-  seconds: string;
-}
-
 export const HeaderWatch = (
-  { hours, minutes, seconds }: IProps
-) => (
-<Wrapper>
-  <Span>{hours}:</Span>
-  <Span>{minutes}:</Span>
-  <Span>{seconds}</Span>
-</Wrapper>
-);
+  { time }: { time: string }
+) => {
+  const [ hours, minutes, seconds ] = time.split(':');
+  return (
+    <Wrapper>
+      <Span>{hours}:</Span>
+      <Span>{minutes}:</Span>
+      <Span>{seconds}</Span>
+    </Wrapper>
+  )
+};
 
 const Wrapper = styled.div`
   display: flex;

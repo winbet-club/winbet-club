@@ -1,5 +1,6 @@
 export const ACTIONS = {
   TEST: 'TEST',
   CHANGE_HEADER_NAV: 'CHANGE_HEADER_NAV',
+  SAVE_NEW_TIME: 'SAVE_NEW_TIME',
 }
 

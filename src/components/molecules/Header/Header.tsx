@@ -5,9 +5,7 @@ import { INavItem } from 'atoms';
 import { colors } from 'context';
 
 interface IProps {
-  hours: string;
-  minutes: string;
-  seconds: string;
+  time: string;
   navList: INavItem[];
   onNavClick: (value: string) => void;
 }
@@ -15,13 +13,11 @@ interface IProps {
 import { HeaderWatch, HeaderNav } from 'atoms';
 
 export const Header = (
-  { hours, minutes, seconds, navList, onNavClick }: IProps
+  { time, navList, onNavClick }: IProps
 ) => (
 <Wrapper>
   <HeaderWatch
-    hours={hours}
-    minutes={minutes}
-    seconds={seconds}
+    time={time}
   />
   <HeaderNav
     navList={navList}
