@@ -3,6 +3,7 @@ export const textConstants = {
   promo: 'Акции',
   winbetMinsk: 'winbet минск',
   winbetGames: 'Игры Winbet',
+  gamesDescription: 'ИГРАЙ BLACK JACK | ROULETTE | SLOTS | JACKPOTS',
 
   currencyBYN: 'byn',
   footerText: 'Copyright 2019, Casino Solutions Ltd. All rights reserved.',

@@ -2,24 +2,48 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { Slider } from 'molecules';
-import { textConstants, colors } from 'context';
+import { textConstants, colors, gamesList } from 'context';
 
-const { winbetGames } = textConstants;
+const { winbetGames, gamesDescription } = textConstants;
 
 export const GameListContent = () => (
   <Wrapper>
     <Slider/>
-    <H2>{winbetGames}</H2>
+    <Description>
+      <H2>{winbetGames.toUpperCase()}</H2>
+      <Text>{gamesDescription}</Text>
+    </Description>
+    <GamesListWrapper>
+      {
+        
+      }
+    </GamesListWrapper>
   </Wrapper>
 )
 const Wrapper = styled.div`
 `;
 
 const H2 = styled.h2`
-  padding: 80px 0 30px;
+  padding: 30px 0 30px;
   color: ${colors.lightGold};
   font-weight: 600;
   font-size: 40px;
+  font-size: 50px;
 `;
 
-// const Text = styled.p``;
+const Text = styled.p`
+  margin-bottom: 10px;
+  color: ${colors.white};
+`;
+
+const Description = styled.div`
+  background: ${colors.silver1};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+`;
+
+const GamesListWrapper = styled.div`
+  
+`;

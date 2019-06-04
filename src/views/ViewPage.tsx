@@ -62,7 +62,11 @@ export class ViewPage extends React.Component<IProps> {
           <Route exact={true} path='/' component={HomeContent}/>
           <Route exact={true} path='/about' component={AboutUsContent}/>
           <Route exact={true} path='/corrier' component={CorriereContent}/>
+<<<<<<< HEAD
           <Route exact={true} path='/casinos' component={CasinosContent}/>
+=======
+          <Route exact={true} path='/games' component={GameListContent}/>
+>>>>>>> Hot fix
         </CommonWrapper>
       </Router>
     )
