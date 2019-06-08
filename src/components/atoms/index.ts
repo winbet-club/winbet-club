@@ -6,5 +6,5 @@ export { MobileMenuIcon } from './MobileMenuIcon';
 export { MobileMenu } from './MobileMenu';
 export { CardJeckpot } from './CardJeckpot';
 export { Footer } from './Footer';
-export { CasinoBlock } from './CasinoBlock';
-
+export { CasinoBlock, ICasinoBlock } from './CasinoBlock';
+export { PageDescription } from './PageDescription';

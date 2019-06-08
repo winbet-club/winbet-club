@@ -11,5 +11,9 @@ export const menuItemsList = [
     value: 'клуб',
     isActive: false,
   },
+  {
+    value: 'казино',
+    isActive: false,
+  },
 ];
 

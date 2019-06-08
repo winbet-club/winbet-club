@@ -5,6 +5,7 @@ export const colors = {
 
   white: '#ffffff',
 
+  gray2: '#151515', // TODO Rename
   blackGray: '#c8c7c7c7',
   gray: '#c8c7c7',
   cadetGray: '#d3d3d3',

@@ -1,10 +1,12 @@
 import { storiesOf } from '@storybook/react';
 import React from 'react';
-import { casino_1 } from 'assets/images';
+import { casinosAddressWithImg } from 'context';
 
 import { CasinoBlock } from 'atoms';
 
+const { img, address } = casinosAddressWithImg[1];
+
 storiesOf('Atoms', module)
 .add('CasinoBlock', () => (
-  <CasinoBlock image={casino_1} description='description'/>
+  <CasinoBlock image={img} description={address}/>
 ))

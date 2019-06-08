@@ -1,2 +1,1 @@
-export { CasinoBlock } from './CasinoBlock';
-
+export { CasinoBlock, ICasinoBlock } from './CasinoBlock';

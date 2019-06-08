@@ -6,4 +6,5 @@ export const linkTransformator = {
   'промоакции': 'promo',
   'игры': 'games',
   'клуб': 'clab',
+  'казино': 'casinos',
 }

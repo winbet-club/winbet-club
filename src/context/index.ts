@@ -5,3 +5,4 @@ export { menuItemsList } from './menuItemsList';
 export { cardJackpodDataMock } from './cardJackpodDataMock';
 export { promoImgList } from './promoImgList';
 export { menuFullNavItemsList } from './menuFullNavItemsList';
+export { casinosAddressWithImg } from './casinosAddressWithImg';
