@@ -1,8 +1,7 @@
 import * as React from 'react';
 import { BrowserRouter as Router, Route} from 'react-router-dom';
 
-import { HomeContent, AboutUsContent, CorriereContent } from 'organisms';
-import { CommonWrapper } from 'organisms';
+import { HomeContent, AboutUsContent, CorriereContent, CasinosContent, CommonWrapper } from 'organisms';
 import { IStore } from 'reducers';
 
 interface IProps extends IStore {
@@ -63,6 +62,7 @@ export class ViewPage extends React.Component<IProps> {
           <Route exact={true} path='/' component={HomeContent}/>
           <Route exact={true} path='/about' component={AboutUsContent}/>
           <Route exact={true} path='/corrier' component={CorriereContent}/>
+          <Route exact={true} path='/casinos' component={CasinosContent}/>
         </CommonWrapper>
       </Router>
     )
