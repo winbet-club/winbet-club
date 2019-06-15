@@ -10,7 +10,7 @@ const { winbetMinsk } = textConstants;
 export const CasinosContent = () => (
   <Wrapper>
     <Slider/>
-    <PageDescription text={winbetMinsk} />
+    <PageDescription text={winbetMinsk} address='Русияова 1' />
     <CasinosList/>
   </Wrapper>
 )

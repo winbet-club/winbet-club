@@ -10,3 +10,4 @@ export { CasinoBlock, ICasinoBlock } from './CasinoBlock';
 export { PageDescription } from './PageDescription';
 export { Game } from './Game';
  
+export { SmallCasinoBlock } from './SmallCasinoBlock';

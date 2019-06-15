@@ -31,4 +31,5 @@ export const colors = {
   green: '#68c000',
 
   color2: '#434343',
+  tomato: '#ed1d25',
 }
