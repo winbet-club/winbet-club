@@ -3,13 +3,14 @@ import styled from 'styled-components';
 
 import { PageDescription } from 'atoms';
 import {  Slider, CasinosList } from 'molecules';
+import { textConstants } from 'context';
 
-// const { corrierHeader, corrierText } = textConstants;
+const { winbetMinsk } = textConstants;
 
 export const CasinosContent = () => (
   <Wrapper>
     <Slider/>
-    <PageDescription text='winbet минск'/>
+    <PageDescription text={winbetMinsk} />
     <CasinosList/>
   </Wrapper>
 )

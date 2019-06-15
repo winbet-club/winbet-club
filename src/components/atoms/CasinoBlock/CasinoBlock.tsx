@@ -37,7 +37,7 @@ const Description = styled.div`
 `;
 
 const Wrapper = styled.div<{image: HTMLImageElement}>`
-  width: 200px;
+  width: 25%;
   height: 200px;
   background: ${({image}) => `url(${image}) no-repeat`};
   background-size: cover;
@@ -45,6 +45,7 @@ const Wrapper = styled.div<{image: HTMLImageElement}>`
   height: 270px;
   position: relative;
   overflow: hidden;
+  border: 1px solid ${colors.silverBlue};
   &:hover ${Description}{
     transition: bottom .5s;
     bottom: 0px;

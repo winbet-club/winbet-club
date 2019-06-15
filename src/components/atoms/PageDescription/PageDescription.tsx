@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { colors } from 'context';
 
 export const PageDescription = (
-  text: any // TODO Change type
+  { text }: any // TODO Change type
 ) => {
   const [ word1, word2 ] = text.split(' ');
   return (
@@ -16,10 +16,14 @@ export const PageDescription = (
 
 const Wrapper = styled.div`
   background: ${colors.gray2};
+  display: flex;
+  justify-content: center;
 `;
 
 const H2 = styled.h2`
-
+  font-size: 40px;
+  color: ${colors.white};
+  padding: 20px;
 `;
 
 const GoldSpan = styled.span`
