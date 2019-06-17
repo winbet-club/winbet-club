@@ -5,12 +5,16 @@ import { ViewPage as ViewPageComponent } from './ViewPage';
 import { changeHeaderNav, IStore, saveNewTime } from 'reducers';
 
 const mapStateToProps = ({
+  activeCasino,
+  casinosListNav,
   navList,
   menuNavItemsList,
   isMobileMenuOpen,
   menuFullNavItemsList,
   time,
 }: IStore) => ({
+  activeCasino,
+  casinosListNav,
   navList,
   menuNavItemsList,
   isMobileMenuOpen,

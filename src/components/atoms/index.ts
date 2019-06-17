@@ -11,3 +11,5 @@ export { PageDescription } from './PageDescription';
 export { Game } from './Game';
  
 export { SmallCasinoBlock } from './SmallCasinoBlock';
+export { CasinoDescriptionNav } from './CasinoDescriptionNav';
+export { AboutCasino } from './AboutCasino';

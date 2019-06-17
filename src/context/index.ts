@@ -8,3 +8,6 @@ export { menuFullNavItemsList } from './menuFullNavItemsList';
 export { casinosAddressWithImg } from './casinosAddressWithImg';
 export { gamesList } from './gamesList';
 export { gamesNameColors } from './gamesNameColors';
+export { casinosListNav } from './casinosListNav';
+export { casinosDescriptions } from './casinosDescriptions';
+export { imageGallery } from './imageGallery';

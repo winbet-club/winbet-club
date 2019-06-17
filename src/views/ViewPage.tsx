@@ -2,7 +2,7 @@ import * as React from 'react';
 import { BrowserRouter as Router, Route} from 'react-router-dom';
 
 import { HomeContent, AboutUsContent, CorriereContent, CasinosContent, CommonWrapper,
-  GameListContent } from 'organisms';
+  GameListContent, CasinoDescription } from 'organisms';
 import { IStore } from 'reducers';
 
 interface IProps extends IStore {
@@ -12,7 +12,13 @@ interface IProps extends IStore {
 }
 
 export class ViewPage extends React.Component<IProps> {
-  public onNavClick =(value: string) => {
+  // constructor(props: any) {
+  //    super(props);
+  //  this.bindProps = this.bindProps.bind(this);
+  //  }
+
+  public onNavClick = (value: string) => {
+    console.log('nav clicl');
     const { changeHeaderNav } = this.props;
     
     changeHeaderNav(value);
@@ -46,8 +52,24 @@ export class ViewPage extends React.Component<IProps> {
     // changeHeaderNav(value);
   }
 
+  public onCasinoDescriptionClick = (value: string) => {
+    // console.log('@@@@@@@@');
+
+    return;
+  }
+  
+  public bindProps = () => {
+    const { casinosListNav, activeCasino } = this.props;
+    return <CasinoDescription
+      casinosListNav={casinosListNav}
+      onClick={this.onCasinoDescriptionClick}
+      activeCasino={activeCasino}
+      />
+  }
+
   public render() {
     const { navList, menuNavItemsList, isMobileMenuOpen, menuFullNavItemsList, time } = this.props;
+
     return (
       <Router>
         <CommonWrapper
@@ -65,6 +87,7 @@ export class ViewPage extends React.Component<IProps> {
           <Route exact={true} path='/corrier' component={CorriereContent}/>
           <Route exact={true} path='/casinos' component={CasinosContent}/>
           <Route exact={true} path='/games' component={GameListContent}/>
+          <Route exact={true} path='/casinos/url_1' render={this.bindProps}/>
         </CommonWrapper>
       </Router>
     )
