@@ -11,3 +11,6 @@ export { gamesNameColors } from './gamesNameColors';
 export { casinosListNav } from './casinosListNav';
 export { casinosDescriptions } from './casinosDescriptions';
 export { imageGallery } from './imageGallery';
+export { addressTransformator } from './addressTransformator';
+export { promoList } from './promoList';
+export { actionsList } from './actionsList';

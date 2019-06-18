@@ -13,3 +13,5 @@ export { Game } from './Game';
 export { SmallCasinoBlock } from './SmallCasinoBlock';
 export { CasinoDescriptionNav } from './CasinoDescriptionNav';
 export { AboutCasino } from './AboutCasino';
+export { PromoNote, IPromoNote } from './PromoNote';
+export { Contacts } from './Contacts';

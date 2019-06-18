@@ -15,7 +15,7 @@ export const Slider = () => (
 <Wrapper>
   <ImageGallery
     items={imagesArr}
-    showFullscreenButton={true}
+    showFullscreenButton={false}
     showPlayButton={false}
     showBullets={true}
     autoPlay={true}

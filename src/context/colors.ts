@@ -6,6 +6,7 @@ export const colors = {
   white: '#ffffff',
 
   gray2: '#151515', // TODO Rename
+  gray3: '#212121', // TODO Rename
   blackGray: '#c8c7c7c7',
   gray: '#c8c7c7',
   cadetGray: '#d3d3d3',
@@ -16,6 +17,7 @@ export const colors = {
   liteDarkSilver: '#1a1c1b',
   silver1: '#141414', // TODO Rename
   silver2: '#66635b', // TODO Rename
+  silver3: '#60605F', // TODO Rename
 
   yellow: '#e8c11c',
   lightellow: '#fff200',
