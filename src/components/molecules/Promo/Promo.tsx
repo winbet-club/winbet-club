@@ -75,6 +75,7 @@ const Header = styled.h2`
   display: flex;
   font-weight: 600;
   color: ${colors.white};
+  font-size: 30px;
   border-bottom: 1px solid;
   border-image: linear-gradient(right, rgba(0, 0, 0, 0), #efe3bd, #efe3bd ) 0 0 100%;
 `;

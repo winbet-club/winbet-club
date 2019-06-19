@@ -26,12 +26,16 @@ export const AboutCasino = (
 const Wrapper = styled.div`
   width: 25%;
   color: ${colors.white};
+  @media (max-width: 994px) {
+    width: 100%;
+  }
 `;
 
 const Header = styled.h2`
   font-size: 30px;
-  /* border: 1px solid;
-  border-image: linear-gradient(right,rgba(0, 0, 0, 0), #efe3bd, rgba(0, 0, 0, 0) ) 0 0 100%; */
+  border-bottom: 1px solid;
+  border-image: -webkit-linear-gradient(right, rgba(0, 0, 0, 0), #efe3bd, #efe3bd ) 0 0 100%;
+  margin-bottom: 30px;
 `;
 
 const Text = styled.p`

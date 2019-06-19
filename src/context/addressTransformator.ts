@@ -4,5 +4,11 @@ export const addressTransformator = {
     workDays: 'Понедельник - воскресенье',
     workTime: 'c 00 до 24',
     phones: '+375 29 111 11 11'
+  },
+  url_2: {
+    address: 'ул. Русиянова 2',
+    workDays: 'Понедельник - воскресенье',
+    workTime: 'c 00 до 24',
+    phones: '+375 29 111 11 11'
   }
 }

@@ -2,8 +2,9 @@ import * as React from 'react';
 import { BrowserRouter as Router, Route} from 'react-router-dom';
 
 import { HomeContent, AboutUsContent, CorriereContent, CasinosContent, CommonWrapper,
-  GameListContent, CasinoDescription } from 'organisms';
+  CasonoDescriptionGeneral, CasinoDescriptionPromo, CasinoDescriptionEvents, GameListContent } from 'organisms';
 import { IStore } from 'reducers';
+import { eventsList } from 'context';
 
 interface IProps extends IStore {
   time: string;
@@ -58,9 +59,28 @@ export class ViewPage extends React.Component<IProps> {
     return;
   }
   
-  public bindProps = () => {
+  public renderCasonoDescriptionGeneral = () => {
     const { casinosListNav, activeCasino } = this.props;
-    return <CasinoDescription
+    return <CasonoDescriptionGeneral
+      casinosListNav={casinosListNav}
+      onClick={this.onCasinoDescriptionClick}
+      activeCasino={activeCasino}
+      />
+  }
+
+  public renderCasinoDescriptionPromo = () => {
+    const { casinosListNav, activeCasino } = this.props;
+    return <CasinoDescriptionPromo
+      casinosListNav={casinosListNav}
+      onClick={this.onCasinoDescriptionClick}
+      activeCasino={activeCasino}
+      />
+  }
+
+  public renderCasinoDescriptionEvents = () => {
+    const { casinosListNav, activeCasino } = this.props;
+    return <CasinoDescriptionEvents
+      promoList={eventsList}
       casinosListNav={casinosListNav}
       onClick={this.onCasinoDescriptionClick}
       activeCasino={activeCasino}
@@ -68,7 +88,7 @@ export class ViewPage extends React.Component<IProps> {
   }
 
   public render() {
-    const { navList, menuNavItemsList, isMobileMenuOpen, menuFullNavItemsList, time } = this.props;
+    const { navList, menuNavItemsList, isMobileMenuOpen, menuFullNavItemsList, time, activeCasino } = this.props;
 
     return (
       <Router>
@@ -88,6 +108,9 @@ export class ViewPage extends React.Component<IProps> {
           <Route exact={true} path='/casinos' component={CasinosContent}/>
           <Route exact={true} path='/games' component={GameListContent}/>
           <Route exact={true} path='/casinos/url_1' render={this.bindProps}/>
+          <Route exact={true} path={`/casinos/${activeCasino}`} render={this.renderCasonoDescriptionGeneral}/>
+          <Route exact={true} path={`/casinos/${activeCasino}/promo`} render={this.renderCasinoDescriptionPromo}/>
+          <Route exact={true} path={`/casinos/${activeCasino}/events`} render={this.renderCasinoDescriptionEvents}/>
         </CommonWrapper>
       </Router>
     )

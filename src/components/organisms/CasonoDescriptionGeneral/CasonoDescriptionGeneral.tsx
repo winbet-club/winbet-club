@@ -1,14 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 
-import { CasinoDescriptionNav, AboutCasino, PromoNote, IPromoNote, Contacts, SmallCasinoBlock } from 'atoms';
+import { AboutCasino, PromoNote, IPromoNote } from 'atoms';
 import ImageGallery from 'react-image-gallery';
 import { ICasinosListNav } from 'reducers';
-import { colors, imageGallery, textConstants, addressTransformator, promoList, actionsList,
-  casinosAddressWithImg } from 'context';
+import { colors, imageGallery, textConstants, addressTransformator, eventsList, promoList } from 'context';
+import { CasinoDescriptionCommonPart } from 'organisms';
+import { NotesList } from 'molecules';
 
-const { gallary, promo, actions } = textConstants;
+const { promo } = textConstants;
+const { gallary, actions } = textConstants;
 
 interface IProps {
   casinosListNav: ICasinosListNav[];
@@ -16,21 +17,15 @@ interface IProps {
   onClick: (value: string) => void;
 }
   
-export const CasinoDescription = (
+export const CasonoDescriptionGeneral = (
   { casinosListNav, activeCasino, onClick }: IProps
 ) => (
-    <Wrapper>
-      <CasinosList>
-        {
-          casinosAddressWithImg.map(({img, address, url}) => // Check link
-            <Link key={address} to={url}><SmallCasinoBlock description={address} image={img} /></Link>)
-        }
-      </CasinosList>
-      <CasinoDescriptionNav navList={casinosListNav} onClick={onClick} />
+    <CasinoDescriptionCommonPart casinosListNav={casinosListNav} activeCasino={activeCasino} onClick={onClick}>
       <PaddingWrapper>
         <InfoBlock>
           <AboutCasino activeCasino={activeCasino} />
         </InfoBlock>
+        <InfoBlockBorderBottom/>
         <GaleryAndPromo>
           <ImageGalleryWrapper>
             <Header>{gallary} 
@@ -48,42 +43,36 @@ export const CasinoDescription = (
             />
           </ImageGalleryWrapper>
         <Promo>
-          <PromoHeader>{promo.toUpperCase()}</PromoHeader>
-          {
-            promoList.map(({header, text}: IPromoNote) => 
-              <PromoNote key={header} header={header} text={text} />)
-          }
+        <NotesList headerName={promo} promoList={promoList}/>
         <Action>
           <ActionHeader>{actions.toUpperCase()}</ActionHeader>
           {
-            actionsList.map(({header, text}: IPromoNote) => 
+            eventsList.map(({header, text}: IPromoNote) => 
               <PromoNote key={header} header={header} text={text} />)
           }
         </Action>
         </Promo>
         </GaleryAndPromo>
       </PaddingWrapper>
-
-      <Contacts activeCasino={activeCasino} />
-    </Wrapper>
+    </CasinoDescriptionCommonPart>
   );
-
-const Wrapper = styled.div`
-  background: ${colors.silver1};
-  color: ${colors.white};
-`;
 
 const PaddingWrapper = styled.div`
   padding: 0 30px;
 `;
 
 const InfoBlock = styled.div`
-
+  padding: 30px 0;
+  display: flex;
+  @media (max-width: 994px) {
+    flex-direction: column;
+  }
 `;
 
-const CasinosList = styled.div`
-  display: flex;
-  justify-content: center;
+const InfoBlockBorderBottom = styled.div`
+  height: 1px;
+  background: -webkit-radial-gradient(50% 0%, 50% 5px, #000 0%, #3e3a31 100%);  
+  margin-bottom: 30px;
 `;
 
 const Action = styled.div`
@@ -100,11 +89,6 @@ const Promo = styled.div`
   @media (max-width: 994px) {
     width: 100%;
   }
-`;
-
-const PromoHeader = styled.div`
-  font-size: 30px;
-  margin-bottom: 20px;
 `;
 
 const Address = styled.span`

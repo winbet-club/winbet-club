@@ -1,0 +1,1 @@
+export { CasonoDescriptionGeneral } from './CasonoDescriptionGeneral';

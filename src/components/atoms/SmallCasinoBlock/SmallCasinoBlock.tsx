@@ -44,6 +44,7 @@ const Wrapper = styled.div<{image: HTMLImageElement}>`
   position: relative;
   overflow: hidden;
   border: 1px solid ${colors.silverBlue};
+  color: ${colors.black};
   &:hover ${Description}{
     transition: bottom .5s;
     height: 75px;

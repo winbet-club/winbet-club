@@ -19,6 +19,8 @@ export const colors = {
   silver2: '#66635b', // TODO Rename
   silver3: '#60605F', // TODO Rename
 
+  background1: '#1a1a1c',
+
   yellow: '#e8c11c',
   lightellow: '#fff200',
   gold: '#b2975f',

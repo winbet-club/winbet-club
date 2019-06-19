@@ -6,7 +6,7 @@ export interface IPromoNote {
   text: string;
 }
 
-export const PromoNote = (
+export const PromoNote = ( // TODO DO common component to promo and event
   { header, text }: IPromoNote
 ) => (
   <Wrapper>
@@ -18,7 +18,9 @@ export const PromoNote = (
 const Wrapper = styled.div`
   margin-bottom: 20px;
   padding-bottom: 15px;
-  border-bottom: 1px solid silver;
+  border: 1px solid;
+  border-image: linear-gradient(right, rgba(0, 0, 0, 0), #efe3bd, #efe3bd ) 0 0 100%;
+  -webkit-border-image: -webkit-linear-gradient(right, rgba(0, 0, 0, 0), #efe3bd, #efe3bd ) 0 0 100%;
 `;
 
 const Header = styled.h3`
