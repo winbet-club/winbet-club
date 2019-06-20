@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import { Header, MenuDesktop } from 'molecules';
 import { Footer, MobileMenu } from 'atoms';
-import { textConstants } from 'context';
+import { textConstants, colors } from 'context';
 
 const { footerText } = textConstants;
 
@@ -46,7 +46,7 @@ export const CommonWrapper = (
 );
 
 const Wrapper = styled.div`
-  background: green;
+  background: ${colors.color2};
 `;
 
 const TabletMenuWrapper = styled.div`
