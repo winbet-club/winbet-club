@@ -1,12 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
+import ImageGallery from 'react-image-gallery';
 
 import { ICasinosListNav } from 'reducers';
 import { CasinoDescriptionCommonPart } from 'organisms';
-import { NotesList } from 'molecules';
-import { textConstants } from 'context';
-
-const { promo } = textConstants;
+import { imageGallery } from 'context';
 
 interface IProps {
   promoList: any; // TODO check
@@ -15,12 +13,21 @@ interface IProps {
   onClick: (value: string) => void;
 }
   
-export const CasinoDescriptionEvents = (
+export const CasinoDescriptionGallary = (
   { promoList, casinosListNav, activeCasino, onClick }: IProps
 ) => (
     <CasinoDescriptionCommonPart casinosListNav={casinosListNav} activeCasino={activeCasino} onClick={onClick}>
       <Wrapper>
-        <NotesList headerName={promo} promoList={promoList}/>
+        <ImageGallery 
+          items={imageGallery[activeCasino]}
+          showFullscreenButton={false}
+          showPlayButton={false}
+          showBullets={false}
+          autoPlay={true}
+          slideInterval={5000}
+          showThumbnails={true}
+          showNav={false}
+        />
       </Wrapper>
     </CasinoDescriptionCommonPart>
 );
@@ -28,4 +35,5 @@ export const CasinoDescriptionEvents = (
 const Wrapper = styled.div`
   padding: 40px 40px;
   width: 48%;
+  margin: auto;
 `;

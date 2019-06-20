@@ -2,7 +2,8 @@ import * as React from 'react';
 import { BrowserRouter as Router, Route} from 'react-router-dom';
 
 import { HomeContent, AboutUsContent, CorriereContent, CasinosContent, CommonWrapper,
-  CasonoDescriptionGeneral, CasinoDescriptionPromo, CasinoDescriptionEvents, GameListContent } from 'organisms';
+  CasonoDescriptionGeneral, CasinoDescriptionPromo, CasinoDescriptionEvents, CasinoDescriptionGallary,
+  GameListContent } from 'organisms';
 import { IStore } from 'reducers';
 import { eventsList } from 'context';
 
@@ -87,6 +88,16 @@ export class ViewPage extends React.Component<IProps> {
       />
   }
 
+  public renderCasinoDescriptionGallary = () => {
+    const { casinosListNav, activeCasino } = this.props;
+    return <CasinoDescriptionGallary
+      promoList='' // TODO Check
+      casinosListNav={casinosListNav}
+      onClick={this.onCasinoDescriptionClick}
+      activeCasino={activeCasino}
+      />
+  }
+
   public render() {
     const { navList, menuNavItemsList, isMobileMenuOpen, menuFullNavItemsList, time, activeCasino } = this.props;
 
@@ -108,8 +119,10 @@ export class ViewPage extends React.Component<IProps> {
           <Route exact={true} path='/casinos' component={CasinosContent}/>
           <Route exact={true} path='/games' component={GameListContent}/>
           <Route exact={true} path={`/casinos/${activeCasino}`} render={this.renderCasonoDescriptionGeneral}/>
+          <Route exact={true} path={`/casinos/${activeCasino}/main`} render={this.renderCasonoDescriptionGeneral}/>
           <Route exact={true} path={`/casinos/${activeCasino}/promo`} render={this.renderCasinoDescriptionPromo}/>
           <Route exact={true} path={`/casinos/${activeCasino}/events`} render={this.renderCasinoDescriptionEvents}/>
+          <Route exact={true} path={`/casinos/${activeCasino}/gallary`} render={this.renderCasinoDescriptionGallary}/>
         </CommonWrapper>
       </Router>
     )

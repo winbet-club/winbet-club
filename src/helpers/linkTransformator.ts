@@ -10,4 +10,5 @@ export const linkTransformator = {
   'промо': 'promo',
   события: 'events',
   галерея: 'gallary',
+  главная: 'main',
 }

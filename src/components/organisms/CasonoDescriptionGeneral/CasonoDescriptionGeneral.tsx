@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+import ImageGallery from 'react-image-gallery';
 
 import { AboutCasino, PromoNote, IPromoNote } from 'atoms';
-import ImageGallery from 'react-image-gallery';
 import { ICasinosListNav } from 'reducers';
 import { colors, imageGallery, textConstants, addressTransformator, eventsList, promoList } from 'context';
 import { CasinoDescriptionCommonPart } from 'organisms';
@@ -59,6 +59,7 @@ export const CasonoDescriptionGeneral = (
 
 const PaddingWrapper = styled.div`
   padding: 0 30px;
+  margin-bottom: 40px;
 `;
 
 const InfoBlock = styled.div`
