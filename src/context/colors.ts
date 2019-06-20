@@ -29,4 +29,6 @@ export const colors = {
   orange: '#f98b09',
 
   green: '#68c000',
+
+  color2: '#434343',
 }

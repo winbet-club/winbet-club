@@ -46,7 +46,7 @@ export const CommonWrapper = (
 );
 
 const Wrapper = styled.div`
-
+  background: green;
 `;
 
 const TabletMenuWrapper = styled.div`

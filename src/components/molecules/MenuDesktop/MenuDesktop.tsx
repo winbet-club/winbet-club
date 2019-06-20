@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { IMenuNavItem, MobileMenuIcon } from 'atoms';
-import { colors } from 'context';
+// import { colors } from 'context';
 
 interface IProps {
   menuNavItemsList: IMenuNavItem[];
@@ -28,6 +28,6 @@ const Wrapper = styled.div`
   display: flex;
   justify-content:space-between;
   align-items: center;
-  background: ${colors.oil};
+  background: linear-gradient(to bottom, rgba(36,36,36,1) 0%, rgba(19,19,19,1) 100%)
 `;
  

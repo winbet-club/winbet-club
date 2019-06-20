@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { colors } from 'context';
 
 interface IGame {
   name: string;
@@ -28,5 +29,6 @@ const Name = styled.h2<{nameColor: any}>`
   margin-bottom: 20px;
 `;
 const Description = styled.p`
-
+  color: ${colors.white};
+  font-size: 14px;
 `;

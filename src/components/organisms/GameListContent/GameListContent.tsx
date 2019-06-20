@@ -51,9 +51,13 @@ const GamesListWrapper = styled.div`
   padding: 40px;
   display: flex;
   flex-wrap: wrap;
+  box-shadow: inset 0 20px 25px rgba(0, 0, 0, 0.4);
 `;
 
 const GameAttention = styled.div`
   background: ${colors.lightGold};
   padding: 40px;
+  text-align: center;
+  color: ${colors.color2};
+  font-family: 'Philosopher', sans-serif;
 `;
