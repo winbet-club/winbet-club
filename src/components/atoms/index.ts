@@ -8,3 +8,5 @@ export { CardJeckpot } from './CardJeckpot';
 export { Footer } from './Footer';
 export { CasinoBlock, ICasinoBlock } from './CasinoBlock';
 export { PageDescription } from './PageDescription';
+export { Game } from './Game';
+ 

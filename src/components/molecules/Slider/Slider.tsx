@@ -4,6 +4,7 @@ import ImageGallery from 'react-image-gallery';
 import "react-image-gallery/styles/css/image-gallery.css";
 
 import { banner_1, banner_2 } from 'images';
+import { colors } from 'context';
 
 const imagesArr = [
   { original: banner_1 },
@@ -26,4 +27,5 @@ export const Slider = () => (
 
 const Wrapper = styled.div`
   width: 100%;
+  border-bottom: 4px solid ${colors.bordo};
 `;

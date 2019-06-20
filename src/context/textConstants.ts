@@ -2,6 +2,8 @@ export const textConstants = {
   menu: 'menu',
   promo: 'Акции',
   winbetMinsk: 'winbet минск',
+  winbetGames: 'Игры Winbet',
+  gamesDescription: 'ИГРАЙ BLACK JACK | ROULETTE | SLOTS | JACKPOTS',
 
   currencyBYN: 'byn',
   footerText: 'Copyright 2019, Casino Solutions Ltd. All rights reserved.',
@@ -34,5 +36,6 @@ export const textConstants = {
   Нашият отдел „Обслужване клиенти“ е на разположение 24 часа в денонощието, 7 дни в седмицата, за да 
   отговори на всички клиентски въпроси и запивания. 
    С редовни нови предложения от игри и промоции, winbet.bg гарантира завладяващи емоции!`,
+   gamesAttention: 'Наша цель - удовлетворить ожидания клиентов, предлагая широкий спектр игрового оборудования для лучших производителей по всему миру. Среди них EGT, IGT, Spielo, Novomatic, WMS, Aristocrat, Konami, TCS, Casino Technology и так далее. Мы также предоставили возможность сделать ставку на два или более автоматических или живых колесных колес'
 }
 
