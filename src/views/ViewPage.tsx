@@ -26,19 +26,19 @@ export class ViewPage extends React.Component<IProps> {
   }
 
   public componentDidMount() {
-    const { saveNewTime } = this.props;
+    // const { saveNewTime } = this.props;
 
-    setInterval(() => {
-      const date = new Date();
+    // setInterval(() => {
+    //   const date = new Date();
 
-      const hours = date.getHours() < 10 ? `0${date.getHours()}` : `${date.getHours()}`
-      const minutes = date.getMinutes() < 10 ? `0${date.getMinutes()}` : `${date.getMinutes()}`
-      const seconds = date.getSeconds() < 10 ? `0${date.getSeconds()}` : `${date.getSeconds()}`
+    //   const hours = date.getHours() < 10 ? `0${date.getHours()}` : `${date.getHours()}`
+    //   const minutes = date.getMinutes() < 10 ? `0${date.getMinutes()}` : `${date.getMinutes()}`
+    //   const seconds = date.getSeconds() < 10 ? `0${date.getSeconds()}` : `${date.getSeconds()}`
 
-      const newTime = `${hours}:${minutes}:${seconds}`;
+    //   const newTime = `${hours}:${minutes}:${seconds}`;
 
-      saveNewTime(newTime);
-    }, 1000)
+    //   saveNewTime(newTime);
+    // }, 1000)
   }
 
   public onMenuClick =(value: string) => {
@@ -107,7 +107,6 @@ export class ViewPage extends React.Component<IProps> {
           <Route exact={true} path='/corrier' component={CorriereContent}/>
           <Route exact={true} path='/casinos' component={CasinosContent}/>
           <Route exact={true} path='/games' component={GameListContent}/>
-          <Route exact={true} path='/casinos/url_1' render={this.bindProps}/>
           <Route exact={true} path={`/casinos/${activeCasino}`} render={this.renderCasonoDescriptionGeneral}/>
           <Route exact={true} path={`/casinos/${activeCasino}/promo`} render={this.renderCasinoDescriptionPromo}/>
           <Route exact={true} path={`/casinos/${activeCasino}/events`} render={this.renderCasinoDescriptionEvents}/>
