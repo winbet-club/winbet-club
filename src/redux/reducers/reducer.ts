@@ -1,14 +1,22 @@
 import { createAction, handleActions, Action } from 'redux-actions';
 
 import { ACTIONS } from 'actionConstants';
-import { headerNavList, menuItemsList, menuFullNavItemsList } from 'context';
+import { headerNavList, menuItemsList, menuFullNavItemsList, casinosListNav } from 'context';
 import { INavItem } from 'atoms';
 
 export const testAction = createAction(ACTIONS.TEST);
 export const changeHeaderNav = createAction(ACTIONS.CHANGE_HEADER_NAV);
 export const saveNewTime = createAction(ACTIONS.SAVE_NEW_TIME);
 
+
+export interface ICasinosListNav {
+  value: string;
+  isActive: boolean;
+}
+
 export interface IStore {
+  activeCasino: string;
+  casinosListNav: ICasinosListNav[];
   navList: INavItem[],
   menuNavItemsList: INavItem[];
   menuFullNavItemsList: any;
@@ -17,6 +25,8 @@ export interface IStore {
 }
 
 const defaultState: IStore = {
+  activeCasino: 'url_1',
+  casinosListNav: [...casinosListNav],
   navList: [...headerNavList],
   menuNavItemsList: [...menuItemsList],
   menuFullNavItemsList: [...menuFullNavItemsList],

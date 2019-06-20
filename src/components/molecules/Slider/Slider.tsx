@@ -7,8 +7,8 @@ import { banner_1, banner_2 } from 'images';
 import { colors } from 'context';
 
 const imagesArr = [
-  { original: banner_1 },
-  { original: banner_2 },
+  { original: banner_1, thumbnail: banner_1 },
+  { original: banner_2, thumbnail: banner_2 },
 ]
 
 export const Slider = () => (

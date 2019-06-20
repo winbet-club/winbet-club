@@ -8,10 +8,6 @@ export const menuFullNavItemsList = [
     isActive: false,
   },
   {
-    value: 'клуб',
-    isActive: false,
-  },
-  {
     value: 'о нас',
     isActive: false,
   },

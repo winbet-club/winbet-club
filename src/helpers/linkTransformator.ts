@@ -7,4 +7,8 @@ export const linkTransformator = {
   'игры': 'games',
   'клуб': 'clab',
   'казино': 'casinos',
+  'промо': 'promo',
+  события: 'events',
+  галерея: 'gallary',
+  главная: 'main',
 }

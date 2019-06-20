@@ -2,8 +2,10 @@ import * as React from 'react';
 import { BrowserRouter as Router, Route} from 'react-router-dom';
 
 import { HomeContent, AboutUsContent, CorriereContent, CasinosContent, CommonWrapper,
+  CasonoDescriptionGeneral, CasinoDescriptionPromo, CasinoDescriptionEvents, CasinoDescriptionGallary,
   GameListContent } from 'organisms';
 import { IStore } from 'reducers';
+import { eventsList } from 'context';
 
 interface IProps extends IStore {
   time: string;
@@ -12,26 +14,32 @@ interface IProps extends IStore {
 }
 
 export class ViewPage extends React.Component<IProps> {
-  public onNavClick =(value: string) => {
+  // constructor(props: any) {
+  //    super(props);
+  //  this.bindProps = this.bindProps.bind(this);
+  //  }
+
+  public onNavClick = (value: string) => {
+    console.log('nav clicl');
     const { changeHeaderNav } = this.props;
     
     changeHeaderNav(value);
   }
 
   public componentDidMount() {
-    const { saveNewTime } = this.props;
+    // const { saveNewTime } = this.props;
 
-    setInterval(() => {
-      const date = new Date();
+    // setInterval(() => {
+    //   const date = new Date();
 
-      const hours = date.getHours() < 10 ? `0${date.getHours()}` : `${date.getHours()}`
-      const minutes = date.getMinutes() < 10 ? `0${date.getMinutes()}` : `${date.getMinutes()}`
-      const seconds = date.getSeconds() < 10 ? `0${date.getSeconds()}` : `${date.getSeconds()}`
+    //   const hours = date.getHours() < 10 ? `0${date.getHours()}` : `${date.getHours()}`
+    //   const minutes = date.getMinutes() < 10 ? `0${date.getMinutes()}` : `${date.getMinutes()}`
+    //   const seconds = date.getSeconds() < 10 ? `0${date.getSeconds()}` : `${date.getSeconds()}`
 
-      const newTime = `${hours}:${minutes}:${seconds}`;
+    //   const newTime = `${hours}:${minutes}:${seconds}`;
 
-      saveNewTime(newTime);
-    }, 1000)
+    //   saveNewTime(newTime);
+    // }, 1000)
   }
 
   public onMenuClick =(value: string) => {
@@ -46,8 +54,53 @@ export class ViewPage extends React.Component<IProps> {
     // changeHeaderNav(value);
   }
 
+  public onCasinoDescriptionClick = (value: string) => {
+    // console.log('@@@@@@@@');
+
+    return;
+  }
+  
+  public renderCasonoDescriptionGeneral = () => {
+    const { casinosListNav, activeCasino } = this.props;
+    return <CasonoDescriptionGeneral
+      casinosListNav={casinosListNav}
+      onClick={this.onCasinoDescriptionClick}
+      activeCasino={activeCasino}
+      />
+  }
+
+  public renderCasinoDescriptionPromo = () => {
+    const { casinosListNav, activeCasino } = this.props;
+    return <CasinoDescriptionPromo
+      casinosListNav={casinosListNav}
+      onClick={this.onCasinoDescriptionClick}
+      activeCasino={activeCasino}
+      />
+  }
+
+  public renderCasinoDescriptionEvents = () => {
+    const { casinosListNav, activeCasino } = this.props;
+    return <CasinoDescriptionEvents
+      promoList={eventsList}
+      casinosListNav={casinosListNav}
+      onClick={this.onCasinoDescriptionClick}
+      activeCasino={activeCasino}
+      />
+  }
+
+  public renderCasinoDescriptionGallary = () => {
+    const { casinosListNav, activeCasino } = this.props;
+    return <CasinoDescriptionGallary
+      promoList='' // TODO Check
+      casinosListNav={casinosListNav}
+      onClick={this.onCasinoDescriptionClick}
+      activeCasino={activeCasino}
+      />
+  }
+
   public render() {
-    const { navList, menuNavItemsList, isMobileMenuOpen, menuFullNavItemsList, time } = this.props;
+    const { navList, menuNavItemsList, isMobileMenuOpen, menuFullNavItemsList, time, activeCasino } = this.props;
+
     return (
       <Router>
         <CommonWrapper
@@ -65,6 +118,11 @@ export class ViewPage extends React.Component<IProps> {
           <Route exact={true} path='/corrier' component={CorriereContent}/>
           <Route exact={true} path='/casinos' component={CasinosContent}/>
           <Route exact={true} path='/games' component={GameListContent}/>
+          <Route exact={true} path={`/casinos/${activeCasino}`} render={this.renderCasonoDescriptionGeneral}/>
+          <Route exact={true} path={`/casinos/${activeCasino}/main`} render={this.renderCasonoDescriptionGeneral}/>
+          <Route exact={true} path={`/casinos/${activeCasino}/promo`} render={this.renderCasinoDescriptionPromo}/>
+          <Route exact={true} path={`/casinos/${activeCasino}/events`} render={this.renderCasinoDescriptionEvents}/>
+          <Route exact={true} path={`/casinos/${activeCasino}/gallary`} render={this.renderCasinoDescriptionGallary}/>
         </CommonWrapper>
       </Router>
     )

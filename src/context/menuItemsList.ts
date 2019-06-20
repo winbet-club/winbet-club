@@ -8,10 +8,6 @@ export const menuItemsList = [
     isActive: false,
   },
   {
-    value: 'клуб',
-    isActive: false,
-  },
-  {
     value: 'казино',
     isActive: false,
   },
