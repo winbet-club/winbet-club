@@ -9,3 +9,4 @@ export { CasonoDescriptionGeneral } from './CasonoDescriptionGeneral';
 export { CasinoDescriptionPromo } from './CasinoDescriptionPromo';
 export { CasinoDescriptionEvents } from './CasinoDescriptionEvents';
 export { CasinoDescriptionGallary } from './CasinoDescriptionGallary';
+export { ContactsContent } from './ContactsContent';

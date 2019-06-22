@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route} from 'react-router-dom';
 
 import { HomeContent, AboutUsContent, CorriereContent, CasinosContent, CommonWrapper,
   CasonoDescriptionGeneral, CasinoDescriptionPromo, CasinoDescriptionEvents, CasinoDescriptionGallary,
-  GameListContent } from 'organisms';
+  GameListContent, ContactsContent } from 'organisms';
 import { IStore } from 'reducers';
 import { eventsList } from 'context';
 
@@ -99,8 +99,9 @@ export class ViewPage extends React.Component<IProps> {
   }
 
   public render() {
-    const { navList, menuNavItemsList, isMobileMenuOpen, menuFullNavItemsList, time, activeCasino } = this.props;
+    const { navList, menuNavItemsList, isMobileMenuOpen, menuFullNavItemsList, casinosInfo, time, activeCasino } = this.props;
 
+    const getContactsContent = () => <ContactsContent casinosInfo={casinosInfo}  />
     return (
       <Router>
         <CommonWrapper
@@ -123,6 +124,7 @@ export class ViewPage extends React.Component<IProps> {
           <Route exact={true} path={`/casinos/${activeCasino}/promo`} render={this.renderCasinoDescriptionPromo}/>
           <Route exact={true} path={`/casinos/${activeCasino}/events`} render={this.renderCasinoDescriptionEvents}/>
           <Route exact={true} path={`/casinos/${activeCasino}/gallary`} render={this.renderCasinoDescriptionGallary}/>
+          <Route exact={true} path='/contacts' render={getContactsContent}/>
         </CommonWrapper>
       </Router>
     )
