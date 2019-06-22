@@ -10,6 +10,9 @@
   "rules": {
     "ordered-imports": [false],
     "object-literal-sort-keys": [false],
-    "no-console": [false, "warning"]
+    "no-console": false
+  },
+  "jsRules": {
+    "no-console": false //Disable for javascript
   }
 }
