@@ -11,14 +11,10 @@ interface IProps extends IStore {
   time: string;
   changeHeaderNav: (value: string) => void;
   saveNewTime: (time: string) => void;
+  loadJackpots: () => void;
 }
 
 export class ViewPage extends React.Component<IProps> {
-  // constructor(props: any) {
-  //    super(props);
-  //  this.bindProps = this.bindProps.bind(this);
-  //  }
-
   public onNavClick = (value: string) => {
     console.log('nav clicl');
     const { changeHeaderNav } = this.props;
@@ -27,6 +23,7 @@ export class ViewPage extends React.Component<IProps> {
   }
 
   public componentDidMount() {
+    this.props.loadJackpots();
     // const { saveNewTime } = this.props;
 
     // setInterval(() => {

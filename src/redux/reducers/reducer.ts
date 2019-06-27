@@ -7,6 +7,8 @@ import { INavItem } from 'atoms';
 export const testAction = createAction(ACTIONS.TEST);
 export const changeHeaderNav = createAction(ACTIONS.CHANGE_HEADER_NAV);
 export const saveNewTime = createAction(ACTIONS.SAVE_NEW_TIME);
+export const loadJackpots = createAction(ACTIONS.LOAD_JECKPOTS);
+export const saveJeckpots = createAction(ACTIONS.SAVE_JACKPOTS);
 
 
 export interface ICasinosListNav {
@@ -22,6 +24,7 @@ export interface IStore {
   menuFullNavItemsList: any;
   isMobileMenuOpen: boolean;
   time?: string; // TODO Check necessarily
+  jackpotsValues?: any;
 }
 
 const defaultState: IStore = {
@@ -32,6 +35,7 @@ const defaultState: IStore = {
   menuFullNavItemsList: [...menuFullNavItemsList],
   isMobileMenuOpen: true,
   time: '',
+  jackpotsValues: [],
 };
 
 export const mainReducer = handleActions<IStore, any> (
@@ -55,11 +59,20 @@ export const mainReducer = handleActions<IStore, any> (
     },
     [ACTIONS.SAVE_NEW_TIME]: (
       state: IStore,
-      {payload}: Action<string>
+      { payload }: Action<string>
     ): IStore => (
       {
         ...state,
         time: payload,
+      }
+    ),
+    [ACTIONS.SAVE_JACKPOTS]: (
+      state: IStore,
+      { payload }: Action<any>
+    ): IStore => (
+      {
+        ...state,
+        jackpotsValues: payload,
       }
     )
   },

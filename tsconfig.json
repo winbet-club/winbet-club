@@ -43,6 +43,9 @@
       "images": [
         "assets/images"
       ],
+      "servises": [
+        "servises"
+      ],
     },
     "baseUrl": "src/",
     "outDir": "build/dist",

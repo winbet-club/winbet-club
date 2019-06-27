@@ -1,15 +1,18 @@
-import { takeEvery, put } from 'redux-saga/effects';
+import { takeEvery, put, call } from 'redux-saga/effects';
 
 import { ACTIONS } from 'actionConstants';
-import { testAction } from 'reducers';
+import { saveJeckpots } from 'reducers';
+import { Api } from 'servises/Api';
 
 export function* mainWatcher() {
-  yield takeEvery(ACTIONS.TEST, testGenerator);
+  yield takeEvery(ACTIONS.LOAD_JECKPOTS, loadJackpots);
 }
 
-function* testGenerator() {
+function* loadJackpots() {
   try {
-    yield put(testAction());
+    const { data: { level } } = yield call(() => Api.getJackpots());
+    
+    yield put(saveJeckpots(level));
   } catch (error) {
     console.log('error', error);
   }
