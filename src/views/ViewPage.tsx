@@ -9,24 +9,24 @@ import { eventsList } from 'context';
 
 interface IProps extends IStore {
   time: string;
+  jackpotsValues: any[];
   changeHeaderNav: (value: string) => void;
   saveNewTime: (time: string) => void;
+  loadJackpots: () => void;
 }
 
 export class ViewPage extends React.Component<IProps> {
-  // constructor(props: any) {
-  //    super(props);
-  //  this.bindProps = this.bindProps.bind(this);
-  //  }
-
   public onNavClick = (value: string) => {
-    console.log('nav clicl');
     const { changeHeaderNav } = this.props;
     
     changeHeaderNav(value);
   }
 
   public componentDidMount() {
+    this.props.loadJackpots();
+    setTimeout(() => {
+      this.props.loadJackpots();
+    }, 10000);
     // const { saveNewTime } = this.props;
 
     // setInterval(() => {
@@ -61,11 +61,13 @@ export class ViewPage extends React.Component<IProps> {
   }
   
   public renderCasonoDescriptionGeneral = () => {
-    const { casinosListNav, activeCasino } = this.props;
+    const { casinosListNav, activeCasino, jackpotsValues } = this.props;
+
     return <CasonoDescriptionGeneral
       casinosListNav={casinosListNav}
       onClick={this.onCasinoDescriptionClick}
       activeCasino={activeCasino}
+      jackpotsValues={jackpotsValues}
       />
   }
 

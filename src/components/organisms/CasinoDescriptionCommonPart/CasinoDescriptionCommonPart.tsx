@@ -7,7 +7,6 @@ import { CasinoDescriptionNav, Contacts, SmallCasinoBlock,
 import { JackpotCardsList } from 'molecules';
 import { ICasinosListNav } from 'reducers';
 import { colors, textConstants, addressTransformator, casinosAddressWithImg } from 'context';
-import { cardJackpodDataMock } from 'context';
 
 const { winbetMinsk } = textConstants;
 
@@ -15,15 +14,16 @@ interface IProps {
   children: any;
   casinosListNav: ICasinosListNav[];
   activeCasino: string;
+  jackpotsValues?: any[];
   onClick: (value: string) => void;
 }
   
 export const CasinoDescriptionCommonPart = (
-  { children, casinosListNav, activeCasino, onClick }: IProps
+  { children, casinosListNav, activeCasino, jackpotsValues, onClick }: IProps
 ) => (
     <Wrapper>
       <JackpotCardsListWrapper>
-        <JackpotCardsList cardJackpotData={cardJackpodDataMock} />
+        <JackpotCardsList cardJackpotData={jackpotsValues} />
       </JackpotCardsListWrapper>
 
       <CasinosList>

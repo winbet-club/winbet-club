@@ -16,3 +16,4 @@ export { promoList } from './promoList';
 export { eventsList } from './eventsList';
 export { casinosInfo } from './casinosInfo';
 export { geoObjectSetings, mapState } from './geoObjectSetings';
+export { cardImagesList } from './cardImagesList';
