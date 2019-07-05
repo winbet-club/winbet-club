@@ -1,9 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+
 import { mainLogo } from 'images';
 
 export const Logo = () => (
-  <Wrapper/>
+  <Link to=''>
+    <Wrapper/>
+  </Link>
 );
 
 const Wrapper = styled.div`

@@ -6,6 +6,7 @@ import { ViewPage } from './views';
 class App extends React.Component {
   public render() {
     return (
+      // @ts-ignore
       <ViewPage/>
     );
   }

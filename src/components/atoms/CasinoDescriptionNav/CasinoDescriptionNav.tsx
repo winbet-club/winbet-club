@@ -14,25 +14,27 @@ interface INavListItem {
 interface IProps {
   navList: INavListItem[];
   activeCasino: string;
+  isMobileMenuDescriptionCasinoOpen: boolean;
   onClick: (value: string) => any;
+  onDescripionMenuClick: () => any;
 }
 
 export const CasinoDescriptionNav = (
-  { navList, activeCasino, onClick }: IProps
+  { navList, activeCasino, onClick, onDescripionMenuClick, isMobileMenuDescriptionCasinoOpen }: IProps
 ) => {
   return (
     <Wrapper>
-      <MenuIcon/>
-      <List>
+      <MenuIcon onClick={onDescripionMenuClick} />
+      <List isMobileMenuDescriptionCasinoOpen={isMobileMenuDescriptionCasinoOpen} >
         {
           navList.map(({value, isActive}: INavListItem) => {
-            const bindClick = (v: string) => onClick(v);
+            const bindClick = () => onClick(value);
             const link = `${activeCasino}-${linkTransformator[value]}`;
             return (
               <Link key={value} to={link}>
                 <NavValue
                   isActive={isActive}
-                  onClick={bindClick(value)}
+                  onClick={bindClick}
                 >
                   {value.toUpperCase()}
                 </NavValue>
@@ -56,8 +58,8 @@ const Wrapper = styled.div`
   }
 `;
 
-const List = styled.ul`
-  display: flex;
+const List = styled.ul<{isMobileMenuDescriptionCasinoOpen: boolean}>`
+  display: ${({ isMobileMenuDescriptionCasinoOpen }) => isMobileMenuDescriptionCasinoOpen ? `flex` : `none`};
   justify-content: flex-end;
   padding: 10px 0 10px;
   
@@ -71,6 +73,7 @@ const List = styled.ul`
   }
 `;
 const NavValue = styled.li<{isActive: boolean}>`
+  color: ${({isActive}) => isActive ? `${colors.yellow}` : `${colors.white}`};
   margin-right: 10px;
   list-style-type: none;
   @media (max-width: 994px) {
@@ -81,7 +84,7 @@ const NavValue = styled.li<{isActive: boolean}>`
 const MenuIcon = styled.div`
   @media (min-width: 994px) {
     display: none;
-  }
+  };
   background: url(${menuIcon});
   background-size: 24px 24px;
   width: 24px;
