@@ -27,27 +27,54 @@ function* loadJackpots() {
   }
 }
 
+
+
 function* updateJackpots() {
   try {
-    const { data: { level } } = yield call(() => Api.getJackpots());
+    const { data: { level: newJackpotData } } = yield call(() => Api.getJackpots());
     const jackpotsValues = (state: any) => state.jackpotsValues;
-
     const values = yield select(jackpotsValues);
-    console.log({values});
+    // const JeckpotsDifference = newJackpotData.map(({value}: any, index: number) => value - values[index].value);
+    console.log(newJackpotData, values);
+    const currentData = [3, 10, 50, 100];
+    const newValues = [5, 15, 70, 120];
 
-    // let isValuesEqual = false;
+    const intervals = (interval: number) => {
+      switch (true) {
+        case interval < 5:
+          return 0.1;
+        case interval < 20:
+          return (interval / 10).toFixed(2);
+        case interval < 100:
+          return (interval / 20).toFixed(2);
+      
+        default:
+          return (interval / 30).toFixed(2);
+      }
+    }
+    // add .value
+    const tempData = currentData.map((item, index) => ({ value: currentData[index], step: intervals(newValues[index] - item)}))
 
-    // while(!isValuesEqual) {
-      level.forEach((jp: any, index: number) => {
-        if(jp.value < values[index].value) {
-          // isValuesEqual = false;
-          put(saveOneJeckpot({ value: values[index].value, index }));
+    
+    console.log({tempData})
+    let count = 0;
+
+    while(count < 4) {
+      
+
+      tempData.forEach(({value, step}: any, index: number) => {
+        if(value < newValues[index]) { // Add .value
+          saveOneJeckpot({value, step});
+          tempData[index].value += step;
+        } else {
+          count++;
         }
-        // isValuesEqual = true;
       })
-    // }
+    }
+
     
   } catch (error) {
     console.log('error', error);
   }
 }
+
