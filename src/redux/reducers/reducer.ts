@@ -9,6 +9,8 @@ export const changeHeaderNav = createAction(ACTIONS.CHANGE_HEADER_NAV);
 export const saveNewTime = createAction(ACTIONS.SAVE_NEW_TIME);
 export const loadJackpots = createAction(ACTIONS.LOAD_JECKPOTS);
 export const saveJeckpots = createAction(ACTIONS.SAVE_JACKPOTS);
+export const saveOneJeckpot = createAction(ACTIONS.SAVE_ONE_JACKPOT);
+export const updateJackpots = createAction(ACTIONS.UPDATE_JACKPOTS);
 
 
 export interface ICasinosListNav {
@@ -77,6 +79,19 @@ export const mainReducer = handleActions<IStore, any> (
       {
         ...state,
         jackpotsValues: payload,
+      }
+    ),
+
+    [ACTIONS.SAVE_ONE_JACKPOT]: (
+      state: IStore,
+      { payload }: Action<any>
+    ): IStore => (
+      {
+        ...state,
+        jackpotsValues: [
+          ...state.jackpotsValues,
+          [payload.index] = payload.value,
+        ],
       }
     )
   },

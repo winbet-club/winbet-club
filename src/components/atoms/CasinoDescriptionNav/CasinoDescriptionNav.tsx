@@ -27,7 +27,7 @@ export const CasinoDescriptionNav = (
         {
           navList.map(({value, isActive}: INavListItem) => {
             const bindClick = (v: string) => onClick(v);
-            const link = `${linkTransformator[value]}`;
+            const link = `${activeCasino}-${linkTransformator[value]}`;
             return (
               <Link key={value} to={link}>
                 <NavValue

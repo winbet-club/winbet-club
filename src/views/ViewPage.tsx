@@ -13,6 +13,7 @@ interface IProps extends IStore {
   changeHeaderNav: (value: string) => void;
   saveNewTime: (time: string) => void;
   loadJackpots: () => void;
+  updateJackpots: () => void;
 }
 
 export class ViewPage extends React.Component<IProps> {
@@ -25,8 +26,8 @@ export class ViewPage extends React.Component<IProps> {
   public componentDidMount() {
     this.props.loadJackpots();
     setTimeout(() => {
-      this.props.loadJackpots();
-    }, 10000);
+      this.props.updateJackpots();
+    }, 60000);
     // const { saveNewTime } = this.props;
 
     // setInterval(() => {
@@ -122,10 +123,10 @@ export class ViewPage extends React.Component<IProps> {
           <Route exact={true} path='/casinos' component={CasinosContent}/>
           <Route exact={true} path='/games' component={GameListContent}/>
           <Route exact={true} path={`/casinos/${activeCasino}`} render={this.renderCasonoDescriptionGeneral}/>
-          <Route exact={true} path={`/casinos/${activeCasino}/main`} render={this.renderCasonoDescriptionGeneral}/>
-          <Route exact={true} path={`/casinos/${activeCasino}/promo`} render={this.renderCasinoDescriptionPromo}/>
-          <Route exact={true} path={`/casinos/${activeCasino}/events`} render={this.renderCasinoDescriptionEvents}/>
-          <Route exact={true} path={`/casinos/${activeCasino}/gallary`} render={this.renderCasinoDescriptionGallary}/>
+          <Route exact={true} path={`/casinos/${activeCasino}-main`} render={this.renderCasonoDescriptionGeneral}/>
+          <Route exact={true} path={`/casinos/${activeCasino}-promo`} render={this.renderCasinoDescriptionPromo}/>
+          <Route exact={true} path={`/casinos/${activeCasino}-events`} render={this.renderCasinoDescriptionEvents}/>
+          <Route exact={true} path={`/casinos/${activeCasino}-gallary`} render={this.renderCasinoDescriptionGallary}/>
           <Route exact={true} path='/contacts' render={getContactsContent}/>
         </CommonWrapper>
       </Router>

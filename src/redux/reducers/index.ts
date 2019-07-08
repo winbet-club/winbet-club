@@ -6,6 +6,8 @@ export {
   saveNewTime,
   ICasinosListNav,
   loadJackpots,
-  saveJeckpots
+  saveJeckpots,
+  saveOneJeckpot,
+  updateJackpots,
 } from './reducer';
 
