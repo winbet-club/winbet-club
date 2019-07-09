@@ -88,10 +88,10 @@ export const mainReducer = handleActions<IStore, any> (
     ): IStore => (
       {
         ...state,
-        jackpotsValues: [
-          ...state.jackpotsValues,
-          [payload.index] = payload.value,
-        ],
+        jackpotsValues: state.jackpotsValues.map((jackpot: any, index: number) => ({
+          ...jackpot,
+          value: payload[index],
+        })),
       }
     )
   },

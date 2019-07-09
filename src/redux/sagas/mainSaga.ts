@@ -41,9 +41,10 @@ const intervals = (interval: number) => {
   }
 }
 
-function* saveJackpot(data: any) {
-  return yield put(saveOneJeckpot(data));
-}
+// function* saveJackpot(data: any) {
+//   yield delay(5000);
+//   return yield put(saveOneJeckpot(data));
+// }
 
 function* updateJackpots() {
   try {
@@ -79,9 +80,11 @@ function* updateJackpots() {
         return [...accum, current];
       }, [])
     })
-    yield all(
-      lastArr.map((value: any, index: number) => saveJackpot({value, index}))
-    )
+    
+    yield all(lastArr.map((value: any, index: number) => {
+      delay(1000)
+      return put(saveOneJeckpot(value))
+    }))
     console.log({lastArr});
     // lastArr.map((value: any, index: number) => {
     //   saveJackpot(value);
