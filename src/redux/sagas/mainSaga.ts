@@ -27,7 +27,19 @@ function* loadJackpots() {
   }
 }
 
-
+const intervals = (interval: number) => {
+  switch (true) {
+    case interval < 5:
+      return 0.1;
+    case interval < 20:
+      return (interval / 10).toFixed(2);
+    case interval < 100:
+      return (interval / 20).toFixed(2);
+  
+    default:
+      return (interval / 30).toFixed(2);
+  }
+}
 
 function* updateJackpots() {
   try {
@@ -39,40 +51,34 @@ function* updateJackpots() {
     const currentData = [3, 10, 50, 100];
     const newValues = [5, 15, 70, 120];
 
-    const intervals = (interval: number) => {
-      switch (true) {
-        case interval < 5:
-          return 0.1;
-        case interval < 20:
-          return (interval / 10).toFixed(2);
-        case interval < 100:
-          return (interval / 20).toFixed(2);
-      
-        default:
-          return (interval / 30).toFixed(2);
-      }
-    }
     // add .value
     const tempData = currentData.map((item, index) => ({ value: currentData[index], step: intervals(newValues[index] - item)}))
-
-    
+    const dataList = tempData.map((item, index) => {
+      const tempArr = [];
+      let currentValue = item.value;
+      while(currentValue < newValues[index]) {
+        tempArr.push(Number(currentValue.toFixed(2)));
+        currentValue += Number(item.step);
+      }
+      return tempArr;
+    })
     console.log({tempData})
+    console.log({dataList})
     let count = 0;
+    let currentIndex = 0;
+    // let newData = [];
 
     while(count < 4) {
-      
-
-      tempData.forEach(({value, step}: any, index: number) => {
+      dataList.map(({value, step}: any, index: number) => {
         if(value < newValues[index]) { // Add .value
           saveOneJeckpot({value, step});
+          // yield put(saveJeckpots(newData));
           tempData[index].value += step;
         } else {
           count++;
         }
       })
-    }
-
-    
+    } 
   } catch (error) {
     console.log('error', error);
   }
