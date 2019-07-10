@@ -9,6 +9,7 @@ import { textConstants } from 'context';
 const { promo } = textConstants;
 
 interface IProps {
+  jackpotsValues: any;
   promoList: any; // TODO check
   casinosListNav: ICasinosListNav[];
   activeCasino: string;
@@ -16,9 +17,14 @@ interface IProps {
 }
   
 export const CasinoDescriptionEvents = (
-  { promoList, casinosListNav, activeCasino, onClick }: IProps
+  { jackpotsValues, promoList, casinosListNav, activeCasino, onClick }: IProps
 ) => (
-    <CasinoDescriptionCommonPart casinosListNav={casinosListNav} activeCasino={activeCasino} onClick={onClick}>
+    <CasinoDescriptionCommonPart
+      jackpotsValues={jackpotsValues}
+      casinosListNav={casinosListNav}
+      activeCasino={activeCasino}
+      onClick={onClick}
+    >
       <Wrapper>
         <NotesList headerName={promo} promoList={promoList}/>
       </Wrapper>

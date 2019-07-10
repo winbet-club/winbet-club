@@ -6,15 +6,21 @@ import { CasinoDescriptionCommonPart } from 'organisms';
 import { Promo } from 'molecules';
 
 interface IProps {
+  jackpotsValues: any;
   casinosListNav: ICasinosListNav[];
   activeCasino: string;
   onClick: (value: string) => void;
 }
   
 export const CasinoDescriptionPromo = (
-  { casinosListNav, activeCasino, onClick }: IProps
+  { jackpotsValues, casinosListNav, activeCasino, onClick }: IProps
 ) => (
-    <CasinoDescriptionCommonPart casinosListNav={casinosListNav} activeCasino={activeCasino} onClick={onClick}>
+    <CasinoDescriptionCommonPart 
+      jackpotsValues={jackpotsValues}
+      casinosListNav={casinosListNav}
+      activeCasino={activeCasino}
+      onClick={onClick}
+    >
       <Promo/>
     </CasinoDescriptionCommonPart>
 );

@@ -7,6 +7,7 @@ import { CasinoDescriptionCommonPart } from 'organisms';
 import { imageGallery } from 'context';
 
 interface IProps {
+  jackpotsValues: any;
   promoList: any; // TODO check
   casinosListNav: ICasinosListNav[];
   activeCasino: string;
@@ -14,9 +15,14 @@ interface IProps {
 }
   
 export const CasinoDescriptionGallary = (
-  { promoList, casinosListNav, activeCasino, onClick }: IProps
+  { jackpotsValues, promoList, casinosListNav, activeCasino, onClick }: IProps
 ) => (
-    <CasinoDescriptionCommonPart casinosListNav={casinosListNav} activeCasino={activeCasino} onClick={onClick}>
+    <CasinoDescriptionCommonPart
+      jackpotsValues={jackpotsValues}
+      casinosListNav={casinosListNav}
+      activeCasino={activeCasino}
+      onClick={onClick}
+    >
       <Wrapper>
         <ImageGallery 
           items={imageGallery[activeCasino]}
