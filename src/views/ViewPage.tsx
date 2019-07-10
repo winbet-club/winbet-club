@@ -25,9 +25,9 @@ export class ViewPage extends React.Component<IProps> {
 
   public componentDidMount() {
     this.props.loadJackpots();
-    setTimeout(() => {
+    setInterval(() => {
       this.props.updateJackpots();
-    }, 2000);
+    }, 10000);
     // const { saveNewTime } = this.props;
 
     // setInterval(() => {

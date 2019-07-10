@@ -53,10 +53,9 @@ function* updateJackpots() {
     const longestArr = { index: 0, lengthArr: 0 };
 
     // add .value
-    const tempData = currentData.map(({value} : any, index: number) =>
-      ({ value: currentData[index], step: intervals(newValues[index] - value)}))
+    const tempData = currentData.map((item, index) => ({ value: currentData[index], step: intervals(newValues[index] - item)}))
 
-    const dataList = tempData.map((item: any, index: number) => {
+    const dataList = tempData.map((item, index) => {
       const tempArr = [];
       let currentValue = item.value;
       while(currentValue < newValues[index]) {
@@ -71,8 +70,8 @@ function* updateJackpots() {
       return tempArr;
     })
     
-    const lastArr = dataList[longestArr.index].map((value: any, index: number) => {
-      return dataList.reduce((accum: any, item:  any, i: number) => {
+    const lastArr = dataList[longestArr.index].map((value, index) => {
+      return dataList.reduce((accum, item, i) => {
         const current = item[index] ? item[index] : item[item.length - 1]
         return [...accum, current];
       }, [])
