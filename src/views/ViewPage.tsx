@@ -73,32 +73,41 @@ export class ViewPage extends React.Component<IProps> {
   }
 
   public renderCasinoDescriptionPromo = () => {
-    const { casinosListNav, activeCasino } = this.props;
+    const { casinosListNav, activeCasino, jackpotsValues } = this.props;
     return <CasinoDescriptionPromo
       casinosListNav={casinosListNav}
       onClick={this.onCasinoDescriptionClick}
       activeCasino={activeCasino}
+      jackpotsValues={jackpotsValues}
       />
   }
 
   public renderCasinoDescriptionEvents = () => {
-    const { casinosListNav, activeCasino } = this.props;
+    const { casinosListNav, activeCasino, jackpotsValues } = this.props;
     return <CasinoDescriptionEvents
       promoList={eventsList}
       casinosListNav={casinosListNav}
       onClick={this.onCasinoDescriptionClick}
       activeCasino={activeCasino}
+      jackpotsValues={jackpotsValues}
       />
   }
 
   public renderCasinoDescriptionGallary = () => {
-    const { casinosListNav, activeCasino } = this.props;
+    const { casinosListNav, activeCasino, jackpotsValues } = this.props;
     return <CasinoDescriptionGallary
       promoList='' // TODO Check
       casinosListNav={casinosListNav}
       onClick={this.onCasinoDescriptionClick}
       activeCasino={activeCasino}
+      jackpotsValues={jackpotsValues}
       />
+  }
+
+  public renderHomeContent = () => {
+    const { jackpotsValues } = this.props;
+
+   return <HomeContent jackpotsValues={jackpotsValues} />
   }
 
   public render() {
@@ -117,7 +126,7 @@ export class ViewPage extends React.Component<IProps> {
           onMobileMenuClick={this.onMobileMenuClick}
           menuFullNavItemsList={menuFullNavItemsList}
         >
-          <Route exact={true} path='/' component={HomeContent}/>
+          <Route exact={true} path='/' render={this.renderHomeContent} />
           <Route exact={true} path='/about' component={AboutUsContent}/>
           <Route exact={true} path='/corrier' component={CorriereContent}/>
           <Route exact={true} path='/casinos' component={CasinosContent}/>
