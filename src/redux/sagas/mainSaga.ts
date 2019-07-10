@@ -31,8 +31,10 @@ const intervals = (interval: number) => {
   switch (true) {
     case interval === 0:
       return 0;
-    case interval < 5:
+    case interval < 0.2:
       return 0.01;
+    case interval < 2:
+      return 0.11;
     case interval < 20:
       return (interval / 10).toFixed(2);
     case interval < 100:
@@ -51,22 +53,24 @@ function* updateJackpots() {
 
     const longestArr = { index: 0, lengthArr: 0 };
 
-    const lastDataWithNewStap = lastData.map(({value}: any, index: number) =>
+    const lastDataWithNewStap = lastData.map(({ value }: any, index: number) =>
       ({ value: Number(lastData[index].value), step: intervals(newJackpotData[index].value - value)}))
 
     const intermediateData = lastDataWithNewStap.map((item: any, index: number) => {
       const tempArr = [];
       let currentValue = item.value;
+
       while(currentValue < newJackpotData[index].value) {
-        tempArr.push(Number(currentValue).toFixed(2));
+        tempArr.push(Number(currentValue).toFixed(2));  // TODO Check if it is need to use Number
         currentValue += Number(item.step);
       }
+
       if(tempArr.length > longestArr.lengthArr) {
         longestArr.index = index;
         longestArr.lengthArr = tempArr.length;
       }
 
-      return tempArr;
+      return tempArr.length ? tempArr : lastData[index].value;
     })
     
     const dataForSaving = intermediateData[longestArr.index].map((value: any, index:number) => {
@@ -77,7 +81,7 @@ function* updateJackpots() {
     });
 
     for (const newArr of dataForSaving) {
-      yield delay(200);
+      yield delay(100);
       yield put(saveOneJeckpot(newArr))
     }
 
