@@ -1,4 +1,4 @@
-import { takeEvery, put, call, select, delay, all} from 'redux-saga/effects';
+import { takeEvery, put, call, select, delay, } from 'redux-saga/effects';
 
 import { ACTIONS } from 'actionConstants';
 import { saveJeckpots, saveOneJeckpot } from 'reducers';
@@ -41,11 +41,6 @@ const intervals = (interval: number) => {
   }
 }
 
-// function* saveJackpot(data: any) {
-//   yield delay(5000);
-//   return yield put(saveOneJeckpot(data));
-// }
-
 function* updateJackpots() {
   try {
     const { data: { level: newJackpotData } } = yield call(() => Api.getJackpots());
@@ -58,8 +53,10 @@ function* updateJackpots() {
     const longestArr = { index: 0, lengthArr: 0 };
 
     // add .value
-    const tempData = currentData.map((item, index) => ({ value: currentData[index], step: intervals(newValues[index] - item)}))
-    const dataList = tempData.map((item, index) => {
+    const tempData = currentData.map(({value} : any, index: number) =>
+      ({ value: currentData[index], step: intervals(newValues[index] - value)}))
+
+    const dataList = tempData.map((item: any, index: number) => {
       const tempArr = [];
       let currentValue = item.value;
       while(currentValue < newValues[index]) {
@@ -74,40 +71,18 @@ function* updateJackpots() {
       return tempArr;
     })
     
-    const lastArr = dataList[longestArr.index].map((value, index) => {
-      return dataList.reduce((accum, item, i) => {
+    const lastArr = dataList[longestArr.index].map((value: any, index: number) => {
+      return dataList.reduce((accum: any, item:  any, i: number) => {
         const current = item[index] ? item[index] : item[item.length - 1]
         return [...accum, current];
       }, [])
     })
-    
-    yield all(lastArr.map((value: any, index: number) => {
-      delay(1000)
-      return put(saveOneJeckpot(value))
-    }))
-    console.log({lastArr});
-    // lastArr.map((value: any, index: number) => {
-    //   saveJackpot(value);
-    // })
-    // console.log({tempData})
-    // console.log({dataList})
-    // console.log({longestArr})
-    
-    // let count = 0;
-    // let currentIndex = 0;
-    // // let newData = [];
 
-    // while(count < 4) {
-    //   dataList.map(({value, step}: any, index: number) => {
-    //     if(value < newValues[index]) { // Add .value
-    //       saveOneJeckpot({value, step});
-    //       // yield put(saveJeckpots(newData));
-    //       tempData[index].value += step;
-    //     } else {
-    //       count++;
-    //     }
-    //   })
-    // } 
+    for (const newArr of lastArr) {
+      yield delay(50);
+      yield put(saveOneJeckpot(newArr))
+    }
+
   } catch (error) {
     console.log('error', error);
   }
