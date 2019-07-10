@@ -53,9 +53,9 @@ function* updateJackpots() {
     const longestArr = { index: 0, lengthArr: 0 };
 
     // add .value
-    const tempData = currentData.map((item, index) => ({ value: currentData[index], step: intervals(newValues[index] - item)}))
-
-    const dataList = tempData.map((item, index) => {
+    const lastDataWithNewStap = currentData.map((item, index) => ({ value: currentData[index], step: intervals(newValues[index] - item)}))
+    console.log({lastDataWithNewStap});
+    const intermediateData = lastDataWithNewStap.map((item, index) => { // Массивы промежуточных значений
       const tempArr = [];
       let currentValue = item.value;
       while(currentValue < newValues[index]) {
@@ -69,15 +69,17 @@ function* updateJackpots() {
 
       return tempArr;
     })
-    
-    const lastArr = dataList[longestArr.index].map((value, index) => {
-      return dataList.reduce((accum, item, i) => {
+    console.log({intermediateData});
+    const dataForSaving = intermediateData[longestArr.index].map((value, index) => {
+      return intermediateData.reduce((accum, item, i) => {
         const current = item[index] ? item[index] : item[item.length - 1]
         return [...accum, current];
       }, [])
     })
 
-    for (const newArr of lastArr) {
+    console.log({dataForSaving});
+
+    for (const newArr of dataForSaving) {
       yield delay(50);
       yield put(saveOneJeckpot(newArr))
     }
