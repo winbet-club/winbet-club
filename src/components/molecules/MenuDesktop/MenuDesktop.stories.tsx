@@ -8,8 +8,10 @@ import { menuItemsList } from 'context';
 storiesOf('Molecules', module)
 .add('MenuDesktop', () => (
   <MenuDesktop
+    isMobileMenuOpen={true}
     menuNavItemsList={menuItemsList}
     onMenuClick={action('onClick')}
     onMobileMenuClick={action('onClick')}
+    onMainLogoClick={action('onClick')}
   />
 ))

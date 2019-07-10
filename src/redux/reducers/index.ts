@@ -13,5 +13,7 @@ export {
   toggleMobileMenuDescriptionCasinoOpen,
   changeCasinoDescriptionNav,
   changeMenuFullNavItemsList,
+  changeMenuNav,
+  nullNavs,
 } from './reducer';
 

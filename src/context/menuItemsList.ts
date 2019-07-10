@@ -1,7 +1,7 @@
 export const menuItemsList = [
   {
     value: 'промоакции',
-    isActive: true,
+    isActive: false,
   },
   {
     value: 'игры',

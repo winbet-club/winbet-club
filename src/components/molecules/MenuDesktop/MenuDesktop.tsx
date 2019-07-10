@@ -1,24 +1,25 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { IMenuNavItem, MobileMenuIcon } from 'atoms';
+import { IMenuNavItem, MobileMenuIcon, Logo, MenuNav, MobileMenu } from 'atoms';
 // import { colors } from 'context';
 
 interface IProps {
   menuNavItemsList: IMenuNavItem[];
+  isMobileMenuOpen: any;
   onMenuClick: (value: string) => void;
   onMobileMenuClick: () => void;
+  onMainLogoClick: () => void;
 }
 
-import { Logo, MenuNav } from 'atoms';
-
 export const MenuDesktop = (
-  { menuNavItemsList, onMenuClick, onMobileMenuClick }: IProps
+  { menuNavItemsList, isMobileMenuOpen, onMenuClick, onMobileMenuClick, onMainLogoClick }: IProps
 ) => (
 <Wrapper>
-  <Logo/>
+  <Logo onMainLogoClick={onMainLogoClick} />
   <MenuNav menuNavItemsList={menuNavItemsList} onMenuClick={onMenuClick} />
   <MobileMenuIcon onMobileMenuClick={onMobileMenuClick}/>
+  <MobileMenu itemsList={menuNavItemsList} isMobileMenuOpen={isMobileMenuOpen} />
 </Wrapper>
 );
 

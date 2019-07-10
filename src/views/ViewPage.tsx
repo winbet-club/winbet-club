@@ -19,6 +19,8 @@ interface IProps extends IStore {
   toggleMobileMenuDescriptionCasinoOpen: () => void;
   changeCasinoDescriptionNav: (value: string) => void;
   changeMenuFullNavItemsList: (value: string) => void;
+  changeMenuNav: (value: string) => void;
+  nullNavs: () => void;
 }
 
 export class ViewPage extends React.Component<IProps> {
@@ -49,9 +51,9 @@ export class ViewPage extends React.Component<IProps> {
   }
 
   public onMenuClick =(value: string) => {
-    // const { changeHeaderNav } = this.props;
+    const { changeMenuNav } = this.props;
     
-    // changeHeaderNav(value);
+    changeMenuNav(value);
   }
 
   public onMobileMenuClick =() => {
@@ -134,6 +136,12 @@ export class ViewPage extends React.Component<IProps> {
    return <HomeContent jackpotsValues={jackpotsValues} />
   }
 
+  public onMainLogoClick = () => {
+    const { nullNavs } = this.props;
+
+    nullNavs();
+  }
+
   public render() {
     const { navList, menuNavItemsList, isMobileMenuOpen, menuFullNavItemsList, casinosInfo, time, activeCasino } = this.props;
 
@@ -150,6 +158,7 @@ export class ViewPage extends React.Component<IProps> {
           onMobileMenuClick={this.onMobileMenuClick}
           onMenuFullNavItemsListClick={this.onMenuFullNavItemsListClick}
           menuFullNavItemsList={menuFullNavItemsList}
+          onMainLogoClick={this.onMainLogoClick}
         >
           <Route exact={true} path='/' render={this.renderHomeContent} />
           <Route exact={true} path='/about' component={AboutUsContent}/>

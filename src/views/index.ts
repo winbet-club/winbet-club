@@ -11,7 +11,9 @@ import {
   changeCasinoDescriptionNav,
   changeMenuFullNavItemsList,
   loadJackpots,
-  updateJackpots
+  updateJackpots,
+  changeMenuNav,
+  nullNavs,
 } from 'reducers';
 
 const mapStateToProps = ({
@@ -47,6 +49,8 @@ const mapDispatchProps = (dispatch: Dispatch) => ({
   toggleMobileMenuDescriptionCasinoOpen: () => dispatch(toggleMobileMenuDescriptionCasinoOpen()),
   changeCasinoDescriptionNav: (value: string) => dispatch(changeCasinoDescriptionNav(value)),
   changeMenuFullNavItemsList: (value: string) => dispatch(changeMenuFullNavItemsList(value)),
+  changeMenuNav: (value: string) => dispatch(changeMenuNav(value)),
+  nullNavs: () => dispatch(nullNavs()),
 });
 
 export const ViewPage = connect(

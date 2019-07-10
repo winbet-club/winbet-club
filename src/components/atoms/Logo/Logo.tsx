@@ -4,9 +4,14 @@ import { Link } from 'react-router-dom';
 
 import { mainLogo } from 'images';
 
-export const Logo = () => (
+interface IProps {
+  onMainLogoClick: () => void;
+}
+
+
+export const Logo = ({onMainLogoClick}: IProps) => (
   <Link to=''>
-    <Wrapper/>
+    <Wrapper onClick={onMainLogoClick}/>
   </Link>
 );
 

@@ -15,6 +15,8 @@ export const toggleMobileMenu = createAction(ACTIONS.TOGGLE_MOBILE_MENU);
 export const toggleMobileMenuDescriptionCasinoOpen = createAction(ACTIONS.TOGGLE_MOBILE_MENU_DESCRIPTION_OPEN);
 export const changeCasinoDescriptionNav = createAction(ACTIONS.CHANGE_CASINO_DESCRIPTION_NAV);
 export const changeMenuFullNavItemsList = createAction(ACTIONS.CHANGE_MENU_FULL_NAV_ITEMS_LIST);
+export const changeMenuNav = createAction(ACTIONS.CHANGE_MENU_NAV);
+export const nullNavs = createAction(ACTIONS.NULL_NAVS);
 
 export interface ICasinosListNav {
   value: string;
@@ -40,7 +42,7 @@ const defaultState: IStore = {
   navList: [...headerNavList],
   menuNavItemsList: [...menuItemsList],
   menuFullNavItemsList: [...menuFullNavItemsList],
-  isMobileMenuOpen: false,
+  isMobileMenuOpen: true,
   time: '',
   casinosInfo: [...casinosInfo],
   jackpotsValues: [],
@@ -62,6 +64,10 @@ export const mainReducer = handleActions<IStore, any> (
               isActive: item.value === payload,
             }
           )),
+          menuNavItemsList: state.menuNavItemsList.map(item => ({
+            ...item,
+            isActive: false,
+          })),
         }
       };
       return state;
@@ -137,6 +143,41 @@ export const mainReducer = handleActions<IStore, any> (
           ...item,
           isActive: item.value === payload,
         })),
+      }
+    ),
+    [ACTIONS.CHANGE_MENU_NAV]: (
+      state: IStore,
+      { payload }: Action<string>
+    ): IStore => (
+      {
+        ...state,
+        menuNavItemsList: state.menuNavItemsList.map(item => ({
+          ...item,
+          isActive: item.value === payload,
+        })),
+        navList: state.navList.map((item) => ({
+          ...item,
+          isActive: false,
+        }))
+      }
+    ),
+    [ACTIONS.NULL_NAVS]: (
+      state: IStore,
+    ): IStore => (
+      {
+        ...state,
+        menuNavItemsList: state.menuNavItemsList.map(item => ({
+          ...item,
+          isActive: false,
+        })),
+        navList: state.navList.map((item) => ({
+          ...item,
+          isActive: false,
+        })),
+        menuFullNavItemsList: state.menuFullNavItemsList.map((item) => ({
+          ...item,
+          isActive: false,
+        }))
       }
     ),
   },

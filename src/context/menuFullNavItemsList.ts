@@ -1,7 +1,7 @@
 export const menuFullNavItemsList = [
   {
     value: 'промоакции',
-    isActive: true,
+    isActive: false,
   },
   {
     value: 'игры',
@@ -9,6 +9,10 @@ export const menuFullNavItemsList = [
   },
   {
     value: 'о нас',
+    isActive: false,
+  },
+  {
+    value: 'казино',
     isActive: false,
   },
   {
