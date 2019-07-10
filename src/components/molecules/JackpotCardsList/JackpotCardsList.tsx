@@ -2,14 +2,15 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { jackpotcardsLogo , jackpotcardsLogoMobi } from 'images'
+import { cardImagesList } from 'context';
 
-interface ICard {
-  image: HTMLImageElement;
-  jackpotValue: number;
-}
+// interface ICard {
+//   image: HTMLImageElement;
+//   jackpotValue: number;
+// }
 
 interface IProps {
-  cardJackpotData: ICard[];
+  cardJackpotData?: any[];
 }
 
 import { CardJeckpot } from 'atoms';
@@ -20,8 +21,8 @@ export const JackpotCardsList = (
 <Wrapper>
   <Logo/>
   {
-    cardJackpotData.map((card: ICard, i) =>
-      <CardJeckpot key={i} jackpotValue={card.jackpotValue} image={card.image}/> )
+    cardJackpotData && // Delete 
+    cardJackpotData.map(({ value }, i) => <CardJeckpot key={i} jackpotValue={value} image={cardImagesList[i]}/> )
   }
 </Wrapper>
 );

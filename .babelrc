@@ -18,6 +18,7 @@
             "images": "./src/assets/images",
             "core": "./src/core",
             "helpers": "./src/helpers",
+            "servises": "./src/servises",
           }
         }
       ]

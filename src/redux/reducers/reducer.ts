@@ -1,12 +1,16 @@
 import { createAction, handleActions, Action } from 'redux-actions';
 
 import { ACTIONS } from 'actionConstants';
-import { headerNavList, menuItemsList, menuFullNavItemsList, casinosInfo } from 'context';
+import { headerNavList, menuItemsList, menuFullNavItemsList, casinosInfo, casinosListNav } from 'context';
 import { INavItem, ICasinoAddress } from 'atoms';
 
 export const testAction = createAction(ACTIONS.TEST);
 export const changeHeaderNav = createAction(ACTIONS.CHANGE_HEADER_NAV);
 export const saveNewTime = createAction(ACTIONS.SAVE_NEW_TIME);
+export const loadJackpots = createAction(ACTIONS.LOAD_JECKPOTS);
+export const saveJeckpots = createAction(ACTIONS.SAVE_JACKPOTS);
+export const saveOneJeckpot = createAction(ACTIONS.SAVE_ONE_JACKPOT);
+export const updateJackpots = createAction(ACTIONS.UPDATE_JACKPOTS);
 
 
 export interface ICasinosListNav {
@@ -23,6 +27,7 @@ export interface IStore {
   isMobileMenuOpen: boolean;
   time?: string; // TODO Check necessarily
   casinosInfo: ICasinoAddress[];
+  jackpotsValues?: any;
 }
 
 const defaultState: IStore = {
@@ -34,6 +39,7 @@ const defaultState: IStore = {
   isMobileMenuOpen: true,
   time: '',
   casinosInfo: [...casinosInfo],
+  jackpotsValues: [],
 };
 
 export const mainReducer = handleActions<IStore, any> (
@@ -55,13 +61,37 @@ export const mainReducer = handleActions<IStore, any> (
       };
       return state;
     },
+    
     [ACTIONS.SAVE_NEW_TIME]: (
       state: IStore,
-      {payload}: Action<string>
+      { payload }: Action<string>
     ): IStore => (
       {
         ...state,
         time: payload,
+      }
+    ),
+
+    [ACTIONS.SAVE_JACKPOTS]: (
+      state: IStore,
+      { payload }: Action<any>
+    ): IStore => (
+      {
+        ...state,
+        jackpotsValues: payload,
+      }
+    ),
+
+    [ACTIONS.SAVE_ONE_JACKPOT]: (
+      state: IStore,
+      { payload }: Action<any>
+    ): IStore => (
+      {
+        ...state,
+        jackpotsValues: state.jackpotsValues.map((jackpot: any, index: number) => ({
+          ...jackpot,
+          value: payload[index],
+        })),
       }
     )
   },

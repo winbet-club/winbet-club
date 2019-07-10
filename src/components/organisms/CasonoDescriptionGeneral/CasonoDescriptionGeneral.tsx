@@ -14,13 +14,14 @@ const { gallary, actions } = textConstants;
 interface IProps {
   casinosListNav: ICasinosListNav[];
   activeCasino: string;
+  jackpotsValues: any[];
   onClick: (value: string) => void;
 }
   
 export const CasonoDescriptionGeneral = (
-  { casinosListNav, activeCasino, onClick }: IProps
+  { casinosListNav, activeCasino, jackpotsValues, onClick }: IProps
 ) => (
-    <CasinoDescriptionCommonPart casinosListNav={casinosListNav} activeCasino={activeCasino} onClick={onClick}>
+    <CasinoDescriptionCommonPart casinosListNav={casinosListNav} activeCasino={activeCasino} jackpotsValues={jackpotsValues} onClick={onClick}>
       <PaddingWrapper>
         <InfoBlock>
           <AboutCasino activeCasino={activeCasino} />

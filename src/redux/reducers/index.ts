@@ -1,2 +1,13 @@
-export { mainReducer, testAction, changeHeaderNav, IStore, saveNewTime, ICasinosListNav } from './reducer';
+export {
+  mainReducer,
+  testAction,
+  changeHeaderNav,
+  IStore,
+  saveNewTime,
+  ICasinosListNav,
+  loadJackpots,
+  saveJeckpots,
+  saveOneJeckpot,
+  updateJackpots,
+} from './reducer';
 
