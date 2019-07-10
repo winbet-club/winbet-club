@@ -16,7 +16,10 @@ export const CardJeckpot = (
 <Wrapper>
   <CardSuit image={image}/>
   <JackpotValuesBlock>
-    {jackpotValue}
+    {
+      jackpotValue.toString().split('').map((value: string, i: number) => <LeftBorder key={i}>{value}</LeftBorder>)
+    }  
+
     <Currency>
       {
         currencyBYN.split('').map((letter: string, i) => <CurrencyLetter key={i}>{letter.toUpperCase()}</CurrencyLetter>)
@@ -73,5 +76,11 @@ const JackpotValuesBlock =styled.div`
   justify-content: center;
   font-size: 30px;
   color: ${colors.white};
+`;
+
+const LeftBorder = styled.div`
+  border-left: 1px solid;
+  border-image: linear-gradient(to top, rgba(0, 0, 0, 0), #c2beb0, rgba(0, 0, 0, 0)) 0 100%;
+  padding: 0 2px;
 `;
 
