@@ -29,8 +29,10 @@ function* loadJackpots() {
 
 const intervals = (interval: number) => {
   switch (true) {
+    case interval === 0:
+      return 0;
     case interval < 5:
-      return 0.1;
+      return 0.01;
     case interval < 20:
       return (interval / 10).toFixed(2);
     case interval < 100:
@@ -45,21 +47,18 @@ function* updateJackpots() {
   try {
     const { data: { level: newJackpotData } } = yield call(() => Api.getJackpots());
     const jackpotsValues = (state: any) => state.jackpotsValues;
-    const values = yield select(jackpotsValues);
-    // const JeckpotsDifference = newJackpotData.map(({value}: any, index: number) => value - values[index].value);
-    console.log(newJackpotData, values);
-    const currentData = [3, 10, 50, 100];
-    const newValues = [5, 15, 70, 120];
+    const lastData = yield select(jackpotsValues);
+
     const longestArr = { index: 0, lengthArr: 0 };
 
-    // add .value
-    const lastDataWithNewStap = currentData.map((item, index) => ({ value: currentData[index], step: intervals(newValues[index] - item)}))
-    console.log({lastDataWithNewStap});
-    const intermediateData = lastDataWithNewStap.map((item, index) => { // Массивы промежуточных значений
+    const lastDataWithNewStap = lastData.map(({value}: any, index: number) =>
+      ({ value: Number(lastData[index].value), step: intervals(newJackpotData[index].value - value)}))
+
+    const intermediateData = lastDataWithNewStap.map((item: any, index: number) => {
       const tempArr = [];
       let currentValue = item.value;
-      while(currentValue < newValues[index]) {
-        tempArr.push(Number(currentValue.toFixed(2)));
+      while(currentValue < newJackpotData[index].value) {
+        tempArr.push(Number(currentValue).toFixed(2));
         currentValue += Number(item.step);
       }
       if(tempArr.length > longestArr.lengthArr) {
@@ -69,18 +68,16 @@ function* updateJackpots() {
 
       return tempArr;
     })
-    console.log({intermediateData});
-    const dataForSaving = intermediateData[longestArr.index].map((value, index) => {
-      return intermediateData.reduce((accum, item, i) => {
+    
+    const dataForSaving = intermediateData[longestArr.index].map((value: any, index:number) => {
+      return intermediateData.reduce((accum: any, item: any, i: number) => {
         const current = item[index] ? item[index] : item[item.length - 1]
         return [...accum, current];
       }, [])
-    })
-
-    console.log({dataForSaving});
+    });
 
     for (const newArr of dataForSaving) {
-      yield delay(50);
+      yield delay(200);
       yield put(saveOneJeckpot(newArr))
     }
 
