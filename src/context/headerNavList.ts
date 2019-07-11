@@ -1,7 +1,7 @@
 export const headerNavList = [
   {
     value: 'о нас',
-    isActive: true,
+    isActive: false,
   },
   {
     value: 'новости',

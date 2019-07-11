@@ -11,17 +11,22 @@ interface IProps {
   promoList: any; // TODO check
   casinosListNav: ICasinosListNav[];
   activeCasino: string;
+  isMobileMenuDescriptionCasinoOpen: boolean;
   onClick: (value: string) => void;
+  onDescripionMenuClick: () => void;
 }
   
 export const CasinoDescriptionGallary = (
-  { jackpotsValues, promoList, casinosListNav, activeCasino, onClick }: IProps
+  { jackpotsValues, promoList, casinosListNav, activeCasino, onClick,
+    isMobileMenuDescriptionCasinoOpen, onDescripionMenuClick }: IProps
 ) => (
     <CasinoDescriptionCommonPart
       jackpotsValues={jackpotsValues}
       casinosListNav={casinosListNav}
       activeCasino={activeCasino}
       onClick={onClick}
+      onDescripionMenuClick={onDescripionMenuClick}
+      isMobileMenuDescriptionCasinoOpen={isMobileMenuDescriptionCasinoOpen}
     >
       <Wrapper>
         <ImageGallery 

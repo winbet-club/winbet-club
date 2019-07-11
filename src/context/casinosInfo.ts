@@ -1,7 +1,7 @@
 export const casinosInfo = [
   {
     casinoName: 'SomeName',
-    casinoAddress: 'София, бул. Черни връх 100',
+    casinoAddress: 'София, бул. Черни връх 1001',
     workDays: 'понеделник - неделя',
     casinoWorkTime: 'от 00:00 до 00:00 часа',
     id: 0,

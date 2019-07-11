@@ -9,5 +9,11 @@ export {
   saveJeckpots,
   saveOneJeckpot,
   updateJackpots,
+  toggleMobileMenu,
+  toggleMobileMenuDescriptionCasinoOpen,
+  changeCasinoDescriptionNav,
+  changeMenuFullNavItemsList,
+  changeMenuNav,
+  nullNavs,
 } from './reducer';
 

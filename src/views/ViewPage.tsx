@@ -10,10 +10,17 @@ import { eventsList } from 'context';
 interface IProps extends IStore {
   time: string;
   jackpotsValues: any[];
+  isMobileMenuDescriptionCasinoOpen: boolean;
   changeHeaderNav: (value: string) => void;
   saveNewTime: (time: string) => void;
   loadJackpots: () => void;
   updateJackpots: () => void;
+  toggleMobileMenu: () => void;
+  toggleMobileMenuDescriptionCasinoOpen: () => void;
+  changeCasinoDescriptionNav: (value: string) => void;
+  changeMenuFullNavItemsList: (value: string) => void;
+  changeMenuNav: (value: string) => void;
+  nullNavs: () => void;
 }
 
 export class ViewPage extends React.Component<IProps> {
@@ -44,63 +51,82 @@ export class ViewPage extends React.Component<IProps> {
   }
 
   public onMenuClick =(value: string) => {
-    // const { changeHeaderNav } = this.props;
+    const { changeMenuNav } = this.props;
     
-    // changeHeaderNav(value);
+    changeMenuNav(value);
   }
 
   public onMobileMenuClick =() => {
-    // const { changeHeaderNav } = this.props;
+    const { toggleMobileMenu } = this.props;
     
-    // changeHeaderNav(value);
+    toggleMobileMenu();
   }
 
   public onCasinoDescriptionClick = (value: string) => {
-    // console.log('@@@@@@@@');
+    const { changeCasinoDescriptionNav } = this.props;
 
-    return;
+    changeCasinoDescriptionNav(value)
+  }
+
+  public onDescripionMenuClick = () => {
+    const { toggleMobileMenuDescriptionCasinoOpen } = this.props;
+    
+    toggleMobileMenuDescriptionCasinoOpen();
+  }
+
+  public onMenuFullNavItemsListClick = (value: string) => {
+    const { changeMenuFullNavItemsList } = this.props;
+
+    changeMenuFullNavItemsList(value);
   }
   
   public renderCasonoDescriptionGeneral = () => {
-    const { casinosListNav, activeCasino, jackpotsValues } = this.props;
-
+    const { casinosListNav, activeCasino, isMobileMenuDescriptionCasinoOpen, jackpotsValues } = this.props;
     return <CasonoDescriptionGeneral
       casinosListNav={casinosListNav}
       onClick={this.onCasinoDescriptionClick}
       activeCasino={activeCasino}
       jackpotsValues={jackpotsValues}
+      onDescripionMenuClick={this.onDescripionMenuClick}
+      isMobileMenuDescriptionCasinoOpen={isMobileMenuDescriptionCasinoOpen}
       />
   }
 
   public renderCasinoDescriptionPromo = () => {
-    const { casinosListNav, activeCasino, jackpotsValues } = this.props;
+    const { casinosListNav, activeCasino, isMobileMenuDescriptionCasinoOpen, jackpotsValues } = this.props;
     return <CasinoDescriptionPromo
       casinosListNav={casinosListNav}
       onClick={this.onCasinoDescriptionClick}
       activeCasino={activeCasino}
       jackpotsValues={jackpotsValues}
+      onDescripionMenuClick={this.onDescripionMenuClick}
+      isMobileMenuDescriptionCasinoOpen={isMobileMenuDescriptionCasinoOpen}
       />
   }
 
   public renderCasinoDescriptionEvents = () => {
-    const { casinosListNav, activeCasino, jackpotsValues } = this.props;
+    const { casinosListNav, activeCasino, isMobileMenuDescriptionCasinoOpen, jackpotsValues } = this.props;
     return <CasinoDescriptionEvents
       promoList={eventsList}
       casinosListNav={casinosListNav}
       onClick={this.onCasinoDescriptionClick}
       activeCasino={activeCasino}
       jackpotsValues={jackpotsValues}
+      onDescripionMenuClick={this.onDescripionMenuClick}
+      isMobileMenuDescriptionCasinoOpen={isMobileMenuDescriptionCasinoOpen}
       />
   }
 
   public renderCasinoDescriptionGallary = () => {
-    const { casinosListNav, activeCasino, jackpotsValues } = this.props;
+    const { casinosListNav, activeCasino, isMobileMenuDescriptionCasinoOpen, jackpotsValues } = this.props;
     return <CasinoDescriptionGallary
       promoList='' // TODO Check
       casinosListNav={casinosListNav}
       onClick={this.onCasinoDescriptionClick}
       activeCasino={activeCasino}
       jackpotsValues={jackpotsValues}
+      onDescripionMenuClick={this.onDescripionMenuClick}
+      isMobileMenuDescriptionCasinoOpen={isMobileMenuDescriptionCasinoOpen}
       />
   }
 
@@ -108,6 +134,12 @@ export class ViewPage extends React.Component<IProps> {
     const { jackpotsValues } = this.props;
 
    return <HomeContent jackpotsValues={jackpotsValues} />
+  }
+
+  public onMainLogoClick = () => {
+    const { nullNavs } = this.props;
+
+    nullNavs();
   }
 
   public render() {
@@ -124,7 +156,9 @@ export class ViewPage extends React.Component<IProps> {
           onMenuClick={this.onMenuClick}
           isMobileMenuOpen={isMobileMenuOpen}
           onMobileMenuClick={this.onMobileMenuClick}
+          onMenuFullNavItemsListClick={this.onMenuFullNavItemsListClick}
           menuFullNavItemsList={menuFullNavItemsList}
+          onMainLogoClick={this.onMainLogoClick}
         >
           <Route exact={true} path='/' render={this.renderHomeContent} />
           <Route exact={true} path='/about' component={AboutUsContent}/>

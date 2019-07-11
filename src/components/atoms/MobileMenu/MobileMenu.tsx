@@ -1,7 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 import { colors } from 'context';
+import { linkTransformator } from 'helpers';
 
 interface INavElem {
   value: string;
@@ -11,19 +13,37 @@ interface INavElem {
 interface IProps {
   itemsList: INavElem[];
   isMobileMenuOpen: boolean;
+  onMenuFullNavItemsListClick?: (value: string) => void;
 }
 
 export const MobileMenu = (
-  { itemsList, isMobileMenuOpen }: IProps
+  { itemsList, isMobileMenuOpen, onMenuFullNavItemsListClick }: IProps
 ) => (
 <Wrapper isMobileMenuOpen={isMobileMenuOpen}>
   {
-    itemsList.map(({value, isActive}) => <NavItem key={value} isActive={isActive}>{value.toUpperCase()}</NavItem>)
-  }
+    itemsList.map(({value, isActive}) => {
+      if(onMenuFullNavItemsListClick) {
+        const bindClick = () => onMenuFullNavItemsListClick(value);
+
+        return (
+          <Link to={`/${linkTransformator[value]}`} key={value}>
+            <NavItem
+              key={value}
+              isActive={isActive}
+              onClick={bindClick}
+            >{value.toUpperCase()}</NavItem>
+          </Link>
+        )
+      }
+      return;
+    })}
 </Wrapper>
 );
 
 const Wrapper = styled.div<{isMobileMenuOpen: boolean}>`
+  & a {
+    text-decoration: none;
+  };
   display: ${({isMobileMenuOpen}) => isMobileMenuOpen ? `flex` : `none`};
   flex-direction: column;
   justify-content: center;
@@ -35,7 +55,7 @@ const Wrapper = styled.div<{isMobileMenuOpen: boolean}>`
 `;
 
 const NavItem = styled.div<{isActive: boolean}>`
-  color: ${colors.cadetGray};
+  color: ${({ isActive }) => isActive ? `${colors.yellow}` : `${colors.cadetGray}`};
   font-size: 14px;
   padding: 10px 0;
 `;

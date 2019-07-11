@@ -1,9 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+
 import { mainLogo } from 'images';
 
-export const Logo = () => (
-  <Wrapper/>
+interface IProps {
+  onMainLogoClick: () => void;
+}
+
+
+export const Logo = ({onMainLogoClick}: IProps) => (
+  <Link to=''>
+    <Wrapper onClick={onMainLogoClick}/>
+  </Link>
 );
 
 const Wrapper = styled.div`

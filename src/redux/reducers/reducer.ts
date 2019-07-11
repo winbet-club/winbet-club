@@ -11,7 +11,12 @@ export const loadJackpots = createAction(ACTIONS.LOAD_JECKPOTS);
 export const saveJeckpots = createAction(ACTIONS.SAVE_JACKPOTS);
 export const saveOneJeckpot = createAction(ACTIONS.SAVE_ONE_JACKPOT);
 export const updateJackpots = createAction(ACTIONS.UPDATE_JACKPOTS);
-
+export const toggleMobileMenu = createAction(ACTIONS.TOGGLE_MOBILE_MENU);
+export const toggleMobileMenuDescriptionCasinoOpen = createAction(ACTIONS.TOGGLE_MOBILE_MENU_DESCRIPTION_OPEN);
+export const changeCasinoDescriptionNav = createAction(ACTIONS.CHANGE_CASINO_DESCRIPTION_NAV);
+export const changeMenuFullNavItemsList = createAction(ACTIONS.CHANGE_MENU_FULL_NAV_ITEMS_LIST);
+export const changeMenuNav = createAction(ACTIONS.CHANGE_MENU_NAV);
+export const nullNavs = createAction(ACTIONS.NULL_NAVS);
 
 export interface ICasinosListNav {
   value: string;
@@ -23,11 +28,12 @@ export interface IStore {
   casinosListNav: ICasinosListNav[];
   navList: INavItem[],
   menuNavItemsList: INavItem[];
-  menuFullNavItemsList: any;
+  menuFullNavItemsList: ICasinosListNav[];
   isMobileMenuOpen: boolean;
   time?: string; // TODO Check necessarily
   casinosInfo: ICasinoAddress[];
   jackpotsValues?: any;
+  isMobileMenuDescriptionCasinoOpen?: boolean;
 }
 
 const defaultState: IStore = {
@@ -40,6 +46,7 @@ const defaultState: IStore = {
   time: '',
   casinosInfo: [...casinosInfo],
   jackpotsValues: [],
+  isMobileMenuDescriptionCasinoOpen: true,
 };
 
 export const mainReducer = handleActions<IStore, any> (
@@ -57,6 +64,10 @@ export const mainReducer = handleActions<IStore, any> (
               isActive: item.value === payload,
             }
           )),
+          menuNavItemsList: state.menuNavItemsList.map(item => ({
+            ...item,
+            isActive: false,
+          })),
         }
       };
       return state;
@@ -93,7 +104,82 @@ export const mainReducer = handleActions<IStore, any> (
           value: payload[index],
         })),
       }
-    )
+    ),
+    [ACTIONS.TOGGLE_MOBILE_MENU]: (
+      state: IStore,
+    ): IStore => (
+      {
+        ...state,
+        isMobileMenuOpen: !state.isMobileMenuOpen,
+      }
+    ),
+    [ACTIONS.TOGGLE_MOBILE_MENU_DESCRIPTION_OPEN]: (
+      state: IStore,
+    ): IStore => (
+      {
+        ...state,
+        isMobileMenuDescriptionCasinoOpen: !state.isMobileMenuDescriptionCasinoOpen,
+      }
+    ),
+    [ACTIONS.CHANGE_CASINO_DESCRIPTION_NAV]: (
+      state: IStore,
+      { payload }: Action<string>
+    ): IStore => (
+      {
+        ...state,
+        casinosListNav: state.casinosListNav.map(item => ({
+          ...item,
+          isActive: item.value === payload,
+        })),
+      }
+    ),
+    [ACTIONS.CHANGE_MENU_FULL_NAV_ITEMS_LIST]: (
+      state: IStore,
+      { payload }: Action<string>
+    ): IStore => (
+      {
+        ...state,
+        menuFullNavItemsList: state.menuFullNavItemsList.map(item => ({
+          ...item,
+          isActive: item.value === payload,
+        })),
+      }
+    ),
+    [ACTIONS.CHANGE_MENU_NAV]: (
+      state: IStore,
+      { payload }: Action<string>
+    ): IStore => (
+      {
+        ...state,
+        menuNavItemsList: state.menuNavItemsList.map(item => ({
+          ...item,
+          isActive: item.value === payload,
+        })),
+        navList: state.navList.map((item) => ({
+          ...item,
+          isActive: false,
+        }))
+      }
+    ),
+    [ACTIONS.NULL_NAVS]: (
+      state: IStore,
+    ): IStore => (
+      {
+        ...state,
+        menuNavItemsList: state.menuNavItemsList.map(item => ({
+          ...item,
+          isActive: false,
+        })),
+        navList: state.navList.map((item) => ({
+          ...item,
+          isActive: false,
+        })),
+        menuFullNavItemsList: state.menuFullNavItemsList.map((item) => ({
+          ...item,
+          isActive: false,
+        }))
+      }
+    ),
   },
   defaultState
 );

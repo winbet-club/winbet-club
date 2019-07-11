@@ -15,11 +15,14 @@ interface IProps {
   casinosListNav: ICasinosListNav[];
   activeCasino: string;
   jackpotsValues?: any[];
+  isMobileMenuDescriptionCasinoOpen: boolean;
   onClick: (value: string) => void;
+  onDescripionMenuClick: () => void;
 }
   
 export const CasinoDescriptionCommonPart = (
-  { children, casinosListNav, activeCasino, jackpotsValues, onClick }: IProps
+  { children, casinosListNav, activeCasino, jackpotsValues, 
+    onDescripionMenuClick, isMobileMenuDescriptionCasinoOpen, onClick }: IProps
 ) => (
     <Wrapper>
       <JackpotCardsListWrapper>
@@ -39,7 +42,13 @@ export const CasinoDescriptionCommonPart = (
       </CasinosList>
       <PageDescription text={winbetMinsk} address={addressTransformator[activeCasino].address} />
 
-      <CasinoDescriptionNav navList={casinosListNav} onClick={onClick} activeCasino={activeCasino} />
+      <CasinoDescriptionNav
+        navList={casinosListNav}
+        onClick={onClick}
+        activeCasino={activeCasino}
+        onDescripionMenuClick={onDescripionMenuClick}
+        isMobileMenuDescriptionCasinoOpen={isMobileMenuDescriptionCasinoOpen}
+      />
 
         {children}
 
