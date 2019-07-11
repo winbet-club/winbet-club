@@ -3,14 +3,14 @@ import styled from 'styled-components';
 
 import { PageDescription } from 'atoms';
 import {  Slider, CasinosList, JackpotCardsList } from 'molecules';
-import { textConstants, cardJackpodDataMock, colors } from 'context';
+import { textConstants, colors } from 'context';
 
 const { winbetMinsk } = textConstants;
 
-export const CasinosContent = () => (
+export const CasinosContent = ({jackpotsValues}: any) => (
   <Wrapper>
     <JackpotCardsListWrapper>
-      <JackpotCardsList cardJackpotData={cardJackpodDataMock} />
+      <JackpotCardsList cardJackpotData={jackpotsValues} />
     </JackpotCardsListWrapper>
     <Slider/>
     <PageDescription text={winbetMinsk} address='Русияова 1' />

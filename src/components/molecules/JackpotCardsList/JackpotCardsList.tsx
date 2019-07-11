@@ -22,7 +22,10 @@ export const JackpotCardsList = (
   <Logo/>
   {
     cardJackpotData && // Delete 
-    cardJackpotData.map(({ value }, i) => <CardJeckpot key={i} jackpotValue={value} image={cardImagesList[i]}/> )
+    cardJackpotData.map(({ value }, i) => {
+      console.log({cardJackpotData});
+      return <CardJeckpot key={i} jackpotValue={value} image={cardImagesList[i]}/>
+    } )
   }
 </Wrapper>
 );
