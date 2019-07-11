@@ -70,9 +70,9 @@ function* updateJackpots() {
         longestArr.lengthArr = tempArr.length;
       }
 
-      return tempArr.length ? tempArr : lastData[index].value;
+      return tempArr.length ? tempArr : [lastData[index].value];
     })
-    
+
     const dataForSaving = intermediateData[longestArr.index].map((value: any, index:number) => {
       return intermediateData.reduce((accum: any, item: any, i: number) => {
         const current = item[index] ? item[index] : item[item.length - 1]

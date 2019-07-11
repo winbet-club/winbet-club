@@ -36,12 +36,17 @@ export const CommonWrapper = (
     onMobileMenuClick={onMobileMenuClick}
     onMainLogoClick={onMainLogoClick}
   />
+  <MobileMenu itemsList={menuNavItemsList} isMobileMenuOpen={isMobileMenuOpen} />
   <TabletMenuWrapper>
     <MobileMenu itemsList={menuNavItemsList} isMobileMenuOpen={isMobileMenuOpen} />
   </TabletMenuWrapper>
 
   <MobileMenuWrapper>
-    <MobileMenu itemsList={menuFullNavItemsList} isMobileMenuOpen={isMobileMenuOpen} onMenuFullNavItemsListClick={onMenuFullNavItemsListClick} />
+    <MobileMenu
+      itemsList={menuFullNavItemsList}
+      isMobileMenuOpen={isMobileMenuOpen}
+      onMenuFullNavItemsListClick={onMenuFullNavItemsListClick}
+    />
   </MobileMenuWrapper>
   
     {children}

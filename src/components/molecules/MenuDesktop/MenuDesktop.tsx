@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { IMenuNavItem, MobileMenuIcon, Logo, MenuNav, MobileMenu } from 'atoms';
+import { IMenuNavItem, MobileMenuIcon, Logo, MenuNav } from 'atoms';
 // import { colors } from 'context';
 
 interface IProps {
@@ -13,13 +13,12 @@ interface IProps {
 }
 
 export const MenuDesktop = (
-  { menuNavItemsList, isMobileMenuOpen, onMenuClick, onMobileMenuClick, onMainLogoClick }: IProps
+  { menuNavItemsList, onMenuClick, onMobileMenuClick, onMainLogoClick }: IProps
 ) => (
 <Wrapper>
   <Logo onMainLogoClick={onMainLogoClick} />
   <MenuNav menuNavItemsList={menuNavItemsList} onMenuClick={onMenuClick} />
   <MobileMenuIcon onMobileMenuClick={onMobileMenuClick}/>
-  <MobileMenu itemsList={menuNavItemsList} isMobileMenuOpen={isMobileMenuOpen} />
 </Wrapper>
 );
 
