@@ -21,9 +21,10 @@ interface IProps {
 }
   
 export const CasonoDescriptionGeneral = (
-  { casinosListNav, activeCasino, onClick, onDescripionMenuClick, isMobileMenuDescriptionCasinoOpen }: IProps
+  { casinosListNav, activeCasino, onClick, onDescripionMenuClick, isMobileMenuDescriptionCasinoOpen, jackpotsValues }: IProps
 ) => (
     <CasinoDescriptionCommonPart
+      jackpotsValues={jackpotsValues}
       casinosListNav={casinosListNav}
       activeCasino={activeCasino}
       onClick={onClick}

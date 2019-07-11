@@ -82,6 +82,7 @@ export class ViewPage extends React.Component<IProps> {
   
   public renderCasonoDescriptionGeneral = () => {
     const { casinosListNav, activeCasino, isMobileMenuDescriptionCasinoOpen, jackpotsValues } = this.props;
+    // console.log({jackpotsValues});
     return <CasonoDescriptionGeneral
       casinosListNav={casinosListNav}
       onClick={this.onCasinoDescriptionClick}
@@ -94,6 +95,7 @@ export class ViewPage extends React.Component<IProps> {
 
   public renderCasinoDescriptionPromo = () => {
     const { casinosListNav, activeCasino, isMobileMenuDescriptionCasinoOpen, jackpotsValues } = this.props;
+
     return <CasinoDescriptionPromo
       casinosListNav={casinosListNav}
       onClick={this.onCasinoDescriptionClick}
@@ -133,7 +135,7 @@ export class ViewPage extends React.Component<IProps> {
   public renderHomeContent = () => {
     const { jackpotsValues } = this.props;
 
-   return <HomeContent jackpotsValues={jackpotsValues} />
+    return <HomeContent jackpotsValues={jackpotsValues} />
   }
 
   public onMainLogoClick = () => {
