@@ -138,6 +138,12 @@ export class ViewPage extends React.Component<IProps> {
     return <HomeContent jackpotsValues={jackpotsValues} />
   }
 
+  public renderCasinosContent = () => {
+    const { jackpotsValues } = this.props;
+
+    return <CasinosContent jackpotsValues={jackpotsValues}/>
+  }
+
   public onMainLogoClick = () => {
     const { nullNavs } = this.props;
 
@@ -165,7 +171,7 @@ export class ViewPage extends React.Component<IProps> {
           <Route exact={true} path='/' render={this.renderHomeContent} />
           <Route exact={true} path='/about' component={AboutUsContent}/>
           <Route exact={true} path='/corrier' component={CorriereContent}/>
-          <Route exact={true} path='/casinos' component={CasinosContent}/>
+          <Route exact={true} path='/casinos' render={this.renderCasinosContent}/>
           <Route exact={true} path='/games' component={GameListContent}/>
           <Route exact={true} path={`/casinos/${activeCasino}`} render={this.renderCasonoDescriptionGeneral}/>
           <Route exact={true} path={`/casinos/${activeCasino}-main`} render={this.renderCasonoDescriptionGeneral}/>
