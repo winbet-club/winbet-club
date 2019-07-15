@@ -36,9 +36,12 @@ export const CommonWrapper = (
     onMobileMenuClick={onMobileMenuClick}
     onMainLogoClick={onMainLogoClick}
   />
-  <MobileMenu itemsList={menuNavItemsList} isMobileMenuOpen={isMobileMenuOpen} />
   <TabletMenuWrapper>
-    <MobileMenu itemsList={menuNavItemsList} isMobileMenuOpen={isMobileMenuOpen} />
+    <MobileMenu
+      itemsList={menuNavItemsList}
+      isMobileMenuOpen={isMobileMenuOpen}
+      onMenuClick={onMenuClick}
+    />
   </TabletMenuWrapper>
 
   <MobileMenuWrapper>
@@ -59,8 +62,9 @@ const Wrapper = styled.div`
 `;
 
 const TabletMenuWrapper = styled.div`
-  @media screen and (max-width: 570px) {
-    display: none;
+  display: none;
+  @media screen and (min-width: 570px) and (max-width: 993px) {
+    display: block;
   }
 `;
 

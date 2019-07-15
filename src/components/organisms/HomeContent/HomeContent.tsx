@@ -4,16 +4,15 @@ import styled from 'styled-components';
 import { Slider, Promo, JackpotCardsList } from 'molecules';
 import { colors } from 'context';
 
-export const HomeContent = ({jackpotsValues}: any) => {
-  console.log({jackpotsValues});
-  return   <Wrapper>
-  <JackpotCardsListWrapper>
-      <JackpotCardsList cardJackpotData={jackpotsValues} />
-  </JackpotCardsListWrapper>
-  <Slider/>
-  <Promo/>
-</Wrapper>
-}
+export const HomeContent = ({jackpotsValues}: any) => (
+  <Wrapper>
+    <JackpotCardsListWrapper>
+        <JackpotCardsList cardJackpotData={jackpotsValues} />
+    </JackpotCardsListWrapper>
+    <Slider/>
+    <Promo/>
+  </Wrapper>
+)
 
 const Wrapper = styled.div``;
 

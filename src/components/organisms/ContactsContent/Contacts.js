@@ -11,7 +11,7 @@ export const ContactsContent = ({ casinosInfo }) => (
     <Map defaultState={mapState} width='100%' height='500px'> 
       {
         geoObjectSetings.map((object, i) => {
-          const onClick = () => console.log(object.id)
+          const onClick = () => console.log(object.id);
 
           return <GeoObject {...object} key={i} onClick={onClick} />
         })

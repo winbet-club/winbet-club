@@ -32,9 +32,9 @@ export class ViewPage extends React.Component<IProps> {
 
   public componentDidMount() {
     this.props.loadJackpots();
-    setInterval(() => {
-      this.props.updateJackpots();
-    }, 10000);
+    // setInterval(() => {
+    //   this.props.updateJackpots();
+    // }, 10000);
     // const { saveNewTime } = this.props;
 
     // setInterval(() => {
@@ -58,7 +58,7 @@ export class ViewPage extends React.Component<IProps> {
 
   public onMobileMenuClick =() => {
     const { toggleMobileMenu } = this.props;
-    
+    console.log('click');
     toggleMobileMenu();
   }
 
@@ -82,7 +82,7 @@ export class ViewPage extends React.Component<IProps> {
   
   public renderCasonoDescriptionGeneral = () => {
     const { casinosListNav, activeCasino, isMobileMenuDescriptionCasinoOpen, jackpotsValues } = this.props;
-    // console.log({jackpotsValues});
+
     return <CasonoDescriptionGeneral
       casinosListNav={casinosListNav}
       onClick={this.onCasinoDescriptionClick}
@@ -184,4 +184,3 @@ export class ViewPage extends React.Component<IProps> {
     )
   }
 }
-
