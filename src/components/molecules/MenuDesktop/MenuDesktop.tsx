@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { IMenuNavItem, MobileMenuIcon, Logo, MenuNav } from 'atoms';
-// import { colors } from 'context';
 
 interface IProps {
   menuNavItemsList: IMenuNavItem[];

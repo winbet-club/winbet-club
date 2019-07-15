@@ -14,16 +14,20 @@ interface IProps {
   itemsList: INavElem[];
   isMobileMenuOpen: boolean;
   onMenuFullNavItemsListClick?: (value: string) => void;
+  onMenuClick?: (value: string) => void;
 }
 
 export const MobileMenu = (
-  { itemsList, isMobileMenuOpen, onMenuFullNavItemsListClick }: IProps
+  { itemsList, isMobileMenuOpen, onMenuFullNavItemsListClick, onMenuClick }: IProps
 ) => (
 <Wrapper isMobileMenuOpen={isMobileMenuOpen}>
   {
     itemsList.map(({value, isActive}) => {
-      if(onMenuFullNavItemsListClick) {
-        const bindClick = () => onMenuFullNavItemsListClick(value);
+        // @ts-ignore
+        const bindClick = () => onMenuFullNavItemsListClick
+        ? onMenuFullNavItemsListClick(value)
+        // @ts-ignore
+        : onMenuClick(value);
 
         return (
           <Link to={`/${linkTransformator[value]}`} key={value}>
@@ -34,7 +38,6 @@ export const MobileMenu = (
             >{value.toUpperCase()}</NavItem>
           </Link>
         )
-      }
       return;
     })}
 </Wrapper>
@@ -50,7 +53,7 @@ const Wrapper = styled.div<{isMobileMenuOpen: boolean}>`
   align-items: center;
   background: -webkit-linear-gradient(90deg, #2e2e2e 10%, #4b4b4b 90%);
   @media screen and (min-width: 998px) {
-    display: none;
+    /* display: none; */
   }
 `;
 
