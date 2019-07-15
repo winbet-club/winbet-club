@@ -1,0 +1,1 @@
+export { BannerCover } from './BannerCover';

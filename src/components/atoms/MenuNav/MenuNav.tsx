@@ -54,5 +54,29 @@ const NavItem = styled.li<{isActive: boolean}>`
   list-style-type: none;
   margin-right: 15px;
   font-weight: bold;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  &::after {
+    content: '';
+    background: ${colors.red};
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    width: 0;
+  }
+
+  &:hover {
+    color: ${colors.yellow};
+    
+    &::after {
+      width: 100%;
+      transition: width .2s ease-in-out;
+
+    }
+    /* border-bottom: 2px solid;  */
+  }
 `;
  

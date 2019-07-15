@@ -18,6 +18,7 @@ export const colors = {
   silver1: '#141414', // TODO Rename
   silver2: '#66635b', // TODO Rename
   silver3: '#60605F', // TODO Rename
+  silver4: '#292929', // TODO Rename
 
   background1: '#1a1a1c',
   bgSilver: '#434343',

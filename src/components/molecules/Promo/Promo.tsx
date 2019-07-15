@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import { colors } from 'context';
 import { textConstants, promoImgList } from 'context';
+import { BannerCover } from 'atoms';
 
 const { promo } = textConstants;
 
@@ -12,8 +13,9 @@ export const Promo = () => (
       <Header>{promo.toUpperCase()}</Header>
       <BannersField>
         {
-          promoImgList.map((img) => 
-            <Banner key={img}>
+          promoImgList.map(({img, description}) => 
+            <Banner key={img} description={description}>
+              {/* <BannerCover text={description}/> */}
               <BannerImg src={img}/>
             </Banner>
           )
@@ -44,10 +46,14 @@ const BannerImg = styled.img`
   width: 100%;
 `;
 
-const Banner = styled.div`
+const Banner = styled.div<{description: string}>`
   width: 50%;
   background-size: contain;
+  position: relative;
 
+  ${BannerCover}:hover & {
+    fill: rebeccapurple;
+  }
   @media screen and (max-width: 992px) {
     width: 100%;
   }
