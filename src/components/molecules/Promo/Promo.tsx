@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import { colors } from 'context';
 import { textConstants, promoImgList } from 'context';
-import { BannerCover } from 'atoms';
+// import { BannerCover } from 'atoms';
 
 const { promo } = textConstants;
 
@@ -13,9 +13,12 @@ export const Promo = () => (
       <Header>{promo.toUpperCase()}</Header>
       <BannersField>
         {
-          promoImgList.map(({img, description}) => 
+          promoImgList.map(({img, header, description}) => 
             <Banner key={img} description={description}>
-              {/* <BannerCover text={description}/> */}
+              <BannerCover>
+                <PromoHeader>{header}</PromoHeader>
+                  {description}
+              </BannerCover>
               <BannerImg src={img}/>
             </Banner>
           )
@@ -46,13 +49,26 @@ const BannerImg = styled.img`
   width: 100%;
 `;
 
+
+const BannerCover = styled.div`
+  display: none;
+  position: absolute;
+  background: ${colors.silver4};
+  height: 100%;
+  width: 100%;
+  opacity: .8;
+  color: ${colors.white};
+  padding: 30px;
+  box-sizing: border-box;
+`;
+
+
 const Banner = styled.div<{description: string}>`
   width: 50%;
   background-size: contain;
   position: relative;
-
-  ${BannerCover}:hover & {
-    fill: rebeccapurple;
+  &:hover ${BannerCover} {
+    display: block;
   }
   @media screen and (max-width: 992px) {
     width: 100%;
@@ -86,3 +102,14 @@ const Header = styled.h2`
   border-image: linear-gradient(right, rgba(0, 0, 0, 0), #efe3bd, #efe3bd ) 0 0 100%;
 `;
 
+const PromoHeader = styled.h2`
+  margin-bottom: 20px;
+  width: 35%;
+  height: 40px;
+  display: flex;
+  font-weight: 600;
+  color: ${colors.white};
+  font-size: 30px;
+  border-bottom: 1px solid;
+  border-image: linear-gradient(right, rgba(0, 0, 0, 0), #efe3bd, #efe3bd ) 0 0 100%;
+`;

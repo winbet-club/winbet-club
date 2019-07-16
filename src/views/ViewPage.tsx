@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route} from 'react-router-dom';
 import { HomeContent, AboutUsContent, CorriereContent, CasinosContent, CommonWrapper,
   CasonoDescriptionGeneral, CasinoDescriptionPromo, CasinoDescriptionEvents, CasinoDescriptionGallary,
   GameListContent, ContactsContent } from 'organisms';
+import { Promo } from 'molecules';
 import { IStore } from 'reducers';
 import { eventsList } from 'context';
 
@@ -31,10 +32,12 @@ export class ViewPage extends React.Component<IProps> {
   }
 
   public componentDidMount() {
-    this.props.loadJackpots();
-    // setInterval(() => {
-    //   this.props.updateJackpots();
-    // }, 10000);
+    const { loadJackpots, updateJackpots } = this.props;
+
+    loadJackpots();
+    setInterval(() => {
+      updateJackpots();
+    }, 7000);
     // const { saveNewTime } = this.props;
 
     // setInterval(() => {
@@ -58,7 +61,7 @@ export class ViewPage extends React.Component<IProps> {
 
   public onMobileMenuClick =() => {
     const { toggleMobileMenu } = this.props;
-    console.log('click');
+    
     toggleMobileMenu();
   }
 
@@ -173,6 +176,7 @@ export class ViewPage extends React.Component<IProps> {
           <Route exact={true} path='/corrier' component={CorriereContent}/>
           <Route exact={true} path='/casinos' render={this.renderCasinosContent}/>
           <Route exact={true} path='/games' component={GameListContent}/>
+          <Route exact={true} path='/promo' component={Promo}/>
           <Route exact={true} path={`/casinos/${activeCasino}`} render={this.renderCasonoDescriptionGeneral}/>
           <Route exact={true} path={`/casinos/${activeCasino}-main`} render={this.renderCasonoDescriptionGeneral}/>
           <Route exact={true} path={`/casinos/${activeCasino}-promo`} render={this.renderCasinoDescriptionPromo}/>

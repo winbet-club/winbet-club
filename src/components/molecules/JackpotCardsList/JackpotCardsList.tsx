@@ -31,7 +31,7 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  width: 80%;
+  width: 95%;
   margin: auto;
   padding: 40px 0;
 `;

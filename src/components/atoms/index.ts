@@ -15,4 +15,3 @@ export { AboutCasino } from './AboutCasino';
 export { PromoNote, IPromoNote } from './PromoNote';
 export { Contacts } from './Contacts';
 export { CasinoAddress, ICasinoAddress } from './CasinoAddress';
-export { BannerCover } from './BannerCover';
