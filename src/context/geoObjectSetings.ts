@@ -3,13 +3,13 @@ const bollunProperties = [
     balloonContent: '<h2>привет1</h2>',
     balloonContentHeader: '<h2>привет2</h2>',
     hintContent: '<h2>привет3</h2>',
-    iconCaption: 'Русиянова 1',
+    iconCaption: 'ул. Руссиянова 1 - 1',
   },
   {
     balloonContent: '<h2>привет</h2>',
     balloonContentHeader: '<h2>привет</h2>',
     hintContent: '<h2>привет</h2>',
-    iconCaption: 'некрасова 1',
+    iconCaption: 'ул. Богдановича 120 Б',
   }
 ]
 

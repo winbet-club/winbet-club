@@ -7,14 +7,14 @@ import { textConstants, colors } from 'context';
 
 const { winbetMinsk } = textConstants;
 
-export const CasinosContent = ({jackpotsValues}: any) => (
+export const CasinosContent = ({jackpotsValues, casinoClick}: any) => (
   <Wrapper>
     <JackpotCardsListWrapper>
       <JackpotCardsList cardJackpotData={jackpotsValues} />
     </JackpotCardsListWrapper>
     <Slider/>
     <PageDescription text={winbetMinsk} address='Русияова 1' />
-    <CasinosList/>
+    <CasinosList casinoClick={casinoClick}/>
   </Wrapper>
 )
 

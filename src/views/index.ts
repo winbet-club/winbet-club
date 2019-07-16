@@ -14,6 +14,7 @@ import {
   updateJackpots,
   changeMenuNav,
   nullNavs,
+  changeActiveCasino,
 } from 'reducers';
 
 const mapStateToProps = ({
@@ -50,6 +51,7 @@ const mapDispatchProps = (dispatch: Dispatch) => ({
   changeCasinoDescriptionNav: (value: string) => dispatch(changeCasinoDescriptionNav(value)),
   changeMenuFullNavItemsList: (value: string) => dispatch(changeMenuFullNavItemsList(value)),
   changeMenuNav: (value: string) => dispatch(changeMenuNav(value)),
+  changeActiveCasino: (value: string) => dispatch(changeActiveCasino(value)),
   nullNavs: () => dispatch(nullNavs()),
 });
 

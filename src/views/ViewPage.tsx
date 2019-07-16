@@ -21,6 +21,7 @@ interface IProps extends IStore {
   changeCasinoDescriptionNav: (value: string) => void;
   changeMenuFullNavItemsList: (value: string) => void;
   changeMenuNav: (value: string) => void;
+  changeActiveCasino: (value: string) => void;
   nullNavs: () => void;
 }
 
@@ -67,7 +68,7 @@ export class ViewPage extends React.Component<IProps> {
 
   public onCasinoDescriptionClick = (value: string) => {
     const { changeCasinoDescriptionNav } = this.props;
-
+    
     changeCasinoDescriptionNav(value)
   }
 
@@ -141,10 +142,16 @@ export class ViewPage extends React.Component<IProps> {
     return <HomeContent jackpotsValues={jackpotsValues} />
   }
 
+  public casinoClick = (value: string) => {
+    const { changeActiveCasino } = this.props;
+    console.log(value);
+    changeActiveCasino(value);
+  }
+
   public renderCasinosContent = () => {
     const { jackpotsValues } = this.props;
 
-    return <CasinosContent jackpotsValues={jackpotsValues}/>
+    return <CasinosContent jackpotsValues={jackpotsValues} casinoClick={this.casinoClick}/>
   }
 
   public onMainLogoClick = () => {

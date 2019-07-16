@@ -3,7 +3,7 @@ export const linkTransformator = {
   'новости': 'news',
   'карьера': 'corrier',
   'контакты': 'contacts',
-  'промоакции': 'promo',
+  'акции': 'promo',
   'игры': 'games',
   'клуб': 'clab',
   'казино': 'casinos',

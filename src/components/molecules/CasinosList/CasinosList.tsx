@@ -6,12 +6,12 @@ import { CasinoBlock } from 'atoms';
 import { casinosAddressWithImg } from 'context';
 import { colors } from 'context';
 
-export const CasinosList = () => (
+export const CasinosList = ({casinoClick}: any) => (
 <Wrapper>
   {
     casinosAddressWithImg.map(({img, address, url}: any) => 
       <Link to={url} key={address}>
-        <CasinoBlock image={img} description={address} />
+        <CasinoBlock image={img} description={address} casinoClick={casinoClick} url={url.split('/')[1]} />
       </Link>
       )
   }

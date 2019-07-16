@@ -1,6 +1,6 @@
 export const menuItemsList = [
   {
-    value: 'промоакции',
+    value: 'акции',
     isActive: false,
   },
   {
