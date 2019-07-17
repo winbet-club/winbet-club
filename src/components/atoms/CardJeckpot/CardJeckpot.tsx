@@ -41,11 +41,28 @@ const Wrapper = styled.div`
   width: 20%;
 
 
+  @media screen and (max-width: 1200px) {
+    width: 24%;
+    margin-bottom: 10px;
+  }
+
   @media screen and (max-width: 992px) {
+    width: calc(40% - 4px);
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  @media screen and (max-width: 650px) {
     width: calc(50% - 4px);
     margin-bottom: 10px;
   }
   @media screen and (max-width: 580px) {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @media screen and (max-width: 400px) {
     width: 100%;
   }
 `;

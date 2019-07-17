@@ -14,6 +14,6 @@ export const casinosAddressWithImg = [
   {
     img: casino_2,
     address: 'ул. Немига 40',
-    url: 'casinos/bogdanovicha'
+    url: 'casinos/nemiga'
   },
 ]

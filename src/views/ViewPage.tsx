@@ -68,7 +68,7 @@ export class ViewPage extends React.Component<IProps> {
 
   public onCasinoDescriptionClick = (value: string) => {
     const { changeCasinoDescriptionNav } = this.props;
-    
+
     changeCasinoDescriptionNav(value)
   }
 
@@ -94,6 +94,7 @@ export class ViewPage extends React.Component<IProps> {
       jackpotsValues={jackpotsValues}
       onDescripionMenuClick={this.onDescripionMenuClick}
       isMobileMenuDescriptionCasinoOpen={isMobileMenuDescriptionCasinoOpen}
+      casinoClick={this.casinoClick}
       />
   }
 
@@ -107,6 +108,7 @@ export class ViewPage extends React.Component<IProps> {
       jackpotsValues={jackpotsValues}
       onDescripionMenuClick={this.onDescripionMenuClick}
       isMobileMenuDescriptionCasinoOpen={isMobileMenuDescriptionCasinoOpen}
+      casinoClick={this.casinoClick}
       />
   }
 
@@ -120,6 +122,7 @@ export class ViewPage extends React.Component<IProps> {
       jackpotsValues={jackpotsValues}
       onDescripionMenuClick={this.onDescripionMenuClick}
       isMobileMenuDescriptionCasinoOpen={isMobileMenuDescriptionCasinoOpen}
+      casinoClick={this.casinoClick}
       />
   }
 
@@ -133,6 +136,7 @@ export class ViewPage extends React.Component<IProps> {
       jackpotsValues={jackpotsValues}
       onDescripionMenuClick={this.onDescripionMenuClick}
       isMobileMenuDescriptionCasinoOpen={isMobileMenuDescriptionCasinoOpen}
+      casinoClick={this.casinoClick}
       />
   }
 
@@ -144,7 +148,7 @@ export class ViewPage extends React.Component<IProps> {
 
   public casinoClick = (value: string) => {
     const { changeActiveCasino } = this.props;
-    console.log(value);
+
     changeActiveCasino(value);
   }
 
@@ -161,7 +165,15 @@ export class ViewPage extends React.Component<IProps> {
   }
 
   public render() {
-    const { navList, menuNavItemsList, isMobileMenuOpen, menuFullNavItemsList, casinosInfo, time, activeCasino } = this.props;
+    const {
+      navList,
+      menuNavItemsList,
+      isMobileMenuOpen,
+      menuFullNavItemsList,
+      casinosInfo,
+      time,
+      activeCasino,
+    } = this.props;
 
     const getContactsContent = () => <ContactsContent casinosInfo={casinosInfo}  />
     return (

@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { PageDescription } from 'atoms';
-import {  Slider, CasinosList, JackpotCardsList } from 'molecules';
+import {  Slider, CasinosList, JackpotCardsList, YaMap } from 'molecules';
 import { textConstants, colors } from 'context';
 
 const { winbetMinsk } = textConstants;
@@ -13,8 +13,9 @@ export const CasinosContent = ({jackpotsValues, casinoClick}: any) => (
       <JackpotCardsList cardJackpotData={jackpotsValues} />
     </JackpotCardsListWrapper>
     <Slider/>
-    <PageDescription text={winbetMinsk} address='Русияова 1' />
+    <PageDescription text={winbetMinsk} />
     <CasinosList casinoClick={casinoClick}/>
+    <YaMap/>
   </Wrapper>
 )
 

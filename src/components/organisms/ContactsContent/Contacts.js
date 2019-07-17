@@ -7,6 +7,7 @@ import { colors, geoObjectSetings, mapState } from "context";
 
 export const ContactsContent = ({ casinosInfo }) => (
   <Wrapper>
+    {/* <YaMap/> */}
   <YMaps>
     <Map defaultState={mapState} width='100%' height='500px'> 
       {

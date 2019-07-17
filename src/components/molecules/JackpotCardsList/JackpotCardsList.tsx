@@ -34,6 +34,9 @@ const Wrapper = styled.div`
   width: 95%;
   margin: auto;
   padding: 40px 0;
+  @media screen and (max-width: 992px) {
+    justify-content: center;
+  }
 `;
 
 const Logo = styled.div`
@@ -42,9 +45,16 @@ const Logo = styled.div`
   background: url(${jackpotcardsLogo}) no-repeat;
   background-position-y: center;
   background-size: contain;
+
+
+  @media screen and (max-width: 1200px) {
+    width: 100%;
+    margin-bottom: 10px;
+  }
   @media screen and (max-width: 992px) {
     width: 100%;
     margin-bottom: 10px;
+    background-position: center;
   }
   @media screen and (max-width: 580px) {
     background: url(${jackpotcardsLogoMobi}) center no-repeat;
