@@ -29,7 +29,7 @@ const H2 = styled.h2`
   font-size: 40px;
 `;
 
-const Text = styled.p`
+const Text = styled.div`
   text-indent: 20px;
   line-height: 25px;
 `;

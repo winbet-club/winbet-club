@@ -23,4 +23,6 @@ const Wrapper = styled.div`
   justify-content: center;
   flex-wrap: wrap;
   background: ${colors.black};
+  padding-top: 50px;
+  padding-bottom: 50px;
 `;
