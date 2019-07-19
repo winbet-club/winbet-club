@@ -26,7 +26,10 @@ export const Contacts = (
       </WorkTime>
       <Phones>
         <HeaderSpan>{phones.toUpperCase()}:</HeaderSpan>
-        <Span>{addressTransformator[activeCasino].phones}</Span>
+        <PhoneNumber
+          href={`tel:${addressTransformator[activeCasino].phones}`}>
+          {addressTransformator[activeCasino].phones}
+        </PhoneNumber>
       </Phones>
     </ContextBlock>
 
@@ -99,9 +102,12 @@ const WorkTime = styled.div`
   }
 `;
 
-const Span = styled.span`
-
+const PhoneNumber = styled.a`
+  text-decoration: none;
+  color: ${colors.white};
 `;
+
+const Span = styled.span``;
 
 const HeaderSpan = styled.span`
   margin-bottom: 15px;

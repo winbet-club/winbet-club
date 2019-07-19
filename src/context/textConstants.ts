@@ -6,7 +6,7 @@ export const textConstants = {
   gamesDescription: 'ИГРАЙ BLACK JACK | ROULETTE | SLOTS | JACKPOTS',
   actions: 'события',
   contacts: 'контакты',
-  phones: 'телефоны',
+  phones: 'Телефон',
 
   currencyBYN: 'byn',
   footerText: 'Copyright 2019, Casino Solutions Ltd. All rights reserved.',
@@ -14,7 +14,7 @@ export const textConstants = {
   aboutCasino: 'о казино',
   gallary: 'Галерея',
   corrierHeader: 'Работа у нас',
-  address: 'адрес',
+  address: 'Адрес',
   workTime: 'Время работы',
   vacancy: 'Вакансии',
 
