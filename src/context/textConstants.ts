@@ -1,5 +1,5 @@
 export const textConstants = {
-  menu: 'menu',
+  menu: 'меню',
   promo: 'Акции',
   winbetMinsk: 'winbet минск',
   winbetGames: 'Игры Winbet',

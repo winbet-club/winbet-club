@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { BrowserRouter as Router, Route} from 'react-router-dom';
+import { LocalizeProvider } from "react-localize-redux";
 
 import { HomeContent, AboutUsContent, CorriereContent, CasinosContent, CommonWrapper,
   CasonoDescriptionGeneral, CasinoDescriptionPromo, CasinoDescriptionEvents, CasinoDescriptionGallary,
@@ -168,7 +169,7 @@ export class ViewPage extends React.Component<IProps> {
     const {
       navList,
       menuNavItemsList,
-      isMobileMenuOpen,
+  isMobileMenuOpen,
       menuFullNavItemsList,
       casinosInfo,
       time,
@@ -177,7 +178,8 @@ export class ViewPage extends React.Component<IProps> {
 
     const getContactsContent = () => <ContactsContent casinosInfo={casinosInfo}  />
     return (
-      <Router>
+      <LocalizeProvider>
+        <Router>
         <CommonWrapper
           time={time}
           navList={navList}
@@ -203,7 +205,8 @@ export class ViewPage extends React.Component<IProps> {
           <Route exact={true} path={`/casinos/${activeCasino}-gallary`} render={this.renderCasinoDescriptionGallary}/>
           <Route exact={true} path='/contacts' render={getContactsContent}/>
         </CommonWrapper>
-      </Router>
+        </Router>
+      </LocalizeProvider>
     )
   }
 }
