@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import { Dispatch } from 'redux';
+import { withLocalize } from 'react-localize-redux';
 
 import { ViewPage as ViewPageComponent } from './ViewPage';
 import {
@@ -55,7 +56,7 @@ const mapDispatchProps = (dispatch: Dispatch) => ({
   nullNavs: () => dispatch(nullNavs()),
 });
 
-export const ViewPage = connect(
+export const ViewPage = withLocalize(connect(
   mapStateToProps,
   mapDispatchProps
-)(ViewPageComponent);
+)(ViewPageComponent) as any);

@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { BrowserRouter as Router, Route} from 'react-router-dom';
-import { LocalizeProvider } from "react-localize-redux";
 
 import { HomeContent, AboutUsContent, CorriereContent, CasinosContent, CommonWrapper,
   CasonoDescriptionGeneral, CasinoDescriptionPromo, CasinoDescriptionEvents, CasinoDescriptionGallary,
@@ -24,12 +23,15 @@ interface IProps extends IStore {
   changeMenuNav: (value: string) => void;
   changeActiveCasino: (value: string) => void;
   nullNavs: () => void;
+  setActiveLanguage: (leng:string) => void;
 }
 
 export class ViewPage extends React.Component<IProps> {
+
   public onNavClick = (value: string) => {
-    const { changeHeaderNav } = this.props;
-    
+    const { changeHeaderNav, setActiveLanguage } = this.props;
+    setActiveLanguage('en');
+
     changeHeaderNav(value);
   }
 
@@ -57,7 +59,7 @@ export class ViewPage extends React.Component<IProps> {
 
   public onMenuClick =(value: string) => {
     const { changeMenuNav } = this.props;
-    
+
     changeMenuNav(value);
   }
 
@@ -178,7 +180,6 @@ export class ViewPage extends React.Component<IProps> {
 
     const getContactsContent = () => <ContactsContent casinosInfo={casinosInfo}  />
     return (
-      <LocalizeProvider>
         <Router>
         <CommonWrapper
           time={time}
@@ -206,7 +207,6 @@ export class ViewPage extends React.Component<IProps> {
           <Route exact={true} path='/contacts' render={getContactsContent}/>
         </CommonWrapper>
         </Router>
-      </LocalizeProvider>
     )
   }
 }
