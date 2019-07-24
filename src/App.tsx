@@ -28,6 +28,7 @@ class App extends React.Component {
   }
 
   public render() {
+    console.log({globalTranslations});
     return (
       <LocalizeProvider>
         <ViewPage/>
