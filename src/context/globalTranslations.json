@@ -2,5 +2,37 @@
   "aboutAs": [
     "О нас",
     "About us"
-  ]
+  ],
+  "some?": {
+    "promo": [
+      "Акции",
+      "Promo"
+    ],
+    "news": [
+      "Новости",
+      "News"
+    ],
+    "career": [
+      "Карьера",
+      "Career"
+    ],
+    "contacts": [
+      "Контакты",
+      "Contacts"
+    ]
+  },
+  "menu": {
+    "promo": [
+      "Акции",
+      "Promo"
+    ],
+    "games": [
+      "Игры",
+      "Games"
+    ],
+    "casinos": [
+      "Казино",
+      "Casinos"
+    ]
+  }
 }

@@ -7,15 +7,15 @@ import { Provider } from 'react-redux';
 import { applyMiddleware, compose, createStore } from 'redux';
 import createSageMiddleware from 'redux-saga';
 
-import { mainReducer } from 'reducers'
+import { rootReducer } from 'reducers'
 import { rootSaga } from 'core';
 
 const sagaMiddleware = createSageMiddleware();
 const composeEnhancer: typeof compose =
   (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-const store = createStore(
-  mainReducer,
+export const store = createStore(
+  rootReducer,
   composeEnhancer(
     applyMiddleware(
       sagaMiddleware

@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { Translate } from "react-localize-redux";
 
 import { colors } from 'context';
 import { linkTransformator } from 'helpers';
@@ -23,10 +24,11 @@ export const MenuNav = (
     {
       menuNavItemsList.map(({value, isActive}: IMenuNavItem) => {
         const onItemClick = () => onMenuClick(value);
-        
         return (
           <Link key={value} to={`/${linkTransformator[value]}`}>
-            <NavItem isActive={isActive} onClick={onItemClick} >{value.toUpperCase()}</NavItem>
+            <NavItem isActive={isActive} onClick={onItemClick} >
+              <Translate id={`menu.${value}`}/>
+            </NavItem>
           </Link>
         )
       })

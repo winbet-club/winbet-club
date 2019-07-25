@@ -1,14 +1,14 @@
 export const menuItemsList = [
   {
-    value: 'акции',
+    value: 'promo',
     isActive: false,
   },
   {
-    value: 'игры',
+    value: 'games',
     isActive: false,
   },
   {
-    value: 'казино',
+    value: 'casinos',
     isActive: false,
   },
 ];

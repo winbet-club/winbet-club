@@ -6,6 +6,7 @@ import { renderToStaticMarkup } from 'react-dom/server';
 import './App.css';
 import { ViewPage } from './views';
 import { globalTranslations } from './context';
+import { store } from './index';
 
 
 class App extends React.Component {
@@ -33,7 +34,7 @@ class App extends React.Component {
   public render() {
 
     return (
-      <LocalizeProvider initialize={this.initialize}>
+      <LocalizeProvider initialize={this.initialize} store={store}>
         <ViewPage/>
       </LocalizeProvider>
     );
