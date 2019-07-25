@@ -11,5 +11,6 @@ storiesOf('Molecules', module)
     time='10:00:00'
     navList={headerNavList}
     onNavClick={action('onClick')}
+    changeLanguage={action('changeLanguage')}
   />
 ))

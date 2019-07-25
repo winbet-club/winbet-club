@@ -29,8 +29,7 @@ interface IProps extends IStore {
 export class ViewPage extends React.Component<IProps> {
 
   public onNavClick = (value: string) => {
-    const { changeHeaderNav, setActiveLanguage } = this.props;
-    setActiveLanguage('en');
+    const { changeHeaderNav } = this.props;
 
     changeHeaderNav(value);
   }
@@ -167,6 +166,13 @@ export class ViewPage extends React.Component<IProps> {
     nullNavs();
   }
 
+  public changeLanguage = (language: string) => {
+    const { setActiveLanguage } = this.props;
+    setActiveLanguage(language);
+
+    console.log(language);
+  }
+
   public render() {
     const {
       navList,
@@ -192,6 +198,7 @@ export class ViewPage extends React.Component<IProps> {
           onMenuFullNavItemsListClick={this.onMenuFullNavItemsListClick}
           menuFullNavItemsList={menuFullNavItemsList}
           onMainLogoClick={this.onMainLogoClick}
+          changeLanguage={this.changeLanguage}
         >
           <Route exact={true} path='/' render={this.renderHomeContent} />
           <Route exact={true} path='/about' component={AboutUsContent}/>

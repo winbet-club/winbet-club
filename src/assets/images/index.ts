@@ -11,6 +11,7 @@ import * as corrieraBg from './corriera-bg.png';
 import { banner_1, banner_2 } from './banners';
 import {  promo_1, promo_2 } from './promo';
 import { casino_1, casino_2 } from './casinos';
+import { rusFlag, usaFlag } from './flags';
 
 export { mainLogo, menuIcon, banner_1, banner_2, hearts, spades,diamonds, clubs, jackpotcardsLogo, 
-  jackpotcardsLogoMobi, promo_1, promo_2, corrieraBg, aboutBg, casino_1, casino_2 };
+  jackpotcardsLogoMobi, promo_1, promo_2, corrieraBg, aboutBg, casino_1, casino_2, rusFlag, usaFlag };
