@@ -2,23 +2,24 @@ import { ICasinosListNav } from 'reducers';
 
 export const casinosListNav: ICasinosListNav[] = [
   {
-    value: 'главная',
+    value: 'main',
     isActive: true,
   },
   {
-    value: 'промо',
+    value: 'promo',
     isActive: false,
   },
   {
-    value: 'события',
+    value: 'events',
     isActive: false,
   },
   {
-    value: 'галерея',
+    value: 'gallery',
     isActive: false,
   },
   {
-    value: 'игры',
+    value: 'games',
     isActive: false,
   },
 ];
+

@@ -13,8 +13,7 @@ export const AboutUsContent = () => (
     <Slider/>
     <DescriptionBlock img={aboutBg}>
       <H2>
-      <Translate id="aboutAs" />
-
+        <Translate id="aboutUs" />
       </H2>
       <Text>
         {aboutUsText.split('<newString>').map((str: string, i: number) => <Text key={i}>{str}</Text>)}

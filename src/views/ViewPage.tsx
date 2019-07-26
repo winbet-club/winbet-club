@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { BrowserRouter as Router, Route} from 'react-router-dom';
 
-import { HomeContent, AboutUsContent, CorriereContent, CasinosContent, CommonWrapper,
+import { HomeContent, AboutUsContent, CareerContent, CasinosContent, CommonWrapper,
   CasonoDescriptionGeneral, CasinoDescriptionPromo, CasinoDescriptionEvents, CasinoDescriptionGallary,
   GameListContent, ContactsContent } from 'organisms';
 import { Promo } from 'molecules';
@@ -168,16 +168,15 @@ export class ViewPage extends React.Component<IProps> {
 
   public changeLanguage = (language: string) => {
     const { setActiveLanguage } = this.props;
-    setActiveLanguage(language);
 
-    console.log(language);
+    setActiveLanguage(language);
   }
 
   public render() {
     const {
       navList,
       menuNavItemsList,
-  isMobileMenuOpen,
+      isMobileMenuOpen,
       menuFullNavItemsList,
       casinosInfo,
       time,
@@ -201,8 +200,8 @@ export class ViewPage extends React.Component<IProps> {
           changeLanguage={this.changeLanguage}
         >
           <Route exact={true} path='/' render={this.renderHomeContent} />
-          <Route exact={true} path='/about' component={AboutUsContent}/>
-          <Route exact={true} path='/corrier' component={CorriereContent}/>
+          <Route exact={true} path='/aboutUs' component={AboutUsContent}/>
+          <Route exact={true} path='/career' component={CareerContent}/>
           <Route exact={true} path='/casinos' render={this.renderCasinosContent}/>
           <Route exact={true} path='/games' component={GameListContent}/>
           <Route exact={true} path='/promo' component={Promo}/>

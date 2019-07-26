@@ -3,16 +3,16 @@ import styled from 'styled-components';
 
 import { DescriptionBlock, Slider } from 'molecules';
 import { textConstants, colors, vacancyList } from 'context';
-import { corrieraBg } from 'images';
+import { careeraBg } from 'images';
 
-const { corrierHeader, corrierText, vacancy } = textConstants;
+const { careerHeader, careerText, vacancy } = textConstants;
 
-export const CorriereContent = () => (
+export const CareerContent = () => (
   <Wrapper>
     <Slider/>
-    <DescriptionBlock img={corrieraBg}>
-      <H2>{corrierHeader}</H2>
-      <Text>{corrierText}</Text>
+    <DescriptionBlock img={careeraBg}>
+      <H2>{careerHeader}</H2>
+      <Text>{careerText}</Text>
       <H2>{vacancy}</H2>
       <Ul>
         {vacancyList.map((vacan: string, i: number) => <Li key={vacan}>{vacan}</Li>)}

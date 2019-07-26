@@ -1,18 +1,18 @@
 export const headerNavList = [
   {
-    value: 'о нас',
+    value: 'aboutUs',
     isActive: false,
   },
   {
-    value: 'новости',
+    value: 'news',
     isActive: false,
   },
   {
-    value: 'карьера',
+    value: 'career',
     isActive: false,
   },
   {
-    value: 'контакты',
+    value: 'contacts',
     isActive: false,
   },
 ];

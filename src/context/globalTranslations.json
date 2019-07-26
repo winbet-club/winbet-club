@@ -1,38 +1,66 @@
 {
-  "aboutAs": [
-    "О нас",
-    "About us"
+  "aboutUs": [
+    "О НАС",
+    "ABOUT US"
   ],
-  "some?": {
+  "news": [
+    "НОВОСТИ",
+    "NEWS"
+  ],
+  "career": [
+    "КАРЬЕРА",
+    "CAREER"
+  ],
+  "contacts": [
+    "КОНТАКТЫ",
+    "CONTACTS"
+  ],
     "promo": [
-      "Акции",
-      "Promo"
-    ],
-    "news": [
-      "Новости",
-      "News"
-    ],
-    "career": [
-      "Карьера",
-      "Career"
-    ],
-    "contacts": [
-      "Контакты",
-      "Contacts"
-    ]
-  },
-  "menu": {
-    "promo": [
-      "Акции",
-      "Promo"
-    ],
-    "games": [
-      "Игры",
-      "Games"
-    ],
-    "casinos": [
-      "Казино",
-      "Casinos"
-    ]
-  }
+    "АКЦИИ",
+    "PROMO"
+  ],
+  "main": [
+    "ГЛАВНАЯ",
+    "MAIN"
+  ],
+  "events": [
+    "СОБЫТИЯ",
+    "EVENTS"
+  ],
+  "gallery": [
+    "ГАЛЕРЕЯ",
+    "GALLERY"
+  ],
+  "games": [
+    "ИГРЫ",
+    "GAMES"
+  ],
+  "casinos": [
+    "КАЗИНО",
+    "CASINOS"
+  ],
+  "aboutCasino": [
+    "О КАЗИНО",
+    "ABOUT CASINO"
+  ],
+  "address": [
+    "АДРЕС",
+    "ADDRESS"
+  ],
+  "workTime": [
+    "ВРЕМЯ РАБОТЫ",
+    "WORK TIME"
+  ],
+  "phones": [
+    "ТЕЛЕФОНЫ",
+    "PHONES"
+  ],
+  "workWithUs": [
+    "РАБОТА У НАС",
+    "WORK WITH US"
+  ],
+  "vacancies": [
+    "ВАКАНСИИ",
+    "VACANCIES"
+  ]
 }

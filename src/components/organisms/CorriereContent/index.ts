@@ -1,1 +1,0 @@
-export { CorriereContent } from './CorriereContent';

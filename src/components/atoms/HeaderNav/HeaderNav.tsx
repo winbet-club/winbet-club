@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { Translate } from 'react-localize-redux';
 
 import { colors } from 'context';
-import { linkTransformator } from 'helpers';
 
 export interface INavItem {
   value: string;
@@ -25,13 +25,13 @@ export const HeaderNav = (
           const onNavItemClick = () => onNavClick(value);
 
           return (
-            <Link to={`/${linkTransformator[value]}`} key={value}>
+            <Link to={`/${[value]}`} key={value}>
               <NavItem
                 isActive={isActive}
                 onClick={onNavItemClick}
                 value={value}
               >
-                {value.toUpperCase()}
+                <Translate id={`${value}`}/>
               </NavItem>
             </Link>
           )

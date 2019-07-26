@@ -3,13 +3,13 @@ import styled from 'styled-components';
 
 import { colors } from 'context';
 
-interface ICorriera {
+interface Icareera {
   children: any; // TODO Check
   img: string;
 }
 
 export const DescriptionBlock = (
-  { children, img }: ICorriera
+  { children, img }: Icareera
 ) => (
   <Wrapper>
     <Description>
