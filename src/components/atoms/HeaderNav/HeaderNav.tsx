@@ -31,7 +31,7 @@ export const HeaderNav = (
                 onClick={onNavItemClick}
                 value={value}
               >
-                <Translate id={`${value}`}/>
+                <Translate id={value}/>
               </NavItem>
             </Link>
           )

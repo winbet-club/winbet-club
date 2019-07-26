@@ -37,7 +37,7 @@ export const MobileMenu = (
               onClick={bindClick}
               isMobileMenuOpen={isMobileMenuOpen}
             >
-              <Translate id={`${value}`}/>
+              <Translate id={value}/>
             </NavItem>
           </Link>
         )

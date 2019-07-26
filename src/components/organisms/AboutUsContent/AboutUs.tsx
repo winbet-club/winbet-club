@@ -6,14 +6,14 @@ import { DescriptionBlock, Slider } from 'molecules';
 import { textConstants, colors } from 'context';
 import { aboutBg } from 'images';
 
-const { aboutUsText } = textConstants;
+const { aboutUsText, aboutUs } = textConstants;
 
 export const AboutUsContent = () => (
   <Wrapper>
     <Slider/>
     <DescriptionBlock img={aboutBg}>
       <H2>
-        <Translate id="aboutUs" />
+        <Translate id={aboutUs} />
       </H2>
       <Text>
         {aboutUsText.split('<newString>').map((str: string, i: number) => <Text key={i}>{str}</Text>)}

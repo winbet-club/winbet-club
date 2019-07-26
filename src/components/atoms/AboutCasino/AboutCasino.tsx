@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Translate } from 'react-localize-redux';
 
 import { textConstants, casinosDescriptions, colors } from 'context';
 
@@ -13,7 +14,7 @@ export const AboutCasino = (
   { activeCasino }: IProps
 ) => (
 <Wrapper>
-  <Header>{aboutCasino.toUpperCase()}</Header>
+  <Header><Translate id={aboutCasino}/></Header>
   <Text>
     {
       casinosDescriptions[activeCasino].map((paragraph: string, i: number) => 

@@ -8,7 +8,7 @@ export const linkTransformator = {
   казино: 'casinos',
   промо: 'promo',
   события: 'events',
-  галерея: 'gallary',
+  галерея: 'gallery',
   главная: 'main',
 }
 

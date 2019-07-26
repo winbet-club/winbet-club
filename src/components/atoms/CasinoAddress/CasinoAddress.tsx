@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Translate } from 'react-localize-redux';
 
 import { textConstants, colors } from 'context';
 
@@ -19,13 +20,13 @@ export const CasinoAddress = (
   <Wrapper>
     <Name>{casinoName}</Name>
 
-    <Header>{address}:</Header>
-    <Description>{casinoAddress}</Description>
+    <Header><Translate id={address}/>:</Header>
+    <Description><Translate id={casinoAddress}/></Description>
 
-    <Header>{workTime}:</Header>
+    <Header><Translate id={workTime}/>:</Header>
     <Description>{workDays}</Description>
     <Description>{casinoWorkTime}</Description>
-    <Header>{phones}</Header>
+    <Header><Translate id={phones}/></Header>
     <PhoneNumber href={`tel:${phone}`}>{phone}</PhoneNumber>
   </Wrapper>
 );

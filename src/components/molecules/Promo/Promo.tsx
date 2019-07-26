@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Translate } from 'react-localize-redux';
 
 import { colors } from 'context';
 import { textConstants, promoImgList } from 'context';
@@ -9,7 +10,7 @@ const { promo } = textConstants;
 export const Promo = () => (
   <Wrapper>
     <Container>
-      <Header>{promo.toUpperCase()}</Header>
+      <Header><Translate id={promo}/></Header>
       <BannersField>
         {
           promoImgList.map(({img, header, description}) => 

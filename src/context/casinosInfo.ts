@@ -1,7 +1,7 @@
 export const casinosInfo = [
   {
     casinoName: 'Игровой клуб',
-    casinoAddress: 'г. Минск ул. Руссиянова 1 - 1',
+    casinoAddress: 'russiyanova',
     workDays: 'Понедельник - воскресенье',
     casinoWorkTime: 'c 00 до 24',
     phone: '+375 29 256 22 55',
@@ -9,7 +9,7 @@ export const casinosInfo = [
   },
   {
     casinoName: 'Игровой клуб',
-    casinoAddress: 'г. Минск ул. Богдановича 120 Б',
+    casinoAddress: 'bogdanovicha',
     workDays: 'Понедельник - воскресенье',
     casinoWorkTime: 'c 00 до 24',
     phone: '+375 29 758 85 54',
@@ -17,7 +17,7 @@ export const casinosInfo = [
   },
   {
     casinoName: 'Игровой клуб',
-    casinoAddress: 'г. Минск ул. Немига 40',
+    casinoAddress: 'nemiga',
     workDays: 'Понедельник - воскресенье',
     casinoWorkTime: 'c 00 до 24',
     phone: '+375 29',

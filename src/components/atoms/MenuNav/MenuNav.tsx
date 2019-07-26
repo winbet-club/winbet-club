@@ -26,7 +26,7 @@ export const MenuNav = (
         return (
           <Link key={value} to={`/${value}`}>
             <NavItem isActive={isActive} onClick={onItemClick} >
-              <Translate id={`${value}`}/>
+              <Translate id={value}/>
             </NavItem>
           </Link>
         )

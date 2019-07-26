@@ -36,7 +36,7 @@ export const CasinoDescriptionNav = (
                   isActive={isActive}
                   onClick={bindClick}
                 >
-                  <Translate id={`${value}`}/>
+                  <Translate id={value}/>
                 </NavValue>
               </Link>
             )

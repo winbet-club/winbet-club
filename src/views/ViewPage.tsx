@@ -209,7 +209,7 @@ export class ViewPage extends React.Component<IProps> {
           <Route exact={true} path={`/casinos/${activeCasino}-main`} render={this.renderCasonoDescriptionGeneral}/>
           <Route exact={true} path={`/casinos/${activeCasino}-promo`} render={this.renderCasinoDescriptionPromo}/>
           <Route exact={true} path={`/casinos/${activeCasino}-events`} render={this.renderCasinoDescriptionEvents}/>
-          <Route exact={true} path={`/casinos/${activeCasino}-gallary`} render={this.renderCasinoDescriptionGallary}/>
+          <Route exact={true} path={`/casinos/${activeCasino}-gallery`} render={this.renderCasinoDescriptionGallary}/>
           <Route exact={true} path='/contacts' render={getContactsContent}/>
         </CommonWrapper>
         </Router>

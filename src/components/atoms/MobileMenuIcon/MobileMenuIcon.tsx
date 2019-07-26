@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Translate } from 'react-localize-redux';
 
 import { colors } from 'context';
 import { menuIcon } from 'images';
@@ -17,7 +18,9 @@ export const MobileMenuIcon = (
 ) => (
 <Wrapper onClick={onMobileMenuClick} >
   <Icon/>
-  {menu.toUpperCase()}
+  <Translate>
+    {({ translate }) => <h1>{(translate(`${menu}`) as string).toUpperCase()}</h1>}
+  </Translate>
 </Wrapper>
 );
 
