@@ -17,11 +17,20 @@ interface IProps {
   jackpotsValues: any[];
   isMobileMenuDescriptionCasinoOpen: boolean;
   onClick: (value: string) => void;
+  casinoClick: (value: string) => void;
   onDescripionMenuClick: () => void;
 }
   
 export const CasonoDescriptionGeneral = (
-  { casinosListNav, activeCasino, onClick, onDescripionMenuClick, isMobileMenuDescriptionCasinoOpen, jackpotsValues }: IProps
+  {
+    casinosListNav,
+    activeCasino,
+    onClick,
+    onDescripionMenuClick,
+    isMobileMenuDescriptionCasinoOpen,
+    jackpotsValues,
+    casinoClick,
+  }: IProps
 ) => (
     <CasinoDescriptionCommonPart
       jackpotsValues={jackpotsValues}
@@ -30,6 +39,7 @@ export const CasonoDescriptionGeneral = (
       onClick={onClick}
       onDescripionMenuClick={onDescripionMenuClick}
       isMobileMenuDescriptionCasinoOpen={isMobileMenuDescriptionCasinoOpen}
+      casinoClick={casinoClick}
     >
       <PaddingWrapper>
         <InfoBlock>
@@ -39,7 +49,7 @@ export const CasonoDescriptionGeneral = (
         <GaleryAndPromo>
           <ImageGalleryWrapper>
             <Header>{gallary} 
-              <Address>{addressTransformator[activeCasino].address}</Address>
+            <Address>{addressTransformator[activeCasino].address}</Address>
             </Header>
             <ImageGallery 
               items={imageGallery[activeCasino]}

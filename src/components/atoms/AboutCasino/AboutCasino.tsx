@@ -38,6 +38,6 @@ const Header = styled.h2`
   margin-bottom: 30px;
 `;
 
-const Text = styled.p`
+const Text = styled.div`
   margin-bottom: 15px;
 `;

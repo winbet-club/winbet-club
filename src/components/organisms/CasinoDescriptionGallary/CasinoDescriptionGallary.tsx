@@ -13,12 +13,13 @@ interface IProps {
   activeCasino: string;
   isMobileMenuDescriptionCasinoOpen: boolean;
   onClick: (value: string) => void;
+  casinoClick: (value: string) => void;
   onDescripionMenuClick: () => void;
 }
   
 export const CasinoDescriptionGallary = (
   { jackpotsValues, promoList, casinosListNav, activeCasino, onClick,
-    isMobileMenuDescriptionCasinoOpen, onDescripionMenuClick }: IProps
+    isMobileMenuDescriptionCasinoOpen, onDescripionMenuClick, casinoClick }: IProps
 ) => (
     <CasinoDescriptionCommonPart
       jackpotsValues={jackpotsValues}
@@ -27,6 +28,7 @@ export const CasinoDescriptionGallary = (
       onClick={onClick}
       onDescripionMenuClick={onDescripionMenuClick}
       isMobileMenuDescriptionCasinoOpen={isMobileMenuDescriptionCasinoOpen}
+      casinoClick={casinoClick}
     >
       <Wrapper>
         <ImageGallery 

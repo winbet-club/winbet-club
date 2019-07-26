@@ -7,6 +7,7 @@ import { colors, geoObjectSetings, mapState } from "context";
 
 export const ContactsContent = ({ casinosInfo }) => (
   <Wrapper>
+    {/* <YaMap/> */}
   <YMaps>
     <Map defaultState={mapState} width='100%' height='500px'> 
       {
@@ -21,13 +22,14 @@ export const ContactsContent = ({ casinosInfo }) => (
   </YMaps> 
     {
       casinosInfo.map(
-      ({ casinoAddress, casinoName, casinoWorkTime, workDays }) => (
+      ({ casinoAddress, casinoName, casinoWorkTime, workDays, phone }) => (
         <CasinoAddress
           key={casinoAddress}
           casinoAddress={casinoAddress}
           casinoName={casinoName}
           casinoWorkTime={casinoWorkTime}
           workDays={workDays}
+          phone={phone}
         />
       )
     )

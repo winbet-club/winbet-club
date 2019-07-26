@@ -5,17 +5,23 @@ import { colors } from 'context';
 export interface ICasinoBlock {
   image: HTMLImageElement;
   description: string;
+  activeCasino: string;
+  casinoClick: (value: string) => void;
 }
 
 export const SmallCasinoBlock = (
-  { image, description }: ICasinoBlock
-) => (
-  <Wrapper image={image}>
-    <Description>
-      {description}
-    </Description>
-  </Wrapper>
-);
+  { image, description, activeCasino, casinoClick }: ICasinoBlock
+) => {
+  const bindClick = () => casinoClick(activeCasino);
+
+  return (
+    <Wrapper image={image} onClick={bindClick}>
+      <Description>
+        {description}
+      </Description>
+    </Wrapper>
+  )
+};
 
 const Description = styled.div`
   position: absolute;

@@ -6,3 +6,4 @@ export { Promo } from './Promo';
 export { DescriptionBlock } from './DescriptionBlock';
 export { CasinosList } from './CasinosList';
 export { NotesList } from './NotesList';
+export { YaMap } from './YaMap';

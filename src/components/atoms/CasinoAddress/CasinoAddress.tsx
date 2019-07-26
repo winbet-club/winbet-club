@@ -3,28 +3,30 @@ import styled from 'styled-components';
 
 import { textConstants, colors } from 'context';
 
-const { address, workTime } = textConstants;
+const { address, workTime, phones } = textConstants;
 
 export interface ICasinoAddress {
   casinoName: string;
   casinoAddress: string;
   workDays: string;
   casinoWorkTime: string;
+  phone: string;
 }
 
 export const CasinoAddress = (
-  { casinoName, casinoAddress, workDays, casinoWorkTime }: ICasinoAddress
+  { casinoName, casinoAddress, workDays, casinoWorkTime, phone }: ICasinoAddress
 ) => (
   <Wrapper>
     <Name>{casinoName}</Name>
 
-    <Address>{address}</Address>
+    <Header>{address}:</Header>
     <Description>{casinoAddress}</Description>
 
-    <WorkTime>{workTime}</WorkTime>
+    <Header>{workTime}:</Header>
     <Description>{workDays}</Description>
     <Description>{casinoWorkTime}</Description>
-
+    <Header>{phones}</Header>
+    <PhoneNumber href={`tel:${phone}`}>{phone}</PhoneNumber>
   </Wrapper>
 );
 
@@ -42,14 +44,18 @@ const Name = styled.h2`
   margin-bottom: 15px;
 `;
 
-const Address = styled.h3`
+const Header = styled.h3`
   margin-bottom: 15px;
-`;
-
-const WorkTime = styled.h3`
-  margin-bottom: 15px;
+  font-weight: bold;
+  font-size: 20px;  
 `;
 
 const Description = styled.p`
   margin-bottom: 15px;
+`;
+
+const PhoneNumber = styled.a`
+  margin-bottom: 15px;
+  text-decoration: none;
+  color: ${colors.white};
 `;

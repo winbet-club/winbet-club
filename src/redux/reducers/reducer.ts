@@ -17,6 +17,7 @@ export const changeCasinoDescriptionNav = createAction(ACTIONS.CHANGE_CASINO_DES
 export const changeMenuFullNavItemsList = createAction(ACTIONS.CHANGE_MENU_FULL_NAV_ITEMS_LIST);
 export const changeMenuNav = createAction(ACTIONS.CHANGE_MENU_NAV);
 export const nullNavs = createAction(ACTIONS.NULL_NAVS);
+export const changeActiveCasino = createAction(ACTIONS.CHANGE_ACTIVE_CASINO);
 
 export interface ICasinosListNav {
   value: string;
@@ -37,7 +38,7 @@ export interface IStore {
 }
 
 const defaultState: IStore = {
-  activeCasino: 'url_1',
+  activeCasino: 'russiyanova',
   casinosListNav: [...casinosListNav],
   navList: [...headerNavList],
   menuNavItemsList: [...menuItemsList],
@@ -143,6 +144,15 @@ export const mainReducer = handleActions<IStore, any> (
           ...item,
           isActive: item.value === payload,
         })),
+      }
+    ),
+    [ACTIONS.CHANGE_ACTIVE_CASINO]: (
+      state: IStore,
+      { payload }: Action<string>
+    ): IStore => (
+      {
+        ...state,
+        activeCasino: payload,
       }
     ),
     [ACTIONS.CHANGE_MENU_NAV]: (

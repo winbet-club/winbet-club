@@ -3,7 +3,6 @@ import styled from 'styled-components';
 
 import { colors } from 'context';
 import { textConstants, promoImgList } from 'context';
-// import { BannerCover } from 'atoms';
 
 const { promo } = textConstants;
 

@@ -15,5 +15,6 @@ export {
   changeMenuFullNavItemsList,
   changeMenuNav,
   nullNavs,
+  changeActiveCasino,
 } from './reducer';
 

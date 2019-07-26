@@ -76,7 +76,6 @@ const NavItem = styled.li<{isActive: boolean}>`
       transition: width .2s ease-in-out;
 
     }
-    /* border-bottom: 2px solid;  */
   }
 `;
  

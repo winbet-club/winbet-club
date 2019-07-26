@@ -12,7 +12,9 @@ export const AboutUsContent = () => (
     <Slider/>
     <DescriptionBlock img={aboutBg}>
       <H2>{aboutUsHeader}</H2>
-      <Text>{aboutUsText}</Text>
+      <Text>
+        {aboutUsText.split('<newString>').map((str: string, i: number) => <Text key={i}>{str}</Text>)}
+      </Text>
     </DescriptionBlock>
   </Wrapper>
 )
@@ -27,4 +29,7 @@ const H2 = styled.h2`
   font-size: 40px;
 `;
 
-const Text = styled.p``;
+const Text = styled.div`
+  text-indent: 20px;
+  line-height: 25px;
+`;

@@ -35,6 +35,7 @@ export const MobileMenu = (
               key={value}
               isActive={isActive}
               onClick={bindClick}
+              isMobileMenuOpen={isMobileMenuOpen}
             >{value.toUpperCase()}</NavItem>
           </Link>
         )
@@ -47,7 +48,11 @@ const Wrapper = styled.div<{isMobileMenuOpen: boolean}>`
   & a {
     text-decoration: none;
   };
-  display: ${({isMobileMenuOpen}) => isMobileMenuOpen ? `flex` : `none`};
+  display: flex;
+  
+  height: ${({isMobileMenuOpen}) => isMobileMenuOpen ? '100%' : '0'};
+
+  /* display: ${({isMobileMenuOpen}) => isMobileMenuOpen ? `flex` : `none`}; */
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -57,8 +62,9 @@ const Wrapper = styled.div<{isMobileMenuOpen: boolean}>`
   }
 `;
 
-const NavItem = styled.div<{isActive: boolean}>`
+const NavItem = styled.div<{isActive: boolean, isMobileMenuOpen: boolean}>`
   color: ${({ isActive }) => isActive ? `${colors.yellow}` : `${colors.cadetGray}`};
+  display: ${({isMobileMenuOpen}) => isMobileMenuOpen ? `block` : `none`};
   font-size: 14px;
   padding: 10px 0;
 `;
