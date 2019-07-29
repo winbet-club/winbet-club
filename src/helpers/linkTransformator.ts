@@ -1,14 +1,16 @@
 export const linkTransformator = {
   'о нас': 'about',
-  'новости': 'news',
-  'карьера': 'corrier',
-  'контакты': 'contacts',
-  'акции': 'promo',
-  'игры': 'games',
-  'клуб': 'clab',
-  'казино': 'casinos',
-  'промо': 'promo',
+  новости: 'news',
+  карьера: 'career',
+  контакты: 'contacts',
+  акции: 'promo',
+  игры: 'games',
+  казино: 'casinos',
+  промо: 'promo',
   события: 'events',
-  галерея: 'gallary',
+  галерея: 'gallery',
   главная: 'main',
 }
+
+// TO delete it
+

@@ -18,3 +18,5 @@ export { casinosInfo } from './casinosInfo';
 export { geoObjectSetings, mapState } from './geoObjectSetings';
 export { cardImagesList } from './cardImagesList';
 export { vacancyList } from './vacancyList';
+import * as globalTranslations from './globalTranslations.json';
+export { globalTranslations };

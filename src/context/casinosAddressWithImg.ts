@@ -3,17 +3,17 @@ import { casino_1, casino_2 } from 'images';
 export const casinosAddressWithImg = [
   {
     img: casino_1,
-    address: 'ул. Руссиянова 1 - 1',
+    address: 'russiyanova',
     url: 'casinos/russiyanova'
   },
   {
     img: casino_2,
-    address: 'ул. Богдановича 120 Б',
+    address: 'bogdanovicha',
     url: 'casinos/bogdanovicha'
   },
   {
     img: casino_2,
-    address: 'ул. Немига 40',
+    address: 'nemiga',
     url: 'casinos/nemiga'
   },
 ]

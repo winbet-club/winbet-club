@@ -48,7 +48,7 @@ const intervals = (interval: number) => {
 function* updateJackpots() {
   try {
     const { data: { level: newJackpotData } } = yield call(() => Api.getJackpots());
-    const jackpotsValues = (state: any) => state.jackpotsValues;
+    const jackpotsValues = (state: any) => state.main.jackpotsValues;
     const lastData = yield select(jackpotsValues);
 
     const longestArr = { index: 0, lengthArr: 0 };

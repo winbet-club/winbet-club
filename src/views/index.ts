@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import { Dispatch } from 'redux';
+import { withLocalize } from 'react-localize-redux';
 
 import { ViewPage as ViewPageComponent } from './ViewPage';
 import {
@@ -17,28 +18,23 @@ import {
   changeActiveCasino,
 } from 'reducers';
 
+interface ICurrentState {
+  main: IStore;
+}
+
 const mapStateToProps = ({
-  activeCasino,
-  casinosListNav,
-  navList,
-  menuNavItemsList,
-  isMobileMenuOpen,
-  menuFullNavItemsList,
-  time,
-  casinosInfo,
-  jackpotsValues,
-  isMobileMenuDescriptionCasinoOpen,
-}: IStore) => ({
-  activeCasino,
-  casinosListNav,
-  navList,
-  menuNavItemsList,
-  isMobileMenuOpen,
-  menuFullNavItemsList,
-  time,
-  casinosInfo,
-  jackpotsValues,
-  isMobileMenuDescriptionCasinoOpen
+  main
+}: ICurrentState) => ({
+  activeCasino: main.activeCasino,
+  casinosListNav: main.casinosListNav,
+  navList: main.navList,
+  menuNavItemsList: main.menuNavItemsList,
+  isMobileMenuOpen: main.isMobileMenuOpen,
+  menuFullNavItemsList: main.menuFullNavItemsList,
+  time: main.time,
+  casinosInfo: main.casinosInfo,
+  jackpotsValues: main.jackpotsValues,
+  isMobileMenuDescriptionCasinoOpen: main.isMobileMenuDescriptionCasinoOpen
 });
 
 const mapDispatchProps = (dispatch: Dispatch) => ({
@@ -55,7 +51,7 @@ const mapDispatchProps = (dispatch: Dispatch) => ({
   nullNavs: () => dispatch(nullNavs()),
 });
 
-export const ViewPage = connect(
+export const ViewPage = withLocalize(connect(
   mapStateToProps,
   mapDispatchProps
-)(ViewPageComponent);
+)(ViewPageComponent) as any);

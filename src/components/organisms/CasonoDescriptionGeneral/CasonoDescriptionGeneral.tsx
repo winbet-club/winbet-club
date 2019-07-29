@@ -1,15 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
 import ImageGallery from 'react-image-gallery';
+import { Translate } from 'react-localize-redux';
 
 import { AboutCasino, PromoNote, IPromoNote } from 'atoms';
 import { ICasinosListNav } from 'reducers';
-import { colors, imageGallery, textConstants, addressTransformator, eventsList, promoList } from 'context';
+import { colors, imageGallery, textConstants, eventsList, promoList } from 'context';
 import { CasinoDescriptionCommonPart } from 'organisms';
 import { NotesList } from 'molecules';
 
 const { promo } = textConstants;
-const { gallary, actions } = textConstants;
+const { gallery, actions } = textConstants;
 
 interface IProps {
   casinosListNav: ICasinosListNav[];
@@ -48,8 +49,8 @@ export const CasonoDescriptionGeneral = (
         <InfoBlockBorderBottom/>
         <GaleryAndPromo>
           <ImageGalleryWrapper>
-            <Header>{gallary} 
-            <Address>{addressTransformator[activeCasino].address}</Address>
+            <Header><Translate id={gallery}/> 
+            <Address><Translate id={activeCasino}/></Address>
             </Header>
             <ImageGallery 
               items={imageGallery[activeCasino]}

@@ -1,21 +1,22 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Translate } from 'react-localize-redux';
 
 import { DescriptionBlock, Slider } from 'molecules';
 import { textConstants, colors, vacancyList } from 'context';
-import { corrieraBg } from 'images';
+import { careeraBg } from 'images';
 
-const { corrierHeader, corrierText, vacancy } = textConstants;
+const { careerHeader, careerText, vacancies } = textConstants;
 
-export const CorriereContent = () => (
+export const CareerContent = () => (
   <Wrapper>
     <Slider/>
-    <DescriptionBlock img={corrieraBg}>
-      <H2>{corrierHeader}</H2>
-      <Text>{corrierText}</Text>
-      <H2>{vacancy}</H2>
+    <DescriptionBlock img={careeraBg}>
+      <H2><Translate id={careerHeader}/></H2>
+      <Text><Translate id={careerText}/></Text>
+      <H2><Translate id={vacancies}/></H2>
       <Ul>
-        {vacancyList.map((vacan: string, i: number) => <Li key={vacan}>{vacan}</Li>)}
+        {vacancyList.map((vacan: string) => <Li key={vacan}><Translate id={vacan}/></Li>)}
       </Ul>
     </DescriptionBlock>
   </Wrapper>

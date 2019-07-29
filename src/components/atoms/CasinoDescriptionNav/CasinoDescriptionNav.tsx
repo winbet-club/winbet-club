@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { Translate } from 'react-localize-redux';
 
 import { menuIcon } from 'images';
 import { colors } from 'context';
-import { linkTransformator } from 'helpers';
 
 interface INavListItem {
   value: string;
@@ -29,14 +29,14 @@ export const CasinoDescriptionNav = (
         {
           navList.map(({value, isActive}: INavListItem) => {
             const bindClick = () => onClick(value);
-            const link = `${activeCasino}-${linkTransformator[value]}`;
+            const link = `${activeCasino}-${value}`;
             return (
               <Link key={value} to={link}>
                 <NavValue
                   isActive={isActive}
                   onClick={bindClick}
                 >
-                  {value.toUpperCase()}
+                  <Translate id={value}/>
                 </NavValue>
               </Link>
             )

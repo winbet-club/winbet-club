@@ -19,16 +19,17 @@ interface ICommonWrapper {
   onMobileMenuClick: () => void;
   onMainLogoClick: () => void;
   onMenuFullNavItemsListClick: (value: string) => void;
+  changeLanguage: (value: string) => void;
 }
 
 export const CommonWrapper = (
   {
     children, navList, menuNavItemsList, isMobileMenuOpen, onNavClick, onMenuClick, onMobileMenuClick,
-    menuFullNavItemsList, time, onMenuFullNavItemsListClick, onMainLogoClick
+    menuFullNavItemsList, time, onMenuFullNavItemsListClick, onMainLogoClick, changeLanguage
   }: ICommonWrapper
 ) => (
 <Wrapper>
-  <Header navList={navList} time={time} onNavClick={onNavClick} />
+  <Header navList={navList} time={time} onNavClick={onNavClick} changeLanguage={changeLanguage} />
   <MenuDesktop
     isMobileMenuOpen={isMobileMenuOpen}
     menuNavItemsList={menuNavItemsList}

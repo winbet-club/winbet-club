@@ -1,0 +1,102 @@
+{ 
+  "minsk": [
+    "МИНСК",
+    "MINSK"
+  ],
+  "menu": [
+    "Меню",
+    "Menu"
+  ],
+  "aboutUs": [
+    "О НАС",
+    "ABOUT US"
+  ],
+  "news": [
+    "НОВОСТИ",
+    "NEWS"
+  ],
+  "career": [
+    "КАРЬЕРА",
+    "CAREER"
+  ],
+  "contacts": [
+    "КОНТАКТЫ",
+    "CONTACTS"
+  ],
+    "promo": [
+    "АКЦИИ",
+    "PROMO"
+  ],
+  "main": [
+    "ГЛАВНАЯ",
+    "MAIN"
+  ],
+  "events": [
+    "СОБЫТИЯ",
+    "EVENTS"
+  ],
+  "gallery": [
+    "ГАЛЕРЕЯ",
+    "GALLERY"
+  ],
+  "games": [
+    "ИГРЫ",
+    "GAMES"
+  ],
+  "casinos": [
+    "КАЗИНО",
+    "CASINOS"
+  ],
+  "aboutCasino": [
+    "О КАЗИНО",
+    "ABOUT CASINO"
+  ],
+  "address": [
+    "АДРЕС",
+    "ADDRESS"
+  ],
+  "workTime": [
+    "ВРЕМЯ РАБОТЫ",
+    "WORK TIME"
+  ],
+  "phones": [
+    "ТЕЛЕФОНЫ",
+    "PHONES"
+  ],
+  "workWithUs": [
+    "РАБОТА У НАС",
+    "WORK WITH US"
+  ],
+  "vacancies": [
+    "ВАКАНСИИ",
+    "VACANCIES"
+  ],
+  "careerText": [
+    "Мы ценим наших сотрудников и понимает, что они играют важную роль в развитии компании. Если вы позитивны, инициативны, организованны, общительны, креативны, логичны и легко приспосабливаемы, смотрите списоквакансий. ",
+    "Text in english language"
+  ],
+  "operator": [
+    "Оператор зала игровых автоматов",
+    "Operator of the slot machine hall"
+  ],
+  "cashier": [
+    "Кассир зала игровых автоматов",
+    "The cashier of the slot machines hall"
+  ],
+  "barman": [
+    "Бармен",
+    "Barman"
+  ],
+  "russiyanova": [
+    "г. Минск ул. Руссиянова 1 - 1",
+    "Minsk, 1 - 1 Russiyanova str"
+  ],
+  "bogdanovicha": [
+    "г. Минск ул. Богдановича 120 Б",
+    "Minsk, 120 B Bogdanovicha str"
+  ],
+  "nemiga": [
+    "г. Минск ул. Немига 40",
+    "Minsk, 40 Nemiga str"
+  ]
+}

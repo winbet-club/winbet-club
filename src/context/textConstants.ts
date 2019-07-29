@@ -1,22 +1,23 @@
 export const textConstants = {
+  aboutUs: 'aboutUs',
   menu: 'menu',
-  promo: 'Акции',
-  winbetMinsk: 'winbet минск',
+  promo: 'promo',
+  winbetMinsk: 'winbet minsk',
   winbetGames: 'Игры Winbet',
   gamesDescription: 'ИГРАЙ BLACK JACK | ROULETTE | SLOTS | JACKPOTS',
   actions: 'события',
   contacts: 'контакты',
-  phones: 'Телефон',
+  phones: 'phones',
 
   currencyBYN: 'byn',
   footerText: 'Copyright 2019, Casino Solutions Ltd. All rights reserved.',
   aboutUsHeader: 'О нас',
-  aboutCasino: 'о казино',
-  gallary: 'Галерея',
-  corrierHeader: 'Работа у нас',
-  address: 'Адрес',
-  workTime: 'Время работы',
-  vacancy: 'Вакансии',
+  aboutCasino: 'aboutCasino',
+  gallery: 'gallery',
+  careerHeader: 'workWithUs',
+  address: 'address',
+  workTime: 'workTime',
+  vacancies: 'vacancies',
 
   aboutUsText: `Международная сеть игорных клубов WINBET начала свою работу в Беларуси 5 лет назад. Игровые залы 
   WINBET – это невероятная атмосфера, современные игровые автоматы от лучших мировых производителей с многочисленными
@@ -27,9 +28,7 @@ export const textConstants = {
     Посетив наше заведение, гости остаются нашими друзьями и возвращаются к нам снова. Наша цель – не только 
     удовлетворить их потребности, но и превзойти их ожидания. Сеть WINBET растет и развивается, благодаря нашему
      вниманию к вашим личным потребностям и предпочтениям. <newString> WINBET гарантирует захватывающие эмоции!!!!`,
-   corrierText: `Мы ценим наших сотрудников и понимает, что они играют важную роль в развитии компании. Если вы 
-   позитивны, инициативны, организованны, общительны, креативны, логичны и легко приспосабливаемы, смотрите список
-    вакансий. `,
+   careerText: 'careerText',
    gamesAttention: 'Наша цель - удовлетворить ожидания клиентов, предлагая широкий спектр игрового оборудования для лучших производителей по всему миру. Среди них EGT, IGT, Spielo, Novomatic, WMS, Aristocrat, Konami, TCS, Casino Technology и так далее. Мы также предоставили возможность сделать ставку на два или более автоматических или живых колесных колес'
 }
 

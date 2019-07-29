@@ -1,17 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Translate } from "react-localize-redux";
 
 import { DescriptionBlock, Slider } from 'molecules';
 import { textConstants, colors } from 'context';
 import { aboutBg } from 'images';
 
-const { aboutUsHeader, aboutUsText } = textConstants;
+const { aboutUsText, aboutUs } = textConstants;
 
 export const AboutUsContent = () => (
   <Wrapper>
     <Slider/>
     <DescriptionBlock img={aboutBg}>
-      <H2>{aboutUsHeader}</H2>
+      <H2>
+        <Translate id={aboutUs} />
+      </H2>
       <Text>
         {aboutUsText.split('<newString>').map((str: string, i: number) => <Text key={i}>{str}</Text>)}
       </Text>

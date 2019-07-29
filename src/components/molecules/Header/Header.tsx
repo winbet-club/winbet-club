@@ -1,24 +1,30 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { INavItem } from 'atoms';
+import { INavItem, Flag } from 'atoms';
 import { colors } from 'context';
+import { rusFlag, usaFlag } from 'images';
 
 interface IProps {
   time: string;
   navList: INavItem[];
   onNavClick: (value: string) => void;
+  changeLanguage: (value: string) => void;
 }
 
 import { HeaderWatch, HeaderNav } from 'atoms';
 
 export const Header = (
-  { time, navList, onNavClick }: IProps
+  { time, navList, onNavClick, changeLanguage }: IProps
 ) => (
 <Wrapper>
   <HeaderWatch
     time={time}
   />
+  <Languages>
+    <Flag src={rusFlag} language='ru' changeLanguage={changeLanguage}/>
+    <Flag src={usaFlag} language='en' changeLanguage={changeLanguage}/>
+  </Languages>
   <HeaderNav
     navList={navList}
     onNavClick={onNavClick}
@@ -38,3 +44,6 @@ const Wrapper = styled.div`
   }
 `;
  
+const Languages = styled.div`
+  /* display: flex; */
+`;

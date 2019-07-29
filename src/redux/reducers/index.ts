@@ -18,3 +18,5 @@ export {
   changeActiveCasino,
 } from './reducer';
 
+export { rootReducer } from './rootReducer';
+

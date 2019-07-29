@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { BrowserRouter as Router, Route} from 'react-router-dom';
 
-import { HomeContent, AboutUsContent, CorriereContent, CasinosContent, CommonWrapper,
+import { HomeContent, AboutUsContent, CareerContent, CasinosContent, CommonWrapper,
   CasonoDescriptionGeneral, CasinoDescriptionPromo, CasinoDescriptionEvents, CasinoDescriptionGallary,
   GameListContent, ContactsContent } from 'organisms';
 import { Promo } from 'molecules';
@@ -23,40 +23,42 @@ interface IProps extends IStore {
   changeMenuNav: (value: string) => void;
   changeActiveCasino: (value: string) => void;
   nullNavs: () => void;
+  setActiveLanguage: (leng:string) => void;
 }
 
 export class ViewPage extends React.Component<IProps> {
+
   public onNavClick = (value: string) => {
     const { changeHeaderNav } = this.props;
-    
+
     changeHeaderNav(value);
   }
 
-  // public componentDidMount() {
-  //   const { loadJackpots, updateJackpots } = this.props;
+  public componentDidMount() {
+    const { loadJackpots, updateJackpots } = this.props;
 
-  //   loadJackpots();
-  //   setInterval(() => {
-  //     updateJackpots();
-  //   }, 7000);
-  //   const { saveNewTime } = this.props;
+    loadJackpots();
+    setInterval(() => {
+      updateJackpots();
+    }, 7000);
+    const { saveNewTime } = this.props;
 
-  //   setInterval(() => {
-  //     const date = new Date();
+    setInterval(() => {
+      const date = new Date();
 
-  //     const hours = date.getHours() < 10 ? `0${date.getHours()}` : `${date.getHours()}`
-  //     const minutes = date.getMinutes() < 10 ? `0${date.getMinutes()}` : `${date.getMinutes()}`
-  //     const seconds = date.getSeconds() < 10 ? `0${date.getSeconds()}` : `${date.getSeconds()}`
+      const hours = date.getHours() < 10 ? `0${date.getHours()}` : `${date.getHours()}`
+      const minutes = date.getMinutes() < 10 ? `0${date.getMinutes()}` : `${date.getMinutes()}`
+      const seconds = date.getSeconds() < 10 ? `0${date.getSeconds()}` : `${date.getSeconds()}`
 
-  //     const newTime = `${hours}:${minutes}:${seconds}`;
+      const newTime = `${hours}:${minutes}:${seconds}`;
 
-  //     saveNewTime(newTime);
-  //   }, 1000)
-  // }
+      saveNewTime(newTime);
+    }, 1000)
+  }
 
   public onMenuClick =(value: string) => {
     const { changeMenuNav } = this.props;
-    
+
     changeMenuNav(value);
   }
 
@@ -164,6 +166,12 @@ export class ViewPage extends React.Component<IProps> {
     nullNavs();
   }
 
+  public changeLanguage = (language: string) => {
+    const { setActiveLanguage } = this.props;
+
+    setActiveLanguage(language);
+  }
+
   public render() {
     const {
       navList,
@@ -177,7 +185,7 @@ export class ViewPage extends React.Component<IProps> {
 
     const getContactsContent = () => <ContactsContent casinosInfo={casinosInfo}  />
     return (
-      <Router>
+        <Router>
         <CommonWrapper
           time={time}
           navList={navList}
@@ -189,10 +197,11 @@ export class ViewPage extends React.Component<IProps> {
           onMenuFullNavItemsListClick={this.onMenuFullNavItemsListClick}
           menuFullNavItemsList={menuFullNavItemsList}
           onMainLogoClick={this.onMainLogoClick}
+          changeLanguage={this.changeLanguage}
         >
           <Route exact={true} path='/' render={this.renderHomeContent} />
-          <Route exact={true} path='/about' component={AboutUsContent}/>
-          <Route exact={true} path='/corrier' component={CorriereContent}/>
+          <Route exact={true} path='/aboutUs' component={AboutUsContent}/>
+          <Route exact={true} path='/career' component={CareerContent}/>
           <Route exact={true} path='/casinos' render={this.renderCasinosContent}/>
           <Route exact={true} path='/games' component={GameListContent}/>
           <Route exact={true} path='/promo' component={Promo}/>
@@ -200,10 +209,10 @@ export class ViewPage extends React.Component<IProps> {
           <Route exact={true} path={`/casinos/${activeCasino}-main`} render={this.renderCasonoDescriptionGeneral}/>
           <Route exact={true} path={`/casinos/${activeCasino}-promo`} render={this.renderCasinoDescriptionPromo}/>
           <Route exact={true} path={`/casinos/${activeCasino}-events`} render={this.renderCasinoDescriptionEvents}/>
-          <Route exact={true} path={`/casinos/${activeCasino}-gallary`} render={this.renderCasinoDescriptionGallary}/>
+          <Route exact={true} path={`/casinos/${activeCasino}-gallery`} render={this.renderCasinoDescriptionGallary}/>
           <Route exact={true} path='/contacts' render={getContactsContent}/>
         </CommonWrapper>
-      </Router>
+        </Router>
     )
   }
 }

@@ -1,30 +1,30 @@
 export const menuFullNavItemsList = [
   {
-    value: 'промоакции',
+    value: 'promo',
     isActive: false,
   },
   {
-    value: 'игры',
+    value: 'games',
     isActive: false,
   },
   {
-    value: 'о нас',
+    value: 'aboutUs',
     isActive: false,
   },
   {
-    value: 'казино',
+    value: 'casinos',
     isActive: false,
   },
   {
-    value: 'новости',
+    value: 'news',
     isActive: false,
   },
   {
-    value: 'карьера',
+    value: 'career',
     isActive: false,
   },
   {
-    value: 'контакты',
+    value: 'contacts',
     isActive: false,
   },
 ]

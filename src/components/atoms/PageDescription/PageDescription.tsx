@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Translate } from 'react-localize-redux';
 
 import { colors } from 'context';
 
@@ -11,11 +12,11 @@ interface IProps {
 export const PageDescription = (
   { text, address }: IProps // TODO Change type
 ) => {
-  const [ word1, word2 ] = text.split(' ');
+  const [ word1, city ] = text.split(' ');
   return (
     <Wrapper>
-      <H2>{word1.toUpperCase()} <GoldSpan>{word2.toUpperCase()}</GoldSpan></H2>
-      { address && <Address>{address}</Address>}
+      <H2>{word1.toUpperCase()} <GoldSpan><Translate id={city}/></GoldSpan></H2>
+      { address && <Address><Translate id={address}/></Address>}
     </Wrapper>
   )
 };

@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { Translate } from 'react-localize-redux';
 
 import { colors } from 'context';
-import { linkTransformator } from 'helpers';
 
 interface INavElem {
   value: string;
@@ -30,13 +30,15 @@ export const MobileMenu = (
         : onMenuClick(value);
 
         return (
-          <Link to={`/${linkTransformator[value]}`} key={value}>
+          <Link to={`/${value}`} key={value}>
             <NavItem
               key={value}
               isActive={isActive}
               onClick={bindClick}
               isMobileMenuOpen={isMobileMenuOpen}
-            >{value.toUpperCase()}</NavItem>
+            >
+              <Translate id={value}/>
+            </NavItem>
           </Link>
         )
       return;

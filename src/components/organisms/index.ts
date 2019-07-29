@@ -1,7 +1,7 @@
 export { CommonWrapper } from './CommonWrapper';
 export { HomeContent } from './HomeContent';
 export { AboutUsContent } from './AboutUsContent';
-export { CorriereContent } from './CorriereContent';
+export { CareerContent } from './CareerContent';
 export { CasinosContent } from './CasinosContent';
 export { GameListContent } from './GameListContent';
 export { CasinoDescriptionCommonPart } from './CasinoDescriptionCommonPart';
