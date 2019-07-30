@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { BrowserRouter as Router, Route} from 'react-router-dom';
+import { BrowserRouter as Switch, Route} from 'react-router-dom';
 
 import { HomeContent, AboutUsContent, CareerContent, CasinosContent, CommonWrapper,
   CasonoDescriptionGeneral, CasinoDescriptionPromo, CasinoDescriptionEvents, CasinoDescriptionGallary,
@@ -185,7 +185,11 @@ export class ViewPage extends React.Component<IProps> {
 
     const getContactsContent = () => <ContactsContent casinosInfo={casinosInfo}  />
     return (
+<<<<<<< HEAD
         <Router>
+=======
+      <Switch>
+>>>>>>> Added switch to router
         <CommonWrapper
           time={time}
           navList={navList}
@@ -212,7 +216,11 @@ export class ViewPage extends React.Component<IProps> {
           <Route exact={true} path={`/casinos/${activeCasino}-gallery`} render={this.renderCasinoDescriptionGallary}/>
           <Route exact={true} path='/contacts' render={getContactsContent}/>
         </CommonWrapper>
+<<<<<<< HEAD
         </Router>
+=======
+      </Switch>
+>>>>>>> Added switch to router
     )
   }
 }
