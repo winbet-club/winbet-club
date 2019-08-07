@@ -23,6 +23,7 @@ export const AboutUsContent = () => (
 )
 
 const Wrapper = styled.div`
+
 `;
 
 const H2 = styled.h2`

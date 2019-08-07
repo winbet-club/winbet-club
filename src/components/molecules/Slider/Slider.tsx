@@ -22,12 +22,23 @@ export const Slider = () => (
       autoPlay={true}
       slideInterval={5000}
       showThumbnails={false}
+      showNav={false}
     />
   </Wrapper>
 );
 
 const Wrapper = styled.div`
-  width: 600px;
+  width: 300px;
   border-bottom: 4px solid ${colors.bordo};
   margin: auto;
+  padding-top: 10px;
+
+  @media screen and (min-width: 560px) {
+    width: 530px;
+    padding-top: 20px;
+  }
+  @media screen and (min-width: 980px) {
+    width: 650px;
+    padding-top: 20px;
+  }
 `;

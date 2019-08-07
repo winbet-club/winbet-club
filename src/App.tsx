@@ -1,7 +1,11 @@
 import * as React from 'react';
+<<<<<<< HEAD
 import { LocalizeProvider } from "react-localize-redux";
 import { renderToStaticMarkup } from 'react-dom/server';
 
+=======
+import { HashRouter } from 'react-router-dom';
+>>>>>>> Added a size to slider
 
 import './App.css';
 import { ViewPage } from './views';
@@ -34,9 +38,15 @@ class App extends React.Component {
   public render() {
 
     return (
+<<<<<<< HEAD
       <LocalizeProvider initialize={this.initialize} store={store}>
         <ViewPage/>
       </LocalizeProvider>
+=======
+      <HashRouter>
+        <ViewPage/>
+      </HashRouter> 
+>>>>>>> Added a size to slider
     );
   }
 }

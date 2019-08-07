@@ -23,11 +23,7 @@ interface IProps extends IStore {
   changeMenuNav: (value: string) => void;
   changeActiveCasino: (value: string) => void;
   nullNavs: () => void;
-<<<<<<< HEAD
-  setActiveLanguage: (leng:string) => void;
-=======
   loadAdditionalJackpots: () => void;
->>>>>>> Added new slides
 }
 
 export class ViewPage extends React.Component<IProps> {
@@ -39,14 +35,9 @@ export class ViewPage extends React.Component<IProps> {
   }
 
   public componentDidMount() {
-<<<<<<< HEAD
     const { loadJackpots, updateJackpots } = this.props;
-
-=======
-    const { loadJackpots, updateJackpots, loadAdditionalJackpots } = this.props;
     
-    loadAdditionalJackpots();
->>>>>>> Added new slides
+    // loadAdditionalJackpots();
     loadJackpots();
     setInterval(() => {
       updateJackpots();
@@ -195,11 +186,7 @@ export class ViewPage extends React.Component<IProps> {
 
     const getContactsContent = () => <ContactsContent casinosInfo={casinosInfo}  />
     return (
-<<<<<<< HEAD
         <Router>
-=======
-      <Switch>
->>>>>>> Added switch to router
         <CommonWrapper
           time={time}
           navList={navList}
@@ -226,11 +213,7 @@ export class ViewPage extends React.Component<IProps> {
           <Route exact={true} path={`/casinos/${activeCasino}-gallery`} render={this.renderCasinoDescriptionGallary}/>
           <Route exact={true} path='/contacts' render={getContactsContent}/>
         </CommonWrapper>
-<<<<<<< HEAD
         </Router>
-=======
-      </Switch>
->>>>>>> Added switch to router
     )
   }
 }
