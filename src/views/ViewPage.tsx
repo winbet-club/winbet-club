@@ -23,7 +23,11 @@ interface IProps extends IStore {
   changeMenuNav: (value: string) => void;
   changeActiveCasino: (value: string) => void;
   nullNavs: () => void;
+<<<<<<< HEAD
   setActiveLanguage: (leng:string) => void;
+=======
+  loadAdditionalJackpots: () => void;
+>>>>>>> Added new slides
 }
 
 export class ViewPage extends React.Component<IProps> {
@@ -35,8 +39,14 @@ export class ViewPage extends React.Component<IProps> {
   }
 
   public componentDidMount() {
+<<<<<<< HEAD
     const { loadJackpots, updateJackpots } = this.props;
 
+=======
+    const { loadJackpots, updateJackpots, loadAdditionalJackpots } = this.props;
+    
+    loadAdditionalJackpots();
+>>>>>>> Added new slides
     loadJackpots();
     setInterval(() => {
       updateJackpots();

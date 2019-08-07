@@ -7,6 +7,7 @@ import { Api } from 'servises/Api';
 export function* mainWatcher() {
   yield takeEvery(ACTIONS.LOAD_JECKPOTS, loadJackpots);
   yield takeEvery(ACTIONS.UPDATE_JACKPOTS, updateJackpots);
+  yield takeEvery(ACTIONS.LOAD_ADDITIONAL_JACKPOTS, loadAddionalJackpots);
 }
 
 function* loadJackpots() {
@@ -84,6 +85,16 @@ function* updateJackpots() {
       yield delay(100);
       yield put(saveOneJeckpot(newArr))
     }
+
+  } catch (error) {
+    console.log('error', error);
+  }
+}
+
+function* loadAddionalJackpots() {
+  try {
+    const { data } = yield call(() => Api.getAdditionalJackpots());
+    console.log('Additional jackpots values are ', data);
 
   } catch (error) {
     console.log('error', error);
