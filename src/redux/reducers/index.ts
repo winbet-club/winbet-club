@@ -16,6 +16,7 @@ export {
   changeMenuNav,
   nullNavs,
   changeActiveCasino,
+  loadAdditionalJackpots,
 } from './reducer';
 
 export { rootReducer } from './rootReducer';

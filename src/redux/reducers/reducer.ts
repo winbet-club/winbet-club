@@ -8,6 +8,7 @@ export const testAction = createAction(ACTIONS.TEST);
 export const changeHeaderNav = createAction(ACTIONS.CHANGE_HEADER_NAV);
 export const saveNewTime = createAction(ACTIONS.SAVE_NEW_TIME);
 export const loadJackpots = createAction(ACTIONS.LOAD_JECKPOTS);
+export const loadAdditionalJackpots = createAction(ACTIONS.LOAD_ADDITIONAL_JACKPOTS);
 export const saveJeckpots = createAction(ACTIONS.SAVE_JACKPOTS);
 export const saveOneJeckpot = createAction(ACTIONS.SAVE_ONE_JACKPOT);
 export const updateJackpots = createAction(ACTIONS.UPDATE_JACKPOTS);

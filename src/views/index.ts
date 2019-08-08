@@ -16,6 +16,7 @@ import {
   changeMenuNav,
   nullNavs,
   changeActiveCasino,
+  loadAdditionalJackpots,
 } from 'reducers';
 
 interface ICurrentState {
@@ -49,6 +50,7 @@ const mapDispatchProps = (dispatch: Dispatch) => ({
   changeMenuNav: (value: string) => dispatch(changeMenuNav(value)),
   changeActiveCasino: (value: string) => dispatch(changeActiveCasino(value)),
   nullNavs: () => dispatch(nullNavs()),
+  loadAdditionalJackpots: () => dispatch(loadAdditionalJackpots()),
 });
 
 export const ViewPage = withLocalize(connect(

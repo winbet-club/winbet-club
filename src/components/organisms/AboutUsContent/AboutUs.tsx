@@ -4,12 +4,13 @@ import { Translate } from "react-localize-redux";
 
 import { DescriptionBlock, Slider } from 'molecules';
 import { textConstants, colors } from 'context';
-import { aboutBg } from 'images';
+import { aboutBg, sliderBg } from 'images';
 
 const { aboutUsText, aboutUs } = textConstants;
 
 export const AboutUsContent = () => (
   <Wrapper>
+    <SliderWrapper/>
     <Slider/>
     <DescriptionBlock img={aboutBg}>
       <H2>
@@ -23,6 +24,24 @@ export const AboutUsContent = () => (
 )
 
 const Wrapper = styled.div`
+
+`;
+
+const SliderWrapper = styled.div`
+  width: 100%;
+  height: 220px;
+  background: url(${sliderBg}) no-repeat;
+  background-size: cover;
+  filter: blur(1px);
+  position: absolute;
+  z-index: 0;
+
+  @media screen and (min-width: 560px) {
+    height: 400px;
+  }
+  @media screen and (min-width: 980px) {
+    height: 480px;
+  }
 `;
 
 const H2 = styled.h2`

@@ -4,11 +4,13 @@ import styled from 'styled-components';
 import { Slider } from 'molecules';
 import { textConstants, colors, gamesList, gamesNameColors } from 'context';
 import { Game } from 'atoms';
+import { sliderBg } from 'images';
 
 const { winbetGames, gamesDescription, gamesAttention } = textConstants;
 
 export const GameListContent = () => (
   <Wrapper>
+    <SliderWrapper/>
     <Slider/>
     <Description>
       <H2>{winbetGames.toUpperCase()}</H2>
@@ -24,6 +26,23 @@ export const GameListContent = () => (
   </Wrapper>
 )
 const Wrapper = styled.div`
+`;
+
+const SliderWrapper = styled.div`
+  width: 100%;
+  height: 220px;
+  background: url(${sliderBg}) no-repeat;
+  background-size: cover;
+  filter: blur(1px);
+  position: absolute;
+  z-index: 0;
+
+  @media screen and (min-width: 560px) {
+    height: 400px;
+  }
+  @media screen and (min-width: 980px) {
+    height: 480px;
+  }
 `;
 
 const H2 = styled.h2`

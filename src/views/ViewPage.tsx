@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { BrowserRouter as Router, Route} from 'react-router-dom';
+import { Route } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 
 import { HomeContent, AboutUsContent, CareerContent, CasinosContent, CommonWrapper,
   CasonoDescriptionGeneral, CasinoDescriptionPromo, CasinoDescriptionEvents, CasinoDescriptionGallary,
@@ -23,6 +24,7 @@ interface IProps extends IStore {
   changeMenuNav: (value: string) => void;
   changeActiveCasino: (value: string) => void;
   nullNavs: () => void;
+  loadAdditionalJackpots: () => void;
   setActiveLanguage: (leng:string) => void;
 }
 
@@ -36,7 +38,8 @@ export class ViewPage extends React.Component<IProps> {
 
   public componentDidMount() {
     const { loadJackpots, updateJackpots } = this.props;
-
+    
+    // loadAdditionalJackpots();
     loadJackpots();
     setInterval(() => {
       updateJackpots();
@@ -185,34 +188,34 @@ export class ViewPage extends React.Component<IProps> {
 
     const getContactsContent = () => <ContactsContent casinosInfo={casinosInfo}  />
     return (
-        <Router>
-        <CommonWrapper
-          time={time}
-          navList={navList}
-          menuNavItemsList={menuNavItemsList}
-          onNavClick={this.onNavClick}
-          onMenuClick={this.onMenuClick}
-          isMobileMenuOpen={isMobileMenuOpen}
-          onMobileMenuClick={this.onMobileMenuClick}
-          onMenuFullNavItemsListClick={this.onMenuFullNavItemsListClick}
-          menuFullNavItemsList={menuFullNavItemsList}
-          onMainLogoClick={this.onMainLogoClick}
-          changeLanguage={this.changeLanguage}
-        >
-          <Route exact={true} path='/' render={this.renderHomeContent} />
-          <Route exact={true} path='/aboutUs' component={AboutUsContent}/>
-          <Route exact={true} path='/career' component={CareerContent}/>
-          <Route exact={true} path='/casinos' render={this.renderCasinosContent}/>
-          <Route exact={true} path='/games' component={GameListContent}/>
-          <Route exact={true} path='/promo' component={Promo}/>
-          <Route exact={true} path={`/casinos/${activeCasino}`} render={this.renderCasonoDescriptionGeneral}/>
-          <Route exact={true} path={`/casinos/${activeCasino}-main`} render={this.renderCasonoDescriptionGeneral}/>
-          <Route exact={true} path={`/casinos/${activeCasino}-promo`} render={this.renderCasinoDescriptionPromo}/>
-          <Route exact={true} path={`/casinos/${activeCasino}-events`} render={this.renderCasinoDescriptionEvents}/>
-          <Route exact={true} path={`/casinos/${activeCasino}-gallery`} render={this.renderCasinoDescriptionGallary}/>
-          <Route exact={true} path='/contacts' render={getContactsContent}/>
-        </CommonWrapper>
-        </Router>
+        <BrowserRouter>
+          <CommonWrapper
+            time={time}
+            navList={navList}
+            menuNavItemsList={menuNavItemsList}
+            onNavClick={this.onNavClick}
+            onMenuClick={this.onMenuClick}
+            isMobileMenuOpen={isMobileMenuOpen}
+            onMobileMenuClick={this.onMobileMenuClick}
+            onMenuFullNavItemsListClick={this.onMenuFullNavItemsListClick}
+            menuFullNavItemsList={menuFullNavItemsList}
+            onMainLogoClick={this.onMainLogoClick}
+            changeLanguage={this.changeLanguage}
+          >
+            <Route exact={true} path='/' render={this.renderHomeContent} />
+            <Route exact={true} path='/aboutUs' component={AboutUsContent}/>
+            <Route exact={true} path='/career' component={CareerContent}/>
+            <Route exact={true} path='/casinos' render={this.renderCasinosContent}/>
+            <Route exact={true} path='/games' component={GameListContent}/>
+            <Route exact={true} path='/promo' component={Promo}/>
+            <Route exact={true} path={`/casinos/${activeCasino}`} render={this.renderCasonoDescriptionGeneral}/>
+            <Route exact={true} path={`/casinos/${activeCasino}-main`} render={this.renderCasonoDescriptionGeneral}/>
+            <Route exact={true} path={`/casinos/${activeCasino}-promo`} render={this.renderCasinoDescriptionPromo}/>
+            <Route exact={true} path={`/casinos/${activeCasino}-events`} render={this.renderCasinoDescriptionEvents}/>
+            <Route exact={true} path={`/casinos/${activeCasino}-gallery`} render={this.renderCasinoDescriptionGallary}/>
+            <Route exact={true} path='/contacts' render={getContactsContent}/>
+          </CommonWrapper>
+        </BrowserRouter>
     )
   }
 }
