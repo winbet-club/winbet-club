@@ -5,11 +5,9 @@ import { Translate } from 'react-localize-redux';
 
 import { AboutCasino, PromoNote, IPromoNote } from 'atoms';
 import { ICasinosListNav } from 'reducers';
-import { colors, imageGallery, textConstants, eventsList, promoList } from 'context';
+import { imageGallery, textConstants, eventsList, colors } from 'context';
 import { CasinoDescriptionCommonPart } from 'organisms';
-import { NotesList } from 'molecules';
 
-const { promo } = textConstants;
 const { gallery, actions } = textConstants;
 
 interface IProps {
@@ -64,11 +62,11 @@ export const CasonoDescriptionGeneral = (
             />
           </ImageGalleryWrapper>
         <Promo>
-        <NotesList headerName={promo} promoList={promoList}/>
+        {/* <NotesList headerName={promo} promoList={promoList}/> */}
         <Action>
-          <ActionHeader>{actions.toUpperCase()}</ActionHeader>
+          <ActionHeader><Translate id={actions}/></ActionHeader>
           {
-            eventsList.map(({header, text}: IPromoNote) => 
+            eventsList[activeCasino].map(({header, text}: IPromoNote) => 
               <PromoNote key={header} header={header} text={text} />)
           }
         </Action>
@@ -102,6 +100,8 @@ const Action = styled.div`
 `;
 
 const ActionHeader = styled.h3`
+  color: ${colors.yellow};
+  margin-bottom: 30px;
   font-size: 30px;
 `;
 
@@ -119,7 +119,6 @@ const Address = styled.span`
 `;
 
 const Header = styled.div`
-  background: ${colors.silver3};
   padding: 5px 15px;
   font-size: 30px;
 `;

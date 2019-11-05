@@ -45,5 +45,8 @@ const Wrapper = styled.div`
 `;
  
 const Languages = styled.div`
-  /* display: flex; */
+  margin-left: 120px;
+  width: 90px;
+  display: flex;
+  justify-content: space-between;
 `;

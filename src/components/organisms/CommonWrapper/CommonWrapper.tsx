@@ -36,6 +36,7 @@ export const CommonWrapper = (
     onMenuClick={onMenuClick}
     onMobileMenuClick={onMobileMenuClick}
     onMainLogoClick={onMainLogoClick}
+    changeLanguage={changeLanguage}
   />
   <TabletMenuWrapper>
     <MobileMenu

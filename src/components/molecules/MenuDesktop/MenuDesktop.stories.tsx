@@ -13,5 +13,6 @@ storiesOf('Molecules', module)
     onMenuClick={action('onClick')}
     onMobileMenuClick={action('onClick')}
     onMainLogoClick={action('onClick')}
+    changeLanguage={action('changeLanguage')}
   />
 ))

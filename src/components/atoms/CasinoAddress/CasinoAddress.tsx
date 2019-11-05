@@ -15,17 +15,15 @@ export interface ICasinoAddress {
 }
 
 export const CasinoAddress = (
-  { casinoName, casinoAddress, workDays, casinoWorkTime, phone }: ICasinoAddress
+  { casinoAddress, workDays, casinoWorkTime, phone }: ICasinoAddress
 ) => (
   <Wrapper>
-    <Name>{casinoName}</Name>
-
     <Header><Translate id={address}/>:</Header>
     <Description><Translate id={casinoAddress}/></Description>
 
     <Header><Translate id={workTime}/>:</Header>
-    <Description>{workDays}</Description>
-    <Description>{casinoWorkTime}</Description>
+    <Description><Translate id={workDays}/></Description>
+    <Description><Translate id={casinoWorkTime}/></Description>
     <Header><Translate id={phones}/></Header>
     <PhoneNumber href={`tel:${phone}`}>{phone}</PhoneNumber>
   </Wrapper>
@@ -38,11 +36,6 @@ const Wrapper = styled.div`
   padding: 40px;
   color: ${colors.white};
   font-size: 15px;
-`;
-
-const Name = styled.h2`
-  font-size: 31px;
-  margin-bottom: 15px;
 `;
 
 const Header = styled.h3`

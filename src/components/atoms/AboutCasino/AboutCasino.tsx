@@ -17,8 +17,7 @@ export const AboutCasino = (
   <Header><Translate id={aboutCasino}/></Header>
   <Text>
     {
-      casinosDescriptions[activeCasino].map((paragraph: string, i: number) => 
-      <Text key={i}>{paragraph}</Text>)
+      <Text><Translate id={casinosDescriptions[activeCasino]}/></Text>
     }
   </Text>
 </Wrapper>

@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Translate } from "react-localize-redux";
+
 import { colors } from 'context';
 
 interface IGame {
@@ -12,12 +14,15 @@ export const Game = (
 ) => (
 <Wrapper>
   <Name nameColor={nameColor}>{name.toUpperCase()}</Name>
-  <Description>{description}</Description>
+  <Description>
+    <Translate id={description}/>
+  </Description>
 </Wrapper>
 );
 
 const Wrapper = styled.div`
-  width: 50%;
+  width: 45%;
+  padding: 10px;
   margin-bottom: 10px;
   @media screen and (max-width: 992px) {
     width: 100%;
@@ -29,6 +34,8 @@ const Name = styled.h2<{nameColor: any}>`
   margin-bottom: 20px;
 `;
 const Description = styled.p`
+  text-indent: 20px;
+  line-height: 25px;
   color: ${colors.white};
   font-size: 14px;
 `;
