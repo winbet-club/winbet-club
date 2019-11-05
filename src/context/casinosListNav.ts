@@ -17,9 +17,9 @@ export const casinosListNav: ICasinosListNav[] = [
     value: 'gallery',
     isActive: false,
   },
-  {
-    value: 'games',
-    isActive: false,
-  },
+  // {
+  //   value: 'games',
+  //   isActive: false,
+  // },
 ];
 

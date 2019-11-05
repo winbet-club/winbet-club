@@ -1,4 +1,8 @@
 { 
+  "actions": [
+    "Акции",
+    "Actions"
+  ],
   "minsk": [
     "МИНСК",
     "MINSK"
@@ -72,8 +76,8 @@
     "VACANCIES"
   ],
   "careerText": [
-    "Мы ценим наших сотрудников и понимает, что они играют важную роль в развитии компании. Если вы позитивны, инициативны, организованны, общительны, креативны, логичны и легко приспосабливаемы, смотрите списоквакансий. ",
-    "Text in english language"
+    "Мы ценим наших сотрудников и понимает, что они играют важную роль в развитии компании. Если вы позитивны, инициативны, организованны, общительны, креативны, логичны и легко приспосабливаемы, смотрите список вакансий. ",
+    "We value our employees and understand that they play an important role in the development of the company. If you are positive, initiative, organized, sociable, creative, logical and adaptable, see the list of vacancies."
   ],
   "operator": [
     "Оператор зала игровых автоматов",
@@ -87,6 +91,10 @@
     "Бармен",
     "Barman"
   ],
+  "securityOfficer": [
+    "Сотрудник охраны",
+    "Security officer"
+  ],
   "russiyanova": [
     "г. Минск ул. Руссиянова 1 - 1",
     "Minsk, 1 - 1 Russiyanova str"
@@ -98,5 +106,155 @@
   "nemiga": [
     "г. Минск ул. Немига 40",
     "Minsk, 40 Nemiga str"
+  ],
+  "blackjackDescription": [
+    "Это одна из самых известных карточных игр в мире, которая завоевала популярность благодаря не сложным правилам. В winbet любители карточных игр могут порадовать себя электронной игрой в BLACKJACK",
+    "This is one of the most famous card games in the world, which has gained popularity due to not complicated rules. In winbet fans of card games can enjoy an electronic game of BLACKJACK"
+  ],
+  "rouletteDescription": [
+    "С нами вы можете наслаждаться рулеткой, которая сочетает в себе удовольствие от игры с последними цифровыми инновациями. EGT PREMIER R8 имеет сложный дизайн, передовые технологии и высокий стандарт производительности",
+    "With us you can enjoy roulette that combines the fun of playing with the latest digital innovations. The EGT PREMIER R8 has a sophisticated design, advanced technology and a high standard of performance"
+  ],
+  "slotsDescription": [
+    "В сети игорных клубов WINBET есть множество игровых автоматов. Партнерами залов WINBET является болгарская компания производитель игровых автоматов Euro Games Technology, которая знаменита во всем мире. У нас можно найти новейшие модели аппаратов данного производителя",
+    "WINBET gambling clubs have a variety of slot machines. Partners of WINBET halls are the Bulgarian company manufacturer of slot machines Euro Games Technology, which is famous all over the world. We can find the latest models of devices of this manufacturer"
+  ],
+  "pokerDescription": [
+    "Покер - самая азартная игра в карты. Любимая игра многих. В WINBET вы найдете такие разновидности электронного poker как AMERICAN POKER, JOKER POKER, BONUS POKER, JACKS OR POKER",
+    "Poker is the most gambling card game. Favorite game of many. In WINBET you will find such varieties of electronic poker like AMERICAN POKER, JOKER POKER, BONUS POKER, JACKS or POKER"
+  ],
+  "gamesAttention": [
+    "Наша цель – оправдать ожидания самых взыскательных клиентов, предлагая широкий ассортимент игрового оборудования от лучших производителей. Выбор за вами, а у нас его много",
+    "Our goal is to meet the expectations of the most demanding customers. we offer a wide range of gaming equipment from the best manufacturers. The choice is yours, and we have a lot of it."
+  ],
+  "russiyanovaDescription": [
+    "Игровой зал WINBET в Минске очень просторный и вмещает до 90 посетителей. В зале предоставлен широкий выбор игровых автоматов от ведущих мировых производителей игровых развлечений EGT, Novomatic. Привлекательные джек-поты, разнообразные акции и бонусы, крупные выигрыши являются гарантией вашего хорошего настроения. Здесь вы можете рассчитывать на отличный сервис в современной и уютной обстановке. В баре большой ассортимент алкогольных и безалкогольных напитков белорусского производства, а также спиртное премиум-класса.",
+    "WINBET gaming hall in Minsk is very spacious and can accommodate up to 90 visitors. The hall offers a wide selection of slot machines from the world's leading manufacturers of gaming entertainment EGT, Novomatic. Attractive jackpots, various promotions and bonuses, large winnings are a guarantee of your good mood. Here you can count on excellent service in a modern and cozy atmosphere. The bar offers a wide range of alcoholic and non-alcoholic beverages of Belarusian production, as well as premium spirits."
+  ],
+  "bogdanovichaDescription": [
+    "Игровой зал WINBET в Минске очень просторный и вмещает до 90 посетителей. В зале предоставлен широкий выбор игровых автоматов от ведущих мировых производителей игровых развлечений EGT, Novomatic. Привлекательные джек-поты, разнообразные акции и бонусы, крупные выигрыши являются гарантией вашего хорошего настроения. Здесь вы можете рассчитывать на отличный сервис в современной и уютной обстановке. В баре большой ассортимент алкогольных и безалкогольных напитков белорусского производства, а также спиртное премиум-класса.",
+    "WINBET gaming hall in Minsk is very spacious and can accommodate up to 90 visitors. The hall offers a wide selection of slot machines from the world's leading manufacturers of gaming entertainment EGT, Novomatic. Attractive jackpots, various promotions and bonuses, large winnings are a guarantee of your good mood. Here you can count on excellent service in a modern and cozy atmosphere. The bar offers a wide range of alcoholic and non-alcoholic beverages of Belarusian production, as well as premium spirits."
+  ],
+  "nemigaDescription": [
+    "Игровой зал WINBET в Минске очень просторный и вмещает до 90 посетителей. В зале предоставлен широкий выбор игровых автоматов от ведущих мировых производителей игровых развлечений EGT, Novomatic. Привлекательные джек-поты, разнообразные акции и бонусы, крупные выигрыши являются гарантией вашего хорошего настроения. Здесь вы можете рассчитывать на отличный сервис в современной и уютной обстановке. В баре большой ассортимент алкогольных и безалкогольных напитков белорусского производства, а также спиртное премиум-класса.",
+    "WINBET gaming hall in Minsk is very spacious and can accommodate up to 90 visitors. The hall offers a wide selection of slot machines from the world's leading manufacturers of gaming entertainment EGT, Novomatic. Attractive jackpots, various promotions and bonuses, large winnings are a guarantee of your good mood. Here you can count on excellent service in a modern and cozy atmosphere. The bar offers a wide range of alcoholic and non-alcoholic beverages of Belarusian production, as well as premium spirits."
+  ],
+  "firstPromoHeader": [
+    "Каждую субботу: 22.00",
+    "Every Saturday 10 PM"
+  ],
+  "secondPromoHeader": [
+    "Каждый вечер: 22.00",
+    "Every evening at 10 PM"
+  ],
+  "firstPromoDescription": [
+    "ЕЖЕНЕДЕЛЬНАЯ БОНУС ИГРА с растущим ДЖЕКПОТОМ. Подробности у персонала зала",
+    "WEEKLY BONUS GAME with a growing JACKPOT. The details have personnel the room"
+  ],
+  "secondPromoDescription": [
+    "ОБЪЕДИНЕННАЯ БОНУС ИГРА с растущим ДЖЕКПОТОМ. Подробности у персонала зала",
+    "COMBINED BONUS GAME with a growing JACKPOT. The details have personnel the room"
+  ],
+  "aboutUsFirstParagraph": [
+    "Международная сеть игорных клубов WINBET начала свою работу в Беларуси 5 лет назад. Игровые залы WINBET – это невероятная атмосфера, современные игровые автоматы от лучших мировых производителей с многочисленными бонусными играми, разработанными в соответствии с потребностями гостей.",
+    "The international network of gambling clubs WINBET started its work in Belarus 5 years ago. WINBET gaming halls are an incredible atmosphere, modern slot machines from the world's best manufacturers with numerous bonus games designed according to the needs of guests."
+  ],
+  "aboutUsSecondParagraph": [
+    "Игорные заведения WINBET – это высокий комфорт, приятная атмосфера. Наши клубы невозможно перепутать ни с какими другими, потому что все они имеют уникальный интерьер от лучших болгарских дизайнеров. В клубах европейский не только интерьер, но и обслуживание: внимание и ненавязчивость персонала к каждому гостю. Команда WINBET гарантирует своим гостям отличный сервис. Посетив наше заведение, гости остаются нашими друзьями и возвращаются к нам снова. Наша цель – не только удовлетворить их потребности, но и превзойти их ожидания. Сеть WINBET растет и развивается, благодаря нашему вниманию к вашим личным потребностям и предпочтениям.",
+    "WINBET gambling establishments are high comfort, pleasant atmosphere. Our clubs can not be confused with any other, because they all have a unique interior from the best Bulgarian designers. In the European clubs not only the interior but also the service: attention and unobtrusiveness of the staff to each guest. The WINBET team guarantees its guests excellent service. Visiting our establishment, guests remain our friends and come back to us again. Our goal is not only to meet their needs, but also to exceed their expectations. The WINBET network grows and develops, thanks to our attention to your personal needs and preferences."
+  ],
+  "aboutUsThirdParagraph": [
+    "WINBET гарантирует захватывающие эмоции!!!!",
+    "WINBET guarantees exciting emotions!!!!"
+  ],
+  "workDays": [
+    "Понедельник - воскресенье",
+    "Monday-Sunday"
+  ],
+  "casinoWorkTime": [
+    "Круглосуточно, тех.перерыв - 7.00-8.00",
+    "Around the clock, technical break - 7AM-8AM"
+  ],
+  "eventsListRussiyanovaHeader": [
+    "Каждую субботу: 22.00",
+    "Every Saturday 10 PM"
+  ],
+  "eventsListRussiyanovaHeader_2": [
+    "Каждый вечер в 21:00",
+    "Every evening at 9 PM"
+  ],
+  "eventsListRussiyanovaHeader_3": [
+    "Каждый вечер в 22:00",
+    "Every evening at 10 PM"
+  ],
+  
+
+  "eventsListBogdanovichaHeader": [
+    "Каждую субботу: 22.00",
+    "Every Saturday 10 PM"
+  ],
+  "eventsListBogdanovichaHeader_2": [
+    "Каждый вечер в 21:00",
+    "Every evening at 9 PM"
+  ],
+  "eventsListBogdanovichaHeader_3": [
+    "Каждый вечер в 22:00",
+    "Every evening at 10 PM"
+  ],
+
+
+  "eventsListNemigaHeader": [
+    "Каждую субботу: 22.00",
+    "Every Saturday 10 PM"
+  ],
+  "eventsListNemigaHeader_2": [
+    "Каждый вечер в 21:00",
+    "Every evening at 9 PM"
+  ],
+  "eventsListNemigaHeader_3": [
+    "Каждый вечер в 22:00",
+    "Every evening at 10 PM"
+  ],
+
+
+  "eventsListRussiyanovaText": [
+    "ЕЖЕНЕДЕЛЬНАЯ БОНУС ИГРА с растущим ДЖЕКПОТОМ. Подробности у персонала зала",
+    "WEEKLY BONUS GAME with a growing JACKPOT. The details have personnel the room"
+  ],
+  "eventsListRussiyanovaText_2": [
+    "ЛОКАЛЬНАЯ БОНУС ИГРА с растущим ДЖЕКПОТОМ. Подробности у персонала зала",
+    "LOCAL BONUS GAME with an increasing JACKPOT. The details have personnel the room"
+  ],
+  "eventsListRussiyanovaText_3": [
+    "ОБЪЕДИНЕННАЯ БОНУС ИГРА с растущим ДЖЕКПОТОМ. Подробности у персонала зала",
+    "COMBINED BONUS GAME with a growing JACKPOT. The details have personnel the room"
+  ],
+
+
+  "eventsListBogdanovichaText": [
+    "ЕЖЕНЕДЕЛЬНАЯ БОНУС ИГРА с растущим ДЖЕКПОТОМ. Подробности у персонала зала",
+    "WEEKLY BONUS GAME with a growing JACKPOT. The details have personnel the room"
+  ],
+  "eventsListBogdanovichaText_2": [
+    "ЛОКАЛЬНАЯ БОНУС ИГРА с растущим ДЖЕКПОТОМ. Подробности у персонала зала",
+    "LOCAL BONUS GAME with an increasing JACKPOT. The details have personnel the room"
+  ],
+  "eventsListBogdanovichaText_3": [
+    "ОБЪЕДИНЕННАЯ БОНУС ИГРА с растущим ДЖЕКПОТОМ. Подробности у персонала зала",
+    "COMBINED BONUS GAME with a growing JACKPOT. The details have personnel the room"
+  ],
+
+  
+  "eventsListNemigaText": [
+    "ЕЖЕНЕДЕЛЬНАЯ БОНУС ИГРА с растущим ДЖЕКПОТОМ. Подробности у персонала зала",
+    "WEEKLY BONUS GAME with a growing JACKPOT. The details have personnel the room"
+  ],
+  "eventsListNemigaText_2": [
+    "ЛОКАЛЬНАЯ БОНУС ИГРА с растущим ДЖЕКПОТОМ. Подробности у персонала зала",
+    "LOCAL BONUS GAME with an increasing JACKPOT. The details have personnel the room"
+  ],
+  "eventsListNemigaText_3": [
+    "ОБЪЕДИНЕННАЯ БОНУС ИГРА с растущим ДЖЕКПОТОМ. Подробности у персонала зала",
+    "COMBINED BONUS GAME with a growing JACKPOT. The details have personnel the room"
   ]
 }

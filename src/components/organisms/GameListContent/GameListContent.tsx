@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Translate } from "react-localize-redux";
 
 import { Slider } from 'molecules';
 import { textConstants, colors, gamesList, gamesNameColors } from 'context';
@@ -22,7 +23,9 @@ export const GameListContent = () => (
           <Game key={name} name={name} description={description} nameColor={gamesNameColors[i]}/>)
       }
     </GamesListWrapper>
-    <GameAttention>{gamesAttention}</GameAttention>
+    <GameAttention>
+      <Translate id={gamesAttention} />
+    </GameAttention>
   </Wrapper>
 )
 const Wrapper = styled.div`
@@ -51,11 +54,17 @@ const H2 = styled.h2`
   font-weight: 600;
   font-size: 40px;
   font-size: 50px;
+  @media screen and (max-width: 560px) {
+    font-size: 32px;
+  }
 `;
 
 const Text = styled.p`
   margin-bottom: 10px;
   color: ${colors.white};
+  @media screen and (max-width: 450px) {
+    font-size: 12px;
+  }
 `;
 
 const Description = styled.div`

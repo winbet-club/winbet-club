@@ -54,7 +54,9 @@ const Text = styled.p`
   line-height: 25px;
 `;
 
-const Ul = styled.ul``;
+const Ul = styled.ul`
+  margin-left: 30px;
+`;
 
 const Li = styled.li`
   font-size: 18px;

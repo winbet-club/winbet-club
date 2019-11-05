@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { colors } from 'context';
+import { Translate } from 'react-localize-redux';
 
 export interface ICasinoBlock {
   image: HTMLImageElement;
@@ -17,7 +18,7 @@ export const SmallCasinoBlock = (
   return (
     <Wrapper image={image} onClick={bindClick}>
       <Description>
-        {description}
+        <Translate id={description}/>
       </Description>
     </Wrapper>
   )

@@ -1,21 +1,21 @@
 const bollunProperties = [
   {
-    balloonContent: '<h2>ул. Руссиянова 1 - 1</h2>',
-    balloonContentHeader: '<h2>привет2</h2>',
-    hintContent: '<h2>привет3</h2>',
-    iconCaption: 'ул. Руссиянова 1 - 1',
+    balloonContent: '<h2>(Тех.перерыв - 7.00-8.00)<br> ул. Руссиянова 1 - 1</h2>',
+    balloonContentHeader: '<h2>Время работы 24/7</h2>',
+    hintContent: '<h2>Время работы 24/7  <br> (Тех.перерыв - 7.00-8.00)</h2>',
+    iconCaption: 'Адрес: ул. Руссиянова 1 - 1',
   },
   {
-    balloonContent: '<h2>ул. Богдановича 120 Б</h2>',
+    balloonContent: '<h2>(Тех.перерыв - 7.00-8.00)<br> ул. Богдановича 120 Б</h2>',
     balloonContentHeader: '<h2>Время работы 24/7</h2>',
-    hintContent: '<h2>Игровой клуб</h2>',
+    hintContent: '<h2>Время работы 24/7  <br> (Тех.перерыв - 7.00-8.00)</h2>',
     iconCaption: 'Адрес: ул. Богдановича 120 Б',
   },
   {
-    balloonContent: '<h2>ул. Немига 40</h2>',
-    balloonContentHeader: '<h2>привет</h2>',
-    hintContent: '<h2>привет</h2>',
-    iconCaption: 'ул. Немига 40',
+    balloonContent: '<h2>(Тех.перерыв - 7.00-8.00)<br> ул. Немига 40</h2>',
+    balloonContentHeader: '<h2>Время работы 24/7</h2>',
+    hintContent: '<h2>Время работы 24/7  <br> (Тех.перерыв - 7.00-8.00)</h2>',
+    iconCaption: ' Адрес: ул. Немига 40',
   }
 ]
 

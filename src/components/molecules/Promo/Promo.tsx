@@ -16,8 +16,8 @@ export const Promo = () => (
           promoImgList.map(({img, header, description}) => 
             <Banner key={img} description={description}>
               <BannerCover>
-                <PromoHeader>{header}</PromoHeader>
-                  {description}
+                <PromoHeader><Translate id={header}/></PromoHeader>
+                  <Translate id={description}/>
               </BannerCover>
               <BannerImg src={img}/>
             </Banner>
@@ -60,6 +60,8 @@ const BannerCover = styled.div`
   color: ${colors.white};
   padding: 30px;
   box-sizing: border-box;
+  font-size: 20px;
+  line-height: 30px;
 `;
 
 
@@ -94,6 +96,7 @@ const BannersField = styled.div`
 const Header = styled.h2`
   width: 35%;
   height: 40px;
+  margin-bottom: 20px;
   display: flex;
   font-weight: 600;
   color: ${colors.white};
@@ -104,7 +107,6 @@ const Header = styled.h2`
 
 const PromoHeader = styled.h2`
   margin-bottom: 20px;
-  width: 35%;
   height: 40px;
   display: flex;
   font-weight: 600;
@@ -112,4 +114,7 @@ const PromoHeader = styled.h2`
   font-size: 30px;
   border-bottom: 1px solid;
   border-image: linear-gradient(right, rgba(0, 0, 0, 0), #efe3bd, #efe3bd ) 0 0 100%;
+  @media (max-width: 450px) {
+    font-size: 20px;
+  }
 `;

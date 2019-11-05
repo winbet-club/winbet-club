@@ -17,7 +17,7 @@ export const AboutUsContent = () => (
         <Translate id={aboutUs} />
       </H2>
       <Text>
-        {aboutUsText.split('<newString>').map((str: string, i: number) => <Text key={i}>{str}</Text>)}
+        {aboutUsText.split('<newString>').map((str: string, i: number) => <Text key={i}><Translate id={str} /></Text>)}
       </Text>
     </DescriptionBlock>
   </Wrapper>

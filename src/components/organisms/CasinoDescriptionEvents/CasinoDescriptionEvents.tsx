@@ -33,7 +33,7 @@ export const CasinoDescriptionEvents = (
       casinoClick={casinoClick}
     >
       <Wrapper>
-        <NotesList headerName={promo} promoList={promoList}/>
+        <NotesList headerName={promo} promoList={promoList} activeCasino={activeCasino} />
       </Wrapper>
     </CasinoDescriptionCommonPart>
 );

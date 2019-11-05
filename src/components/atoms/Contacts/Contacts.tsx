@@ -1,9 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Translate } from 'react-localize-redux';
 
 import { textConstants, addressTransformator, colors } from 'context';
 
-const { contacts, address, workTime, phones } = textConstants;
+const { address, workTime, phones } = textConstants;
 
 interface IProps {
   activeCasino: string;
@@ -14,18 +15,18 @@ export const Contacts = (
 ) => (
   <Wrapper>
     <ContextBlock>
-      <Header>{contacts.toUpperCase()}</Header>
+      <Header><Translate id='contacts'/></Header>
       <Address>
-        <HeaderSpan>{address.toUpperCase()}:</HeaderSpan>
-        <Span>{addressTransformator[activeCasino].address}</Span>
+        <HeaderSpan><Translate id={address}/></HeaderSpan>
+        <Span><Translate id={addressTransformator[activeCasino].address}/></Span>
       </Address>
       <WorkTime>
-        <HeaderSpan>{workTime.toUpperCase()}:</HeaderSpan>
-        <Span>{addressTransformator[activeCasino].workDays}</Span>
-        <Span>{addressTransformator[activeCasino].workTime}</Span>
+        <HeaderSpan><Translate id={workTime}/></HeaderSpan>
+        <Span><Translate id={addressTransformator[activeCasino].workDays}/></Span>
+        <Span><Translate id={addressTransformator[activeCasino].workTime}/></Span>
       </WorkTime>
       <Phones>
-        <HeaderSpan>{phones.toUpperCase()}:</HeaderSpan>
+        <HeaderSpan><Translate id={phones}/></HeaderSpan>
         <PhoneNumber
           href={`tel:${addressTransformator[activeCasino].phones}`}>
           {addressTransformator[activeCasino].phones}
