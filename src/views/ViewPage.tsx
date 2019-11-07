@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Route } from 'react-router-dom';
-import { BrowserRouter } from 'react-router-dom';
+// import { BrowserRouter } from 'react-router-dom';
 
 import { HomeContent, AboutUsContent, CareerContent, CasinosContent, CommonWrapper,
   CasonoDescriptionGeneral, CasinoDescriptionPromo, CasinoDescriptionEvents, CasinoDescriptionGallary,
@@ -188,7 +188,7 @@ export class ViewPage extends React.Component<IProps> {
 
     const getContactsContent = () => <ContactsContent casinosInfo={casinosInfo}  />
     return (
-        <BrowserRouter>
+        // <BrowserRouter>
           <CommonWrapper
             time={time}
             navList={navList}
@@ -215,7 +215,7 @@ export class ViewPage extends React.Component<IProps> {
             <Route exact={true} path={`/casinos/${activeCasino}-gallery`} render={this.renderCasinoDescriptionGallary}/>
             <Route exact={true} path='/contacts' render={getContactsContent}/>
           </CommonWrapper>
-        </BrowserRouter>
+        // </BrowserRouter>
     )
   }
 }
