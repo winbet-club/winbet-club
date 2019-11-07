@@ -132,12 +132,12 @@
     "WINBET gaming hall in Minsk is very spacious and can accommodate up to 90 visitors. The hall offers a wide selection of slot machines from the world's leading manufacturers of gaming entertainment EGT, Novomatic. Attractive jackpots, various promotions and bonuses, large winnings are a guarantee of your good mood. Here you can count on excellent service in a modern and cozy atmosphere. The bar offers a wide range of alcoholic and non-alcoholic beverages of Belarusian production, as well as premium spirits."
   ],
   "bogdanovichaDescription": [
-    "Игровой зал WINBET в Минске очень просторный и вмещает до 90 посетителей. В зале предоставлен широкий выбор игровых автоматов от ведущих мировых производителей игровых развлечений EGT, Novomatic. Привлекательные джек-поты, разнообразные акции и бонусы, крупные выигрыши являются гарантией вашего хорошего настроения. Здесь вы можете рассчитывать на отличный сервис в современной и уютной обстановке. В баре большой ассортимент алкогольных и безалкогольных напитков белорусского производства, а также спиртное премиум-класса.",
-    "WINBET gaming hall in Minsk is very spacious and can accommodate up to 90 visitors. The hall offers a wide selection of slot machines from the world's leading manufacturers of gaming entertainment EGT, Novomatic. Attractive jackpots, various promotions and bonuses, large winnings are a guarantee of your good mood. Here you can count on excellent service in a modern and cozy atmosphere. The bar offers a wide range of alcoholic and non-alcoholic beverages of Belarusian production, as well as premium spirits."
+    " Прекрасные эмоции, привлекательные выигрыши, приветливый персонал, доброжелательная атмосфера ждут вас в нашем клубе на Богдановича 120Б. В нем вы найдете захватывающие игровые автоматы, а также электронную рулетку",
+    "Beautiful emotions, attractive winnings, friendly staff, friendly atmosphere are waiting for you in our club on Bogdanovich 120B. in it you will find exciting slot machines, as well as electronic roulette"
   ],
   "nemigaDescription": [
-    "Игровой зал WINBET в Минске очень просторный и вмещает до 90 посетителей. В зале предоставлен широкий выбор игровых автоматов от ведущих мировых производителей игровых развлечений EGT, Novomatic. Привлекательные джек-поты, разнообразные акции и бонусы, крупные выигрыши являются гарантией вашего хорошего настроения. Здесь вы можете рассчитывать на отличный сервис в современной и уютной обстановке. В баре большой ассортимент алкогольных и безалкогольных напитков белорусского производства, а также спиртное премиум-класса.",
-    "WINBET gaming hall in Minsk is very spacious and can accommodate up to 90 visitors. The hall offers a wide selection of slot machines from the world's leading manufacturers of gaming entertainment EGT, Novomatic. Attractive jackpots, various promotions and bonuses, large winnings are a guarantee of your good mood. Here you can count on excellent service in a modern and cozy atmosphere. The bar offers a wide range of alcoholic and non-alcoholic beverages of Belarusian production, as well as premium spirits."
+    "Мы рады приветствовать всех гостей в нашем новом клубе. Клуб открылся совсем недавно. Мы надеемся – он станет излюбленным местом ценителей отличной  игры и уютной атмосферы. Обязательно побалуйте себя любимыми играми, которые есть в вашем распоряжении на WINBET. Профессиональное обслуживание наших улыбающихся сотрудников сделает ваш опыт еще более приятным. Разнообразие игровых автоматов нового поколения позволит вам испытать незабываемые эмоции и получить невероятные выигрыши каждый день. Играйте с удовольствием и выигрывайте с легкостью!",
+    "We are pleased to welcome all guests to our new club. The club opened recently. We hope-it will become a favorite place for lovers of great games and cozy atmosphere. Be sure to treat yourself to your favorite games that are at your disposal on WINBET. The professional service of our smiling staff will make your experience even more enjoyable. A variety of slot machines of the new generation will allow you to experience unforgettable emotions and get incredible winnings every day. Play with pleasure and win with ease!"
   ],
   "firstPromoHeader": [
     "Каждую субботу: 22.00",
@@ -187,6 +187,10 @@
     "Каждый вечер в 22:00",
     "Every evening at 10 PM"
   ],
+  "eventsListRussiyanovaHeader_4": [
+    "Скреч игра",
+    "The scratch game"
+  ],
   
 
   "eventsListBogdanovichaHeader": [
@@ -200,6 +204,10 @@
   "eventsListBogdanovichaHeader_3": [
     "Каждый вечер в 22:00",
     "Every evening at 10 PM"
+  ],
+  "eventsListBogdanovichaHeader_4": [
+    "Скреч игра",
+    "The scratch game"
   ],
 
 
@@ -215,6 +223,10 @@
     "Каждый вечер в 22:00",
     "Every evening at 10 PM"
   ],
+  "eventsListNemigaHeader_4": [
+    "Скреч игра",
+    "The scratch game"
+  ],
 
 
   "eventsListRussiyanovaText": [
@@ -228,6 +240,10 @@
   "eventsListRussiyanovaText_3": [
     "ОБЪЕДИНЕННАЯ БОНУС ИГРА с растущим ДЖЕКПОТОМ. Подробности у персонала зала",
     "COMBINED BONUS GAME with a growing JACKPOT. The details have personnel the room"
+  ],
+  "eventsListRussiyanovaText_4": [
+    "Каждый день. Время: 12.00-14.00 и 18.00-20.00",
+    "Everyday. Time: 12AM-2PM and 6PM-8PM"
   ],
 
 
@@ -243,6 +259,10 @@
     "ОБЪЕДИНЕННАЯ БОНУС ИГРА с растущим ДЖЕКПОТОМ. Подробности у персонала зала",
     "COMBINED BONUS GAME with a growing JACKPOT. The details have personnel the room"
   ],
+  "eventsListBogdanovichaText_4": [
+    "Каждый день. Время: 12.00-14.00 и 18.00-20.00",
+    "Everyday. Time: 12AM-2PM and 6PM-8PM"
+    ],
 
   
   "eventsListNemigaText": [
@@ -256,5 +276,9 @@
   "eventsListNemigaText_3": [
     "ОБЪЕДИНЕННАЯ БОНУС ИГРА с растущим ДЖЕКПОТОМ. Подробности у персонала зала",
     "COMBINED BONUS GAME with a growing JACKPOT. The details have personnel the room"
+  ],
+  "eventsListNemigaText_4": [
+    "Каждый день. Время: 12.00-14.00 и 18.00-20.00",
+    "Everyday. Time: 12AM-2PM and 6PM-8PM"
   ]
 }

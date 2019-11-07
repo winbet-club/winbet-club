@@ -91,7 +91,7 @@ export class ViewPage extends React.Component<IProps> {
   
   public renderCasonoDescriptionGeneral = () => {
     const { casinosListNav, activeCasino, isMobileMenuDescriptionCasinoOpen, jackpotsValues } = this.props;
-
+    
     return <CasonoDescriptionGeneral
       casinosListNav={casinosListNav}
       onClick={this.onCasinoDescriptionClick}

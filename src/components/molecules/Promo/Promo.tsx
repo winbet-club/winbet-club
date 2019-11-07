@@ -17,7 +17,9 @@ export const Promo = () => (
             <Banner key={img} description={description}>
               <BannerCover>
                 <PromoHeader><Translate id={header}/></PromoHeader>
-                  <Translate id={description}/>
+                  <Description>
+                    <Translate id={description}/>
+                  </Description>
               </BannerCover>
               <BannerImg src={img}/>
             </Banner>
@@ -45,10 +47,17 @@ const Container = styled.div`
   }
 `;
 
+const Description = styled.p`
+  text-indent: 15px;
+  @media screen and (max-width: 450px) {
+    font-size: 12px;
+    line-height: 20px;
+  }
+`;
+
 const BannerImg = styled.img`
   width: 100%;
 `;
-
 
 const BannerCover = styled.div`
   display: none;
