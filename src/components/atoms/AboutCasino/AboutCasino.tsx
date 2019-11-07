@@ -39,5 +39,7 @@ const Header = styled.h2`
 `;
 
 const Text = styled.div`
+  line-height: 25px;
+  text-indent: 15px;
   margin-bottom: 15px;
 `;

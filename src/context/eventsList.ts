@@ -12,6 +12,10 @@ export const eventsList = {
       header: 'eventsListRussiyanovaHeader_3',
       text: 'eventsListRussiyanovaText_3'
     },
+    {
+      header: 'eventsListRussiyanovaHeader_4',
+      text: 'eventsListRussiyanovaText_4'
+    },
   ],
   bogdanovicha: [
     {
@@ -26,6 +30,10 @@ export const eventsList = {
       header: 'eventsListBogdanovichaHeader_3',
       text: 'eventsListBogdanovichaText_3'
     },
+    {
+      header: 'eventsListBogdanovichaHeader_4',
+      text: 'eventsListBogdanovichaText_4'
+    },
   ],
   nemiga: [
     {
@@ -39,6 +47,10 @@ export const eventsList = {
     {
       header: 'eventsListNemigaHeader_3',
       text: 'eventsListNemigaText_3'
+    },
+    {
+      header: 'eventsListNemigaHeader_4',
+      text: 'eventsListNemigaText_4'
     },
   ]
 }

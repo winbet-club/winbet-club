@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { LocalizeProvider } from "react-localize-redux";
 import { renderToStaticMarkup } from 'react-dom/server';
+import { HashRouter } from 'react-router-dom';
 
 import { ViewPage } from './views';
 import { globalTranslations } from './context';
@@ -32,13 +33,13 @@ class App extends React.Component {
   public render() {
 
     return (
-      // <HashRouter>
+      <HashRouter>
         <LocalizeProvider initialize={this.initialize} store={store}>
           
             <ViewPage/>
           
         </LocalizeProvider>
-      // </HashRouter>
+      </HashRouter>
     );
   }
 }

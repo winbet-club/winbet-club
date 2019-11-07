@@ -40,5 +40,5 @@ export const CasinoDescriptionEvents = (
 
 const Wrapper = styled.div`
   padding: 40px 40px;
-  width: 48%;
+  /* width: 48%; */
 `;
