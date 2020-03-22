@@ -6,7 +6,7 @@ import { textConstants, colors } from 'context';
 const { currencyBYN } = textConstants;
 
 interface IProps {
-  jackpotValue: number; // May be different type
+  jackpotValue: number;
   image: HTMLImageElement;
 }
 

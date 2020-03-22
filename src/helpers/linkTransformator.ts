@@ -11,6 +11,3 @@ export const linkTransformator = {
   галерея: 'gallery',
   главная: 'main',
 }
-
-// TO delete it
-
