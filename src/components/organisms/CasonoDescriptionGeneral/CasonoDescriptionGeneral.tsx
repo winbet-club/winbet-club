@@ -1,12 +1,12 @@
-import React from 'react';
-import styled from 'styled-components';
-import ImageGallery from 'react-image-gallery';
-import { Translate } from 'react-localize-redux';
+import React from "react";
+import styled from "styled-components";
+import ImageGallery from "react-image-gallery";
+import { Translate } from "react-localize-redux";
 
-import { AboutCasino, PromoNote, IPromoNote } from 'atoms';
-import { ICasinosListNav } from 'reducers';
-import { imageGallery, textConstants, eventsList, colors } from 'context';
-import { CasinoDescriptionCommonPart } from 'organisms';
+import { AboutCasino, PromoNote, IPromoNote } from "atoms";
+import { ICasinosListNav } from "reducers";
+import { imageGallery, textConstants, eventsList, colors } from "context";
+import { CasinoDescriptionCommonPart } from "organisms";
 
 const { gallery, actions } = textConstants;
 
@@ -19,62 +19,69 @@ interface IProps {
   casinoClick: (value: string) => void;
   onDescripionMenuClick: () => void;
 }
-  
-export const CasonoDescriptionGeneral = (
-  {
-    casinosListNav,
-    activeCasino,
-    onClick,
-    onDescripionMenuClick,
-    isMobileMenuDescriptionCasinoOpen,
-    jackpotsValues,
-    casinoClick,
-  }: IProps
-) => (
-    <CasinoDescriptionCommonPart
-      jackpotsValues={jackpotsValues}
-      casinosListNav={casinosListNav}
-      activeCasino={activeCasino}
-      onClick={onClick}
-      onDescripionMenuClick={onDescripionMenuClick}
-      isMobileMenuDescriptionCasinoOpen={isMobileMenuDescriptionCasinoOpen}
-      casinoClick={casinoClick}
-    >
-      <PaddingWrapper>
-        <InfoBlock>
-          <AboutCasino activeCasino={activeCasino} />
-        </InfoBlock>
-        <InfoBlockBorderBottom/>
-        <GaleryAndPromo>
-          <ImageGalleryWrapper>
-            <Header><Translate id={gallery}/> 
-            <Address><Translate id={activeCasino}/></Address>
-            </Header>
-            <ImageGallery 
-              items={imageGallery[activeCasino]}
-              showFullscreenButton={false}
-              showPlayButton={false}
-              showBullets={false}
-              autoPlay={true}
-              slideInterval={5000}
-              showThumbnails={true}
-              showNav={false}
-            />
-          </ImageGalleryWrapper>
+
+export const CasonoDescriptionGeneral = ({
+  casinosListNav,
+  activeCasino,
+  onClick,
+  onDescripionMenuClick,
+  isMobileMenuDescriptionCasinoOpen,
+  jackpotsValues,
+  casinoClick
+}: IProps) => (
+  <CasinoDescriptionCommonPart
+    jackpotsValues={jackpotsValues}
+    casinosListNav={casinosListNav}
+    activeCasino={activeCasino}
+    onClick={onClick}
+    onDescripionMenuClick={onDescripionMenuClick}
+    isMobileMenuDescriptionCasinoOpen={isMobileMenuDescriptionCasinoOpen}
+    casinoClick={casinoClick}
+  >
+    <PaddingWrapper>
+      <InfoBlock>
+        <AboutCasino activeCasino={activeCasino} />
+      </InfoBlock>
+      <InfoBlockBorderBottom />
+      <GaleryAndPromo>
+        <ImageGalleryWrapper>
+          <Header>
+            <Translate id={gallery} />
+            <Address>
+              <Translate id={activeCasino} />
+            </Address>
+          </Header>
+          <ImageGallery
+            items={imageGallery[activeCasino]}
+            showFullscreenButton={false}
+            showPlayButton={false}
+            showBullets={false}
+            autoPlay={true}
+            slideInterval={5000}
+            showThumbnails={true}
+            showNav={false}
+          />
+        </ImageGalleryWrapper>
         <Promo>
-        {/* <NotesList headerName={promo} promoList={promoList}/> */}
-        <Action>
-          <ActionHeader><Translate id={actions}/></ActionHeader>
-          {
-            eventsList[activeCasino].map(({header, text}: IPromoNote) => 
-              <PromoNote key={header} header={header} text={text} />)
-          }
-        </Action>
+          {/* <NotesList
+            headerName=""
+            promoList={promoList}
+            activeCasino="nemiga"
+          /> */}
+
+          <Action>
+            <ActionHeader>
+              <Translate id={actions} />
+            </ActionHeader>
+            {eventsList[activeCasino].map(({ header, text }: IPromoNote) => (
+              <PromoNote key={header} header={header} text={text} />
+            ))}
+          </Action>
         </Promo>
-        </GaleryAndPromo>
-      </PaddingWrapper>
-    </CasinoDescriptionCommonPart>
-  );
+      </GaleryAndPromo>
+    </PaddingWrapper>
+  </CasinoDescriptionCommonPart>
+);
 
 const PaddingWrapper = styled.div`
   padding: 0 30px;
@@ -91,13 +98,11 @@ const InfoBlock = styled.div`
 
 const InfoBlockBorderBottom = styled.div`
   height: 1px;
-  background: -webkit-radial-gradient(50% 0%, 50% 5px, #000 0%, #3e3a31 100%);  
+  background: -webkit-radial-gradient(50% 0%, 50% 5px, #000 0%, #3e3a31 100%);
   margin-bottom: 30px;
 `;
 
-const Action = styled.div`
-
-`;
+const Action = styled.div``;
 
 const ActionHeader = styled.h3`
   color: ${colors.yellow};
@@ -123,7 +128,6 @@ const Header = styled.div`
   font-size: 30px;
 `;
 
-
 const ImageGalleryWrapper = styled.div`
   width: 50%;
   @media (max-width: 994px) {
@@ -137,4 +141,3 @@ const GaleryAndPromo = styled.div`
     flex-direction: column;
   }
 `;
-
