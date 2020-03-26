@@ -5,8 +5,8 @@ export const colors = {
 
   white: '#ffffff',
 
-  gray2: '#151515', // TODO Rename
-  gray3: '#212121', // TODO Rename
+  gray2: '#151515',
+  gray3: '#212121',
   blackGray: '#c8c7c7c7',
   gray: '#c8c7c7',
   cadetGray: '#d3d3d3',
@@ -15,10 +15,10 @@ export const colors = {
   silver: '#a9a9a9',
   darkSilver: '#242424',
   liteDarkSilver: '#1a1c1b',
-  silver1: '#141414', // TODO Rename
-  silver2: '#66635b', // TODO Rename
-  silver3: '#60605F', // TODO Rename
-  silver4: '#292929', // TODO Rename
+  silver1: '#141414',
+  silver2: '#66635b',
+  silver3: '#60605F',
+  silver4: '#292929', 
 
   background1: '#1a1a1c',
   bgSilver: '#434343',

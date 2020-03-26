@@ -4,11 +4,6 @@ import styled from 'styled-components';
 import { jackpotcardsLogo , jackpotcardsLogoMobi } from 'images'
 import { cardImagesList } from 'context';
 
-// interface ICard {
-//   image: HTMLImageElement;
-//   jackpotValue: number;
-// }
-
 interface IProps {
   cardJackpotData?: any[];
 }

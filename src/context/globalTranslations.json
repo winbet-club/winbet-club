@@ -1,80 +1,23 @@
-{ 
-  "actions": [
-    "Акции",
-    "Actions"
-  ],
-  "minsk": [
-    "МИНСК",
-    "MINSK"
-  ],
-  "menu": [
-    "Меню",
-    "Menu"
-  ],
-  "aboutUs": [
-    "О НАС",
-    "ABOUT US"
-  ],
-  "news": [
-    "НОВОСТИ",
-    "NEWS"
-  ],
-  "career": [
-    "КАРЬЕРА",
-    "CAREER"
-  ],
-  "contacts": [
-    "КОНТАКТЫ",
-    "CONTACTS"
-  ],
-    "promo": [
-    "АКЦИИ",
-    "PROMO"
-  ],
-  "main": [
-    "ГЛАВНАЯ",
-    "MAIN"
-  ],
-  "events": [
-    "СОБЫТИЯ",
-    "EVENTS"
-  ],
-  "gallery": [
-    "ГАЛЕРЕЯ",
-    "GALLERY"
-  ],
-  "games": [
-    "ИГРЫ",
-    "GAMES"
-  ],
-  "casinos": [
-    "КАЗИНО",
-    "CASINOS"
-  ],
-  "aboutCasino": [
-    "О КАЗИНО",
-    "ABOUT CASINO"
-  ],
-  "address": [
-    "АДРЕС",
-    "ADDRESS"
-  ],
-  "workTime": [
-    "ВРЕМЯ РАБОТЫ",
-    "WORK TIME"
-  ],
-  "phones": [
-    "ТЕЛЕФОНЫ",
-    "PHONES"
-  ],
-  "workWithUs": [
-    "РАБОТА У НАС",
-    "WORK WITH US"
-  ],
-  "vacancies": [
-    "ВАКАНСИИ",
-    "VACANCIES"
-  ],
+{
+  "actions": ["Акции", "Actions"],
+  "minsk": ["МИНСК", "MINSK"],
+  "menu": ["Меню", "Menu"],
+  "aboutUs": ["О НАС", "ABOUT US"],
+  "news": ["НОВОСТИ", "NEWS"],
+  "career": ["КАРЬЕРА", "CAREER"],
+  "contacts": ["КОНТАКТЫ", "CONTACTS"],
+  "promo": ["АКЦИИ", "PROMO"],
+  "main": ["ГЛАВНАЯ", "MAIN"],
+  "events": ["СОБЫТИЯ", "EVENTS"],
+  "gallery": ["ГАЛЕРЕЯ", "GALLERY"],
+  "games": ["ИГРЫ", "GAMES"],
+  "casinos": ["КАЗИНО", "CASINOS"],
+  "aboutCasino": ["О КАЗИНО", "ABOUT CASINO"],
+  "address": ["АДРЕС", "ADDRESS"],
+  "workTime": ["ВРЕМЯ РАБОТЫ", "WORK TIME"],
+  "phones": ["ТЕЛЕФОНЫ", "PHONES"],
+  "workWithUs": ["РАБОТА У НАС", "WORK WITH US"],
+  "vacancies": ["ВАКАНСИИ", "VACANCIES"],
   "careerText": [
     "Мы ценим наших сотрудников и понимает, что они играют важную роль в развитии компании. Если вы позитивны, инициативны, организованны, общительны, креативны, логичны и легко приспосабливаемы, смотрите список вакансий. ",
     "We value our employees and understand that they play an important role in the development of the company. If you are positive, initiative, organized, sociable, creative, logical and adaptable, see the list of vacancies."
@@ -87,26 +30,18 @@
     "Кассир зала игровых автоматов",
     "The cashier of the slot machines hall"
   ],
-  "barman": [
-    "Бармен",
-    "Barman"
-  ],
-  "securityOfficer": [
-    "Сотрудник охраны",
-    "Security officer"
-  ],
-  "russiyanova": [
+  "barman": ["Бармен", "Barman"],
+  "securityOfficer": ["Сотрудник охраны", "Security officer"],
+  "russiyanovaAdress": [
     "г. Минск ул. Руссиянова 1 - 1",
     "Minsk, 1 - 1 Russiyanova str"
   ],
-  "bogdanovicha": [
+  "bogdanovichaAdress": [
     "г. Минск ул. Богдановича 120 Б",
     "Minsk, 120 B Bogdanovicha str"
   ],
-  "nemiga": [
-    "г. Минск ул. Немига 40",
-    "Minsk, 40 Nemiga str"
-  ],
+  "nemigaAdress": ["г. Минск ул. Немига 40", "Minsk, 40 Nemiga str"],
+  "kulmanAdress": ["г. Минск ул. Кульман 11", "Minsk, 11 Kulman str"],
   "blackjackDescription": [
     "Это одна из самых известных карточных игр в мире, которая завоевала популярность благодаря не сложным правилам. В winbet любители карточных игр могут порадовать себя электронной игрой в BLACKJACK",
     "This is one of the most famous card games in the world, which has gained popularity due to not complicated rules. In winbet fans of card games can enjoy an electronic game of BLACKJACK"
@@ -139,14 +74,12 @@
     "Мы рады приветствовать всех гостей в нашем новом клубе. Клуб открылся совсем недавно. Мы надеемся – он станет излюбленным местом ценителей отличной  игры и уютной атмосферы. Обязательно побалуйте себя любимыми играми, которые есть в вашем распоряжении на WINBET. Профессиональное обслуживание наших улыбающихся сотрудников сделает ваш опыт еще более приятным. Разнообразие игровых автоматов нового поколения позволит вам испытать незабываемые эмоции и получить невероятные выигрыши каждый день. Играйте с удовольствием и выигрывайте с легкостью!",
     "We are pleased to welcome all guests to our new club. The club opened recently. We hope-it will become a favorite place for lovers of great games and cozy atmosphere. Be sure to treat yourself to your favorite games that are at your disposal on WINBET. The professional service of our smiling staff will make your experience even more enjoyable. A variety of slot machines of the new generation will allow you to experience unforgettable emotions and get incredible winnings every day. Play with pleasure and win with ease!"
   ],
-  "firstPromoHeader": [
-    "Каждую субботу: 22.00",
-    "Every Saturday 10 PM"
+  "kulmanDescription": [
+    "Описание для Кульман",
+    "We are pleased to welcome all guests to our new club. The club opened recently. We hope-it will become a favorite place for lovers of great games and cozy atmosphere. Be sure to treat yourself to your favorite games that are at your disposal on WINBET. The professional service of our smiling staff will make your experience even more enjoyable. A variety of slot machines of the new generation will allow you to experience unforgettable emotions and get incredible winnings every day. Play with pleasure and win with ease!"
   ],
-  "secondPromoHeader": [
-    "Каждый вечер: 22.00",
-    "Every evening at 10 PM"
-  ],
+  "firstPromoHeader": ["Каждую субботу: 22.00", "Every Saturday 10 PM"],
+  "secondPromoHeader": ["Каждый вечер: 22.00", "Every evening at 10 PM"],
   "firstPromoDescription": [
     "ЕЖЕНЕДЕЛЬНАЯ БОНУС ИГРА с растущим ДЖЕКПОТОМ. Подробности у персонала зала",
     "WEEKLY BONUS GAME with a growing JACKPOT. The details have personnel the room"
@@ -167,11 +100,23 @@
     "WINBET гарантирует захватывающие эмоции!!!!",
     "WINBET guarantees exciting emotions!!!!"
   ],
-  "workDays": [
-    "Понедельник - воскресенье",
-    "Monday-Sunday"
+  "workDaysBogdanovicha": ["Понедельник - воскресенье", "Monday-Sunday"],
+  "workDaysRussiyanova": ["Понедельник - воскресенье", "Monday-Sunday"],
+  "workDaysNemiga": ["Понедельник - воскресенье", "Monday-Sunday"],
+  "workDaysKulman": ["Понедельник - воскресенье", "Monday-Sunday"],
+  "russiyanovaWorkTime": [
+    "Круглосуточно, тех.перерыв - 7.00-8.00",
+    "Around the clock, technical break - 7AM-8AM"
   ],
-  "casinoWorkTime": [
+  "bogdanovichaWorkTime": [
+    "Круглосуточно, тех.перерыв - 7.00-8.00",
+    "Around the clock, technical break - 7AM-8AM"
+  ],
+  "nemigaWorkTime": [
+    "Круглосуточно, тех.перерыв - 7.00-8.00",
+    "Around the clock, technical break - 7AM-8AM"
+  ],
+  "kulmanWorkTime": [
     "Круглосуточно, тех.перерыв - 7.00-8.00",
     "Around the clock, technical break - 7AM-8AM"
   ],
@@ -187,11 +132,7 @@
     "Каждый вечер в 22:00",
     "Every evening at 10 PM"
   ],
-  "eventsListRussiyanovaHeader_4": [
-    "Скреч игра",
-    "The scratch game"
-  ],
-  
+  "eventsListRussiyanovaHeader_4": ["Скреч игра", "The scratch game"],
 
   "eventsListBogdanovichaHeader": [
     "Каждую субботу: 22.00",
@@ -205,29 +146,22 @@
     "Каждый вечер в 22:00",
     "Every evening at 10 PM"
   ],
-  "eventsListBogdanovichaHeader_4": [
-    "Скреч игра",
-    "The scratch game"
-  ],
+  "eventsListBogdanovichaHeader_4": ["Скреч игра", "The scratch game"],
 
-
-  "eventsListNemigaHeader": [
-    "Каждую субботу: 22.00",
-    "Every Saturday 10 PM"
-  ],
-  "eventsListNemigaHeader_2": [
-    "Каждый вечер в 21:00",
-    "Every evening at 9 PM"
-  ],
+  "eventsListNemigaHeader": ["Каждую субботу: 22.00", "Every Saturday 10 PM"],
+  "eventsListNemigaHeader_2": ["Каждый вечер в 21:00", "Every evening at 9 PM"],
   "eventsListNemigaHeader_3": [
     "Каждый вечер в 22:00",
     "Every evening at 10 PM"
   ],
-  "eventsListNemigaHeader_4": [
-    "Скреч игра",
-    "The scratch game"
+  "eventsListNemigaHeader_4": ["Скреч игра", "The scratch game"],
+  "eventsListKulmanHeader": ["Каждую субботу: 22.00", "Every Saturday 10 PM"],
+  "eventsListKulmanHeader_2": ["Каждый вечер в 21:00", "Every evening at 9 PM"],
+  "eventsListKulmanHeader_3": [
+    "Каждый вечер в 22:00",
+    "Every evening at 10 PM"
   ],
-
+  "eventsListKulmanHeader_4": ["Скреч игра", "The scratch game"],
 
   "eventsListRussiyanovaText": [
     "ЕЖЕНЕДЕЛЬНАЯ БОНУС ИГРА с растущим ДЖЕКПОТОМ. Подробности у персонала зала",
@@ -246,7 +180,6 @@
     "Everyday. Time: 12AM-2PM and 6PM-8PM"
   ],
 
-
   "eventsListBogdanovichaText": [
     "ЕЖЕНЕДЕЛЬНАЯ БОНУС ИГРА с растущим ДЖЕКПОТОМ. Подробности у персонала зала",
     "WEEKLY BONUS GAME with a growing JACKPOT. The details have personnel the room"
@@ -262,9 +195,8 @@
   "eventsListBogdanovichaText_4": [
     "Каждый день. Время: 12.00-14.00 и 18.00-20.00",
     "Everyday. Time: 12AM-2PM and 6PM-8PM"
-    ],
+  ],
 
-  
   "eventsListNemigaText": [
     "ЕЖЕНЕДЕЛЬНАЯ БОНУС ИГРА с растущим ДЖЕКПОТОМ. Подробности у персонала зала",
     "WEEKLY BONUS GAME with a growing JACKPOT. The details have personnel the room"
@@ -278,6 +210,22 @@
     "COMBINED BONUS GAME with a growing JACKPOT. The details have personnel the room"
   ],
   "eventsListNemigaText_4": [
+    "Каждый день. Время: 12.00-14.00 и 18.00-20.00",
+    "Everyday. Time: 12AM-2PM and 6PM-8PM"
+  ],
+  "eventsListKulmanText": [
+    "ЕЖЕНЕДЕЛЬНАЯ БОНУС ИГРА с растущим ДЖЕКПОТОМ. Подробности у персонала зала",
+    "WEEKLY BONUS GAME with a growing JACKPOT. The details have personnel the room"
+  ],
+  "eventsListKulmanText_2": [
+    "ЛОКАЛЬНАЯ БОНУС ИГРА с растущим ДЖЕКПОТОМ. Подробности у персонала зала",
+    "LOCAL BONUS GAME with an increasing JACKPOT. The details have personnel the room"
+  ],
+  "eventsListKulmanText_3": [
+    "ОБЪЕДИНЕННАЯ БОНУС ИГРА с растущим ДЖЕКПОТОМ. Подробности у персонала зала",
+    "COMBINED BONUS GAME with a growing JACKPOT. The details have personnel the room"
+  ],
+  "eventsListKulmanText_4": [
     "Каждый день. Время: 12.00-14.00 и 18.00-20.00",
     "Everyday. Time: 12AM-2PM and 6PM-8PM"
   ]
