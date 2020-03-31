@@ -13,7 +13,13 @@ import {
   nemiga_2,
   nemiga_3,
   nemiga_4,
-  nemiga_5
+  nemiga_5,
+  kulman_1,
+  kulman_2,
+  kulman_3,
+  kulman_4,
+  kulman_5
+
 } from "images";
 
 export const imageGallery = {

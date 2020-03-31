@@ -1,7 +1,13 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\assets",
+    "\\assets\\images\\casinos",
+    "\\context",
+    "\\redux\\actionConstants",
+    "\\redux\\reducers",
+    "\\views"
   ],
-  "SelectedNode": "\\App.tsx",
+  "SelectedNode": "\\context\\casinosAddressWithImg.ts",
   "PreviewInSolutionExplorer": false
 }
