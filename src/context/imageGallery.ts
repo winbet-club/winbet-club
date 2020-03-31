@@ -39,10 +39,10 @@ export const imageGallery = {
     { original: nemiga_5, thumbnail: nemiga_5 }
   ],
   kulman: [
-    { original: nemiga_1, thumbnail: nemiga_1 },
-    { original: nemiga_2, thumbnail: nemiga_2 },
-    { original: nemiga_3, thumbnail: nemiga_3 },
-    { original: nemiga_4, thumbnail: nemiga_4 },
-    { original: nemiga_5, thumbnail: nemiga_5 }
+    { original: kulman_1, thumbnail: kulman_1 },
+    { original: kulman_2, thumbnail: kulman_2 },
+    { original: kulman_3, thumbnail: kulman_3 },
+    { original: kulman_4, thumbnail: kulman_4 },
+    { original: kulman_5, thumbnail: kulman_5 }
   ]
 };
