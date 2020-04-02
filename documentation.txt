@@ -43,14 +43,14 @@
 
 <!-- Изменение дней работы клубов -->
 
-    Для каждого клуба есть значени в файле globalTransformation.json
+    Для каждого клуба есть значени в файле globalTranslations.json
     Значение типа workDaysBogdanovicha. Для каждого клуба свое название
 
     Так же данные содержится в casinosInfo.ts - отвечает за отображение по url contacts
 
 <!-- Изменение время работы клубов -->
 
-    Для каждого клуба есть значени в файле globalTransformation.json
+    Для каждого клуба есть значени в файле globalTranslations.json
     Значение типа nemigaWorkTime. Для каждого клуба свое название
 
     Так же данные содержится в casinosInfo.ts - отвечает за отображение по url contacts
@@ -62,12 +62,12 @@
 
 <!-- Детальное описание каждого клуба -->
 
-    Описание лежит в globalTransformation.json с ключами типа kulmanDescription, nemigaDescription и пр.
+    Описание лежит в globalTranslations.json с ключами типа kulmanDescription, nemigaDescription и пр.
 
 <!-- Замена картинок и адреса для списка клубов, где они отображены в квадратах -->
 
     casinosAddressWithImg.ts содержит фоновую картинку для каждого клуба
-    Адрес меняется в globalTransformation.json
+    Адрес меняется в globalTranslations.json
     Ключ вида nemigaAdress
 
 <!-- Замена событий в /casinos/nemiga-events -->
@@ -76,15 +76,15 @@
     eventsListRussiyanovaHeader - для текста заголовка
     eventsListRussiyanovaText - для основного текста события
 
-    По каждому из ключа есть описание в globalTransformation.json
+    По каждому из ключа есть описание в globalTranslations.json
     Если нужно добавить/удалить событие, добавляем/удаляем объект {} в нужный массив в файле eventsList.
     ts.
 
-    После этого добавляем ключу типа eventsListRussiyanovaHeader-1 значение в globalTransformation.json
+    После этого добавляем ключу типа eventsListRussiyanovaHeader-1 значение в globalTranslations.json
 
  <!-- Замена описания игр в клубах -->
 
-    В файле globalTransformation.json содержится описание для каждой игры под ключем типа - blackjackDescription
+    В файле globalTranslations.json содержится описание для каждой игры под ключем типа - blackjackDescription
 
     Список ключей можно посмотреть в файле gamesList.ts
 
@@ -96,16 +96,18 @@
 <!-- Замена контента в секции promo -->
 
     Файл promoImgList.ts содержит ключи для секции.
-    Значение ключей находятся в globalTransformation.json
+    Значение ключей находятся в globalTranslations.json
 
 <!-- Добавление/удаление вакансий -->
 
     Добавляем значение в массив в файл vacancyList.tsx
-    После этого добавляем описание этого ключа в globalTransformation.json
+    После этого добавляем описание этого ключа в globalTranslations.json
 
 <!-- Изменение описания для секции "О нас" -->
 
     textConstants.ts содержит ключ aboutUsText
-    <newString> означает перенос строки, начало нового параграфа
-    добавляем значения типо aboutUsSecondParagraph через <newString>
-    Значение каждого aboutUsSecondParagraph описываем в globalTransformation.json
+    Значение aboutUsText описываем в globalTranslations.json
+
+<!-- Перенос строки в тексте -->
+
+    Для переноса строки в globalTranslations.json вставляем перед переносом \n

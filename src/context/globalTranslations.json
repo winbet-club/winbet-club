@@ -88,17 +88,9 @@
     "ОБЪЕДИНЕННАЯ БОНУС ИГРА с растущим ДЖЕКПОТОМ. Подробности у персонала зала",
     "COMBINED BONUS GAME with a growing JACKPOT. The details have personnel the room"
   ],
-  "aboutUsFirstParagraph": [
-    "Международная сеть игорных клубов WINBET начала свою работу в Беларуси 5 лет назад. Игровые залы WINBET – это невероятная атмосфера, современные игровые автоматы от лучших мировых производителей с многочисленными бонусными играми, разработанными в соответствии с потребностями гостей.",
-    "The international network of gambling clubs WINBET started its work in Belarus 5 years ago. WINBET gaming halls are an incredible atmosphere, modern slot machines from the world's best manufacturers with numerous bonus games designed according to the needs of guests."
-  ],
-  "aboutUsSecondParagraph": [
-    "Игорные заведения WINBET – это высокий комфорт, приятная атмосфера. Наши клубы невозможно перепутать ни с какими другими, потому что все они имеют уникальный интерьер от лучших болгарских дизайнеров. В клубах европейский не только интерьер, но и обслуживание: внимание и ненавязчивость персонала к каждому гостю. Команда WINBET гарантирует своим гостям отличный сервис. Посетив наше заведение, гости остаются нашими друзьями и возвращаются к нам снова. Наша цель – не только удовлетворить их потребности, но и превзойти их ожидания. Сеть WINBET растет и развивается, благодаря нашему вниманию к вашим личным потребностям и предпочтениям.",
-    "WINBET gambling establishments are high comfort, pleasant atmosphere. Our clubs can not be confused with any other, because they all have a unique interior from the best Bulgarian designers. In the European clubs not only the interior but also the service: attention and unobtrusiveness of the staff to each guest. The WINBET team guarantees its guests excellent service. Visiting our establishment, guests remain our friends and come back to us again. Our goal is not only to meet their needs, but also to exceed their expectations. The WINBET network grows and develops, thanks to our attention to your personal needs and preferences."
-  ],
-  "aboutUsThirdParagraph": [
-    "WINBET гарантирует захватывающие эмоции!!!!",
-    "WINBET guarantees exciting emotions!!!!"
+  "aboutUsText": [
+    "Международная сеть игорных клубов WINBET начала свою работу в Беларуси 5 лет назад. Игровые залы WINBET – это невероятная атмосфера, современные игровые автоматы от лучших мировых производителей с многочисленными бонусными играми, разработанными в соответствии с потребностями гостей. \n\n Игорные заведения WINBET – это высокий комфорт, приятная атмосфера. Наши клубы невозможно перепутать ни с какими другими, потому что все они имеют уникальный интерьер от лучших болгарских дизайнеров. В клубах европейский не только интерьер, но и обслуживание: внимание и ненавязчивость персонала к каждому гостю. Команда WINBET гарантирует своим гостям отличный сервис. Посетив наше заведение, гости остаются нашими друзьями и возвращаются к нам снова. Наша цель – не только удовлетворить их потребности, но и превзойти их ожидания. Сеть WINBET растет и развивается, благодаря нашему вниманию к вашим личным потребностям и предпочтениям. \n\n WINBET гарантирует захватывающие эмоции!!!!",
+    "The international network of gambling clubs WINBET started its work in Belarus 5 years ago. WINBET gaming halls are an incredible atmosphere, modern slot machines from the world's best manufacturers with numerous bonus games designed according to the needs of guests. \n\n WINBET gambling establishments are high comfort, pleasant atmosphere. Our clubs can not be confused with any other, because they all have a unique interior from the best Bulgarian designers. In the European clubs not only the interior but also the service: attention and unobtrusiveness of the staff to each guest. The WINBET team guarantees its guests excellent service. Visiting our establishment, guests remain our friends and come back to us again. Our goal is not only to meet their needs, but also to exceed their expectations. The WINBET network grows and develops, thanks to our attention to your personal needs and preferences. \n\n WINBET guarantees exciting emotions!!!!"
   ],
   "workDaysBogdanovicha": ["Понедельник - воскресенье", "Monday-Sunday"],
   "workDaysRussiyanova": ["Понедельник - воскресенье", "Monday-Sunday"],
@@ -228,5 +220,15 @@
   "eventsListKulmanText_4": [
     "Каждый день. Время: 12.00-14.00 и 18.00-20.00",
     "Everyday. Time: 12AM-2PM and 6PM-8PM"
+  ],
+
+  "newsListHeader1": [
+    "WINBET подкрепи турнир Масару Опен 2020 RUS",
+    "WINBET подкрепи турнир Масару Опен 2020"
+  ],
+  "newsListDate1": ["11 Mar 2020 RUS", "11 Mar 2020"],
+  "newsListText1": [
+    "На 1 март в София се проведе първият международен турнир „Масару Опен 2020“. В три различни категории Pointfighting, Light contact и Kick-light contact се съзтезаваха 180 състезатели от 11 клуба. Всички състезатели играха с много емоция и зарадваха публиката с неподправения си хъс. Пилотното провеждане на Международния турнир „Масару Опен 2020“ в Зала „Универсиада“ беше високооценено от състезателите и от треньорите. Отборът на Клуб „Масару“ София спечели комплексна купа в оспорваната надпревара с цели 47 златни медала в различните категории. \n\n Пожелаваме на турнира да добие широка популярност в и следващите си издания да привлече още съзтезатели! \n\n WINBET подкрепи събитието и поздравява всички състезатели, които взеха участие.",
+    "WINBET подкрепи турнир Масару Опен 2020"
   ]
 }

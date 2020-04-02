@@ -1,31 +1,29 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 import { Translate } from "react-localize-redux";
 
-import { DescriptionBlock, Slider } from 'molecules';
-import { textConstants, colors } from 'context';
-import { aboutBg, sliderBg } from 'images';
+import { DescriptionBlock, Slider } from "molecules";
+import { textConstants, colors } from "context";
+import { aboutBg, sliderBg } from "images";
 
 const { aboutUsText, aboutUs } = textConstants;
 
 export const AboutUsContent = () => (
   <Wrapper>
-    <SliderWrapper/>
-    <Slider/>
+    <SliderWrapper />
+    <Slider />
     <DescriptionBlock img={aboutBg}>
       <H2>
         <Translate id={aboutUs} />
       </H2>
       <Text>
-        {aboutUsText.split('<newString>').map((str: string, i: number) => <Text key={i}><Translate id={str} /></Text>)}
+        <Translate id={aboutUsText} />
       </Text>
     </DescriptionBlock>
   </Wrapper>
-)
+);
 
-const Wrapper = styled.div`
-
-`;
+const Wrapper = styled.div``;
 
 const SliderWrapper = styled.div`
   width: 100%;
@@ -51,7 +49,8 @@ const H2 = styled.h2`
   font-size: 40px;
 `;
 
-const Text = styled.div`
+const Text = styled.p`
   text-indent: 20px;
   line-height: 25px;
+  white-space: pre-wrap;
 `;
