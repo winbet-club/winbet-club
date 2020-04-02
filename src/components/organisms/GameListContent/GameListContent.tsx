@@ -1,35 +1,38 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 import { Translate } from "react-localize-redux";
 
-import { Slider } from 'molecules';
-import { textConstants, colors, gamesList, gamesNameColors } from 'context';
-import { Game } from 'atoms';
-import { sliderBg } from 'images';
+import { Slider } from "molecules";
+import { textConstants, colors, gamesList, gamesNameColors } from "context";
+import { Game } from "atoms";
+import { sliderBg } from "images";
 
 const { winbetGames, gamesDescription, gamesAttention } = textConstants;
 
 export const GameListContent = () => (
   <Wrapper>
-    <SliderWrapper/>
-    <Slider/>
+    <SliderWrapper />
+    <Slider />
     <Description>
       <H2>{winbetGames.toUpperCase()}</H2>
       <Text>{gamesDescription}</Text>
     </Description>
     <GamesListWrapper>
-      {
-        gamesList.map(({name, description}, i) =>
-          <Game key={name} name={name} description={description} nameColor={gamesNameColors[i]}/>)
-      }
+      {gamesList.map(({ name, description }, i) => (
+        <Game
+          key={name}
+          name={name}
+          description={description}
+          nameColor={gamesNameColors[i]}
+        />
+      ))}
     </GamesListWrapper>
     <GameAttention>
       <Translate id={gamesAttention} />
     </GameAttention>
   </Wrapper>
-)
-const Wrapper = styled.div`
-`;
+);
+const Wrapper = styled.div``;
 
 const SliderWrapper = styled.div`
   width: 100%;
@@ -87,5 +90,5 @@ const GameAttention = styled.div`
   padding: 40px;
   text-align: center;
   color: ${colors.color2};
-  font-family: 'Philosopher', sans-serif;
+  font-family: "Philosopher", sans-serif;
 `;

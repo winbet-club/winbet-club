@@ -32,6 +32,16 @@
   ],
   "barman": ["Бармен", "Barman"],
   "securityOfficer": ["Сотрудник охраны", "Security officer"],
+  "russiyanova": [
+    "г. Минск ул. Руссиянова 1 - 1",
+    "Minsk, 1 - 1 Russiyanova str"
+  ],
+  "bogdanovicha": [
+    "г. Минск ул. Богдановича 120 Б",
+    "Minsk, 120 B Bogdanovicha str"
+  ],
+  "nemiga": ["г. Минск ул. Немига 40", "Minsk, 40 Nemiga str"],
+  "kulman": ["г. Минск ул. Кульман 11", "Minsk, 11 Kulman str"],
   "russiyanovaAdress": [
     "г. Минск ул. Руссиянова 1 - 1",
     "Minsk, 1 - 1 Russiyanova str"
