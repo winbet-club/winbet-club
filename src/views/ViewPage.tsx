@@ -12,7 +12,8 @@ import {
   CasinoDescriptionEvents,
   CasinoDescriptionGallary,
   GameListContent,
-  ContactsContent
+  ContactsContent,
+  NewsList
 } from "organisms";
 import { Promo } from "molecules";
 import { IStore } from "reducers";
@@ -260,7 +261,7 @@ export class ViewPage extends React.Component<IProps> {
         />
         <Route exact={true} path="/games" component={GameListContent} />
         <Route exact={true} path="/promo" component={Promo} />
-        {/* <Route exact={true} path='/news' component={News}/> */}
+        <Route exact={true} path="/news" component={NewsList} />
         <Route
           exact={true}
           path={`/casinos/${activeCasino}`}

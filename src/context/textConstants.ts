@@ -10,7 +10,7 @@ export const textConstants = {
   phones: "phones",
 
   currencyBYN: "byn",
-  footerText: "Copyright 2019, Casino Solutions Ltd. All rights reserved.",
+  footerText: "Copyright 2020, Casino Solutions Ltd. All rights reserved.",
   aboutUsHeader: "О нас",
   aboutCasino: "aboutCasino",
   gallery: "gallery",
@@ -19,7 +19,7 @@ export const textConstants = {
   workTime: "workTime",
   vacancies: "vacancies",
 
-  aboutUsText: `aboutUsFirstParagraph<newString>aboutUsSecondParagraph<newString>aboutUsThirdParagraph`,
+  aboutUsText: `aboutUsText`,
   careerText: "careerText",
   gamesAttention: "gamesAttention"
 };
