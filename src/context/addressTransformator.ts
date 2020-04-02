@@ -21,6 +21,6 @@ export const addressTransformator = {
     address: "kulmanAdress",
     workDays: "workDaysKulman",
     workTime: "kulmanWorkTime",
-    phones: "+375 29 757 42 81"
+    phones: "+375 29 757-42-81"
   }
 };
