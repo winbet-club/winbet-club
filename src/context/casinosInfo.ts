@@ -28,7 +28,7 @@ export const casinosInfo = [
     casinoAddress: "kulmanAdress",
     workDays: "workDaysKulman",
     casinoWorkTime: "kulmanWorkTime",
-    phone: "+375 29 757 42 81",
+    phone: "+375 29 757-42-81",
     id: 3
   }
 ];
