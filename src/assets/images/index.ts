@@ -27,6 +27,12 @@ import * as nemiga_2 from "./casinos/nemiga/nemiga_2.jpg";
 import * as nemiga_3 from "./casinos/nemiga/nemiga_3.jpg";
 import * as nemiga_4 from "./casinos/nemiga/nemiga_4.jpg";
 import * as nemiga_5 from "./casinos/nemiga/nemiga_5.jpg";
+import * as kulman_1 from "./casinos/kulman/kulman_1.jpg";
+import * as kulman_2 from "./casinos/kulman/kulman_2.jpg";
+import * as kulman_3 from "./casinos/kulman/kulman_3.jpg";
+import * as kulman_4 from "./casinos/kulman/kulman_4.jpg";
+import * as kulman_5 from "./casinos/kulman/kulman_5.jpg";
+
 
 export {
   mainLogo,
@@ -61,5 +67,10 @@ export {
   nemiga_2,
   nemiga_3,
   nemiga_4,
-  nemiga_5
+  nemiga_5,
+  kulman_1,
+  kulman_2,
+  kulman_3,
+  kulman_4,
+  kulman_5
 };
