@@ -57,6 +57,9 @@ const Description = styled.p`
 
 const BannerImg = styled.img`
   width: 100%;
+  @media screen and (min-width: 980px) {
+    height: 350px;
+  }
 `;
 
 const BannerCover = styled.div`

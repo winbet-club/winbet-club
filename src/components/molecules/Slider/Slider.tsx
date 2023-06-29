@@ -3,13 +3,13 @@ import styled from 'styled-components';
 import ImageGallery from 'react-image-gallery';
 import "react-image-gallery/styles/css/image-gallery.css";
 
-import { banner_1, banner_2, banner_3 } from 'images';
+import { promo_130_1, promo_130_2, promo_130_4 } from 'images';
 import { colors } from 'context';
 
 const imagesArr = [
-  { original: banner_1, thumbnail: banner_1 },
-  { original: banner_2, thumbnail: banner_2 },
-  { original: banner_3, thumbnail: banner_3 },
+  { original: promo_130_1, thumbnail: promo_130_1 },
+  { original: promo_130_2, thumbnail: promo_130_2 },
+  { original: promo_130_4, thumbnail: promo_130_4 },
 ]
 
 export const Slider = () => (

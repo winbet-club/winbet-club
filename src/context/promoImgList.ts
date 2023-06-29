@@ -1,19 +1,14 @@
-import { promo_1, promo_2 } from "images";
+import { promo_130_2, promo_130_4 } from "images";
 
 export const promoImgList = [
  {
-    img: promo_1,
+    img: promo_130_2,
     header: 'firstPromoHeader',
     description: 'firstPromoDescription',
-  },
+  },  
   {
-    img: promo_2,
+    img: promo_130_4,
     header: 'secondPromoHeader',
     description: 'secondPromoDescription',
-  },
-// {
-//    img: promo_3,
-//    header: 'thirdPromoHeader',
-//    description: 'thirdPromoDescription',
-//  }
+  }
 ];
