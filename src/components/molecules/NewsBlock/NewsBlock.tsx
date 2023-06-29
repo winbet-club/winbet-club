@@ -37,12 +37,15 @@ const Wrapper = styled.div`
 `;
 
 const Image = styled.div<{ image: string }>`
-  width: 265px;
-  height: 195px;
+  width: 636px;
+  height: 468px;
   background: ${({ image }) => `url(${image}) no-repeat`};
   background-size: contain;
   margin-top: 50px;
   @media screen and (max-width: 980px) {
+//    width: 400px;
+//    height: 300px;
+//    margin: 0 auto 30px;
     width: 400px;
     height: 300px;
     margin: 0 auto 30px;
@@ -74,7 +77,7 @@ const Header = styled.h2`
   }
 `;
 const NewsDate = styled.h2`
-  font-size: 22px;
+  font-size: 15px;
   text-transform: uppercase;
   font-weight: 300;
   font-style: italic;
@@ -82,7 +85,7 @@ const NewsDate = styled.h2`
   margin-bottom: 25px;
 `;
 const Text = styled.p`
-  font-size: 15px;
+  font-size: 21px;
   white-space: pre-wrap;
   color: ${colors.white};
 `;

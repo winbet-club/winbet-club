@@ -27,4 +27,8 @@ export const menuFullNavItemsList = [
     value: 'contacts',
     isActive: false,
   },
+  {
+    value: 'instagram',
+    isActive: false,
+  },
 ]

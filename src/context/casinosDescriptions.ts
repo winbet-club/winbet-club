@@ -2,5 +2,6 @@ export const casinosDescriptions = {
   russiyanova: "russiyanovaDescription",
   bogdanovicha: "bogdanovichaDescription",
   nemiga: "nemigaDescription",
-  kulman: "kulmanDescription"
+  kulman: "kulmanDescription",
+  pritic: "priticDescription",
 };

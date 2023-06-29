@@ -5,7 +5,7 @@ import { Translate } from "react-localize-redux";
 
 import { AboutCasino, PromoNote, IPromoNote } from "atoms";
 import { ICasinosListNav } from "reducers";
-import { imageGallery, textConstants, eventsList, colors } from "context";
+import { imageGallery, textConstants, eventsList, colors, panaramImagesLink } from "context";
 import { CasinoDescriptionCommonPart } from "organisms";
 
 const { gallery, actions } = textConstants;
@@ -41,6 +41,7 @@ export const CasonoDescriptionGeneral = ({
     <PaddingWrapper>
       <InfoBlock>
         <AboutCasino activeCasino={activeCasino} />
+        <Iframe src={`${panaramImagesLink[activeCasino]}`} />
       </InfoBlock>
       <InfoBlockBorderBottom />
       <GaleryAndPromo>
@@ -82,6 +83,18 @@ export const CasonoDescriptionGeneral = ({
     </PaddingWrapper>
   </CasinoDescriptionCommonPart>
 );
+
+const Iframe = styled.iframe`
+  width: 100%;
+  height: 600px;
+  margin-left: 50px;
+  @media (max-width: 994px) {
+    margin-left: 0;
+  }
+  @media (max-width: 650px) {
+    height: 450px;
+  }
+`;
 
 const PaddingWrapper = styled.div`
   padding: 0 30px;

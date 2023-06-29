@@ -4,21 +4,41 @@ import {
   russiyanova_3,
   russiyanova_4,
   russiyanova_5,
+  russiyanova_6,
+  russiyanova_7,
+  russiyanova_8,
   bogdanovicha_1,
   bogdanovicha_2,
   bogdanovicha_3,
   bogdanovicha_4,
   bogdanovicha_5,
+  bogdanovicha_6,
+  bogdanovicha_7,
+  bogdanovicha_8,
   nemiga_1,
   nemiga_2,
   nemiga_3,
   nemiga_4,
   nemiga_5,
+  nemiga_6,
+  nemiga_7,
+  nemiga_8,
   kulman_1,
   kulman_2,
   kulman_3,
   kulman_4,
-  kulman_5
+  kulman_5,
+  kulman_6,
+  kulman_7,
+  kulman_8,
+  pritic_1,
+  pritic_2,
+  pritic_3,
+  pritic_4,
+  pritic_5,
+  pritic_6,
+  pritic_7,
+  pritic_8
 
 } from "images";
 
@@ -28,27 +48,49 @@ export const imageGallery = {
     { original: russiyanova_2, thumbnail: russiyanova_2 },
     { original: russiyanova_3, thumbnail: russiyanova_3 },
     { original: russiyanova_4, thumbnail: russiyanova_4 },
-    { original: russiyanova_5, thumbnail: russiyanova_5 }
+    { original: russiyanova_5, thumbnail: russiyanova_5 },
+    { original: russiyanova_6, thumbnail: russiyanova_6 },
+    { original: russiyanova_7, thumbnail: russiyanova_7 },
+    { original: russiyanova_8, thumbnail: russiyanova_8 }
   ],
   bogdanovicha: [
     { original: bogdanovicha_1, thumbnail: bogdanovicha_1 },
     { original: bogdanovicha_2, thumbnail: bogdanovicha_2 },
     { original: bogdanovicha_3, thumbnail: bogdanovicha_3 },
     { original: bogdanovicha_4, thumbnail: bogdanovicha_4 },
-    { original: bogdanovicha_5, thumbnail: bogdanovicha_5 }
+    { original: bogdanovicha_5, thumbnail: bogdanovicha_5 },
+    { original: bogdanovicha_6, thumbnail: bogdanovicha_6 },
+    { original: bogdanovicha_7, thumbnail: bogdanovicha_7 },
+    { original: bogdanovicha_8, thumbnail: bogdanovicha_8 }
   ],
   nemiga: [
     { original: nemiga_1, thumbnail: nemiga_1 },
     { original: nemiga_2, thumbnail: nemiga_2 },
     { original: nemiga_3, thumbnail: nemiga_3 },
     { original: nemiga_4, thumbnail: nemiga_4 },
-    { original: nemiga_5, thumbnail: nemiga_5 }
+    { original: nemiga_5, thumbnail: nemiga_5 },
+    { original: nemiga_6, thumbnail: nemiga_6 },
+    { original: nemiga_7, thumbnail: nemiga_7 },
+    { original: nemiga_8, thumbnail: nemiga_8 }
   ],
   kulman: [
     { original: kulman_1, thumbnail: kulman_1 },
     { original: kulman_2, thumbnail: kulman_2 },
     { original: kulman_3, thumbnail: kulman_3 },
     { original: kulman_4, thumbnail: kulman_4 },
-    { original: kulman_5, thumbnail: kulman_5 }
+    { original: kulman_5, thumbnail: kulman_5 },
+    { original: kulman_6, thumbnail: kulman_6 },
+    { original: kulman_7, thumbnail: kulman_7 },
+    { original: kulman_8, thumbnail: kulman_8 }
+  ],
+  pritic: [
+    { original: pritic_1, thumbnail: pritic_1 },
+    { original: pritic_2, thumbnail: pritic_2 },
+    { original: pritic_3, thumbnail: pritic_3 },
+    { original: pritic_4, thumbnail: pritic_4 },
+    { original: pritic_5, thumbnail: pritic_5 },
+    { original: pritic_6, thumbnail: pritic_6 },
+    { original: pritic_7, thumbnail: pritic_7 },
+    { original: pritic_8, thumbnail: pritic_8 }
   ]
 };

@@ -3,6 +3,8 @@ export const linkTransformator = {
   новости: 'news',
   карьера: 'career',
   контакты: 'contacts',
+//  вконтакте: 'vkontakte',
+//  инстаграм: 'instagram',
   акции: 'promo',
   игры: 'games',
   казино: 'casinos',

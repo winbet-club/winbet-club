@@ -2,8 +2,8 @@ export const casinosInfo = [
   {
     casinoName: "Игровой клуб",
     casinoAddress: "russiyanovaAdress",
-    workDays: "russiyanovaWorkTime",
-    casinoWorkTime: "",
+    workDays: "workDaysRussiyanova",
+    casinoWorkTime: "russiyanovaWorkTime",
     phone: "+375 29 256 22 55",
     id: 0
   },
@@ -30,5 +30,13 @@ export const casinosInfo = [
     casinoWorkTime: "kulmanWorkTime",
     phone: "+375 29 757 42 81",
     id: 3
+  },
+  {
+    casinoName: "Игровой клуб",
+    casinoAddress: "priticAdress",
+    workDays: "workDayspritic",
+    casinoWorkTime: "priticWorkTime",
+    phone: "+375 29 783 04 20",
+    id: 4
   }
 ];
