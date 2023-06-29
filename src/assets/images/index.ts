@@ -54,6 +54,10 @@ import * as pritic_6 from "./casinos/pritic/pritic_6.jpg";
 import * as pritic_7 from "./casinos/pritic/pritic_7.jpg";
 import * as pritic_8 from "./casinos/pritic/pritic_8.jpg";
 import * as birthday from "./birthday.jpg";
+import * as promo_130_1 from "./promo_130_1.jpg";
+import * as promo_130_2 from "./promo_130_2.jpg";
+import * as promo_130_3 from "./promo_130_3.jpg";
+import * as promo_130_4 from "./promo_130_4.jpg";
 
 export {
   mainLogo,
@@ -116,5 +120,9 @@ export {
   pritic_6,
   pritic_7,
   pritic_8,
-  birthday
+  birthday,
+  promo_130_1,
+  promo_130_2,
+  promo_130_3,
+  promo_130_4
 };
