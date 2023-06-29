@@ -6,6 +6,7 @@
   "news": ["НОВОСТИ", "NEWS"],
   "career": ["КАРЬЕРА", "CAREER"],
   "contacts": ["КОНТАКТЫ", "CONTACTS"],
+  "instagram": ["<div><a href=\"https://www.instagram.com/winbet_casino/\">ИНСТАГРАМ</a></div>", "<a href=\"https://www.instagram.com/winbet_casino/\">INSTAGRAM</a>"],
   "promo": ["АКЦИИ", "PROMO"],
   "main": ["ГЛАВНАЯ", "MAIN"],
   "events": ["СОБЫТИЯ", "EVENTS"],
@@ -32,26 +33,19 @@
   ],
   "barman": ["Бармен", "Barman"],
   "securityOfficer": ["Сотрудник охраны", "Security officer"],
-  "russiyanova": [
-    "г. Минск ул. Руссиянова 1 - 1",
-    "Minsk, 1 - 1 Russiyanova str"
-  ],
-  "bogdanovicha": [
-    "г. Минск ул. Богдановича 120 Б",
-    "Minsk, 120 B Bogdanovicha str"
-  ],
+ 
+  "russiyanova": ["г. Минск ул. Руссиянова 1 - 1", "Minsk, 1 - 1 Russiyanova str"],
+  "bogdanovicha": ["г. Минск ул. Богдановича 120 Б", "Minsk, 120 B Bogdanovicha str"],
   "nemiga": ["г. Минск ул. Немига 40", "Minsk, 40 Nemiga str"],
   "kulman": ["г. Минск ул. Кульман 11", "Minsk, 11 Kulman str"],
-  "russiyanovaAdress": [
-    "г. Минск ул. Руссиянова 1 - 1",
-    "Minsk, 1 - 1 Russiyanova str"
-  ],
-  "bogdanovichaAdress": [
-    "г. Минск ул. Богдановича 120 Б",
-    "Minsk, 120 B Bogdanovicha str"
-  ],
+  "pritic": ["г. Минск ул. Притыцкого 144", "Minsk, 144 Pritickogo str"],
+
+  "russiyanovaAdress": ["г. Минск ул. Руссиянова 1 - 1", "Minsk, 1 - 1 Russiyanova str"],
+  "bogdanovichaAdress": ["г. Минск ул. Богдановича 120 Б", "Minsk, 120 B Bogdanovicha str"],
   "nemigaAdress": ["г. Минск ул. Немига 40", "Minsk, 40 Nemiga str"],
   "kulmanAdress": ["г. Минск ул. Кульман 11", "Minsk, 11 Kulman str"],
+  "priticAdress": ["г. Минск ул. Притыцкого 144", "Minsk, 144 Pritickogo str"],
+
   "blackjackDescription": [
     "Это одна из самых известных карточных игр в мире, которая завоевала популярность благодаря не сложным правилам. В winbet любители карточных игр могут порадовать себя электронной игрой в BLACKJACK",
     "This is one of the most famous card games in the world, which has gained popularity due to not complicated rules. In winbet fans of card games can enjoy an electronic game of BLACKJACK"
@@ -88,24 +82,38 @@
     "Мы рады приветствовать всех гостей в нашем новом клубе. Клуб открылся совсем недавно. Мы надеемся – он станет излюбленным местом ценителей отличной  игры и уютной атмосферы. Обязательно побалуйте себя любимыми играми, которые есть в вашем распоряжении на WINBET. Профессиональное обслуживание наших улыбающихся сотрудников сделает ваш опыт еще более приятным. Разнообразие игровых автоматов нового поколения позволит вам испытать незабываемые эмоции и получить невероятные выигрыши каждый день. Играйте с удовольствием и выигрывайте с легкостью!",
     "We are pleased to welcome all guests to our new club. The club opened recently. We hope-it will become a favorite place for lovers of great games and cozy atmosphere. Be sure to treat yourself to your favorite games that are at your disposal on WINBET. The professional service of our smiling staff will make your experience even more enjoyable. A variety of slot machines of the new generation will allow you to experience unforgettable emotions and get incredible winnings every day. Play with pleasure and win with ease!"
   ],
-  "firstPromoHeader": ["Каждую субботу: 22.00", "Every Saturday 10 PM"],
-  "secondPromoHeader": ["Каждый вечер: 22.00", "Every evening at 10 PM"],
+  "priticDescription": [
+    "Мы рады приветствовать всех гостей в нашем новом клубе. Клуб открылся совсем недавно. Мы надеемся – он станет излюбленным местом ценителей отличной  игры и уютной атмосферы. Обязательно побалуйте себя любимыми играми, которые есть в вашем распоряжении на WINBET. Профессиональное обслуживание наших улыбающихся сотрудников сделает ваш опыт еще более приятным. Разнообразие игровых автоматов нового поколения позволит вам испытать незабываемые эмоции и получить невероятные выигрыши каждый день. Играйте с удовольствием и выигрывайте с легкостью!",
+    "We are pleased to welcome all guests to our new club. The club opened recently. We hope-it will become a favorite place for lovers of great games and cozy atmosphere. Be sure to treat yourself to your favorite games that are at your disposal on WINBET. The professional service of our smiling staff will make your experience even more enjoyable. A variety of slot machines of the new generation will allow you to experience unforgettable emotions and get incredible winnings every day. Play with pleasure and win with ease!"
+  ],
+
+  "firstPromoHeader": ["Great Gatsby Party", "Great Gatsby Party"],
+  "secondPromoHeader": [" Акции", "Promo "],
+  "thirdPromoHeader": ["НОВОГОДНИЙ ФОРСАЖ", "NEW YEAR Fast and Furious"],
+
   "firstPromoDescription": [
-    "ЕЖЕНЕДЕЛЬНАЯ БОНУС ИГРА с растущим ДЖЕКПОТОМ. Подробности у персонала зала",
-    "WEEKLY BONUS GAME with a growing JACKPOT. The details have personnel the room"
+    "Great Gatsby Party на Притыцкого, 144. 18 ноября 2022г. в 19:00. Подробности в разделе КАЗИНО,НОВОСТИ,  и у персонала",
+     "Great Gatsby Party at Pritytskogo, 144. November 18, 2022 at 19:00. Details in the section CASINO, NEWS, and from the staff"  
   ],
   "secondPromoDescription": [
-    "ОБЪЕДИНЕННАЯ БОНУС ИГРА с растущим ДЖЕКПОТОМ. Подробности у персонала зала",
-    "COMBINED BONUS GAME with a growing JACKPOT. The details have personnel the room"
+    "Разнообразные акции во всех клубах. Подробности в разделе КАЗИНО и у персонала",
+    "Various promotions in all clubs. Details in the CASINO section and at the staff"
   ],
+  "thirdPromoDescription": [
+"Новогодний Форсаж 17 декабря 2021 в 19:00. Кульман 11. Первое место - АВТОМОБИЛЬ или 28000. Подробности у персонала",
+  "New Year Fast and Furious, December 17, 2021 at 19:00. Kuhlman 11. First place - CAR or 28000"
+  ],
+
   "aboutUsText": [
-    "Международная сеть игорных клубов WINBET начала свою работу в Беларуси 5 лет назад. Игровые залы WINBET – это невероятная атмосфера, современные игровые автоматы от лучших мировых производителей с многочисленными бонусными играми, разработанными в соответствии с потребностями гостей. \n\n Игорные заведения WINBET – это высокий комфорт, приятная атмосфера. Наши клубы невозможно перепутать ни с какими другими, потому что все они имеют уникальный интерьер от лучших болгарских дизайнеров. В клубах европейский не только интерьер, но и обслуживание: внимание и ненавязчивость персонала к каждому гостю. Команда WINBET гарантирует своим гостям отличный сервис. Посетив наше заведение, гости остаются нашими друзьями и возвращаются к нам снова. Наша цель – не только удовлетворить их потребности, но и превзойти их ожидания. Сеть WINBET растет и развивается, благодаря нашему вниманию к вашим личным потребностям и предпочтениям. \n\n WINBET гарантирует захватывающие эмоции!!!!",
-    "The international network of gambling clubs WINBET started its work in Belarus 5 years ago. WINBET gaming halls are an incredible atmosphere, modern slot machines from the world's best manufacturers with numerous bonus games designed according to the needs of guests. \n\n WINBET gambling establishments are high comfort, pleasant atmosphere. Our clubs can not be confused with any other, because they all have a unique interior from the best Bulgarian designers. In the European clubs not only the interior but also the service: attention and unobtrusiveness of the staff to each guest. The WINBET team guarantees its guests excellent service. Visiting our establishment, guests remain our friends and come back to us again. Our goal is not only to meet their needs, but also to exceed their expectations. The WINBET network grows and develops, thanks to our attention to your personal needs and preferences. \n\n WINBET guarantees exciting emotions!!!!"
+    "Международная сеть игорных клубов WINBET начала свою работу в Беларуси 5 лет назад. Игровые залы WINBET – это невероятная атмосфера, современные игровые автоматы от лучших мировых производителей с многочисленными бонусными играми, разработанными в соответствии с потребностями гостей. \n\n Игорные заведения WINBET – это высокий комфорт, приятная атмосфера. Наши клубы невозможно перепутать ни с какими другими, потому что все они имеют уникальный интерьер от лучших болгарских дизайнеров. В клубах европейский не только интерьер, но и обслуживание: внимание и ненавязчивость персонала к каждому гостю. Команда WINBET гарантирует своим гостям отличный сервис. Посетив наше заведение, гости остаются нашими друзьями и возвращаются к нам снова. Наша цель – не только удовлетворить их потребности, но и превзойти их ожидания. Сеть WINBET растет и развивается, благодаря нашему вниманию к вашим личным потребностям и предпочтениям\n\n WINBET гарантирует захватывающие эмоции!!!\n\n НАШИ РЕКВИЗИТЫ\n\n ИООО «КорнерГейм»\n 220138, г. Минск,  пер. Липковский д.12 каб.404\n УНП 192038047 ОКПО 381287545000\n Р/с BY54 ALFA 3012 2575 4600 1027 0000\n в ЗАО «Альфа-Банк»  СВИФТ -   ALFABY2X\n 220013, г. Минск, ул.Сурганова, 43-47\n Тел. +375 17 320-67-87\n\n Лицензия № 33120/636 от 10.06.2014г. \n Выдана Министерством по налогам и сборам Республики Беларусь \n\n",
+    "The international network of gambling clubs WINBET started its work in Belarus 5 years ago. WINBET gaming halls are an incredible atmosphere, modern slot machines from the world's best manufacturers with numerous bonus games designed according to the needs of guests. \n\n WINBET gambling establishments are high comfort, pleasant atmosphere. Our clubs can not be confused with any other, because they all have a unique interior from the best Bulgarian designers. In the European clubs not only the interior but also the service: attention and unobtrusiveness of the staff to each guest. The WINBET team guarantees its guests excellent service. Visiting our establishment, guests remain our friends and come back to us again. Our goal is not only to meet their needs, but also to exceed their expectations. The WINBET network grows and develops, thanks to our attention to your personal needs and preferences. \n\n WINBET guarantees exciting emotions!!!\n\n OUR REQUISITES\n\n FLLC «CornerGame»\n 220138, 12-404, Lipvkovsky lane, Minsk, Belarus\nPAN 192038047 NCEO 381287545000\n B/A BY54 ALFA 3012 2575 4600 1027 0000\n at CJSC «Alfa-Bank» SWIFT ALFABY2X\n 220013, 43-47  Surganova str. Minsk, Belarus\n Phone +375 17 320-67-87\n\n License No. 33120/636 dated 10.06.2014 \n Issued by the Ministry of Taxes and Duties of the Republic of Belarus \n\n"
   ],
   "workDaysBogdanovicha": ["Понедельник - воскресенье", "Monday-Sunday"],
   "workDaysRussiyanova": ["Понедельник - воскресенье", "Monday-Sunday"],
   "workDaysNemiga": ["Понедельник - воскресенье", "Monday-Sunday"],
   "workDaysKulman": ["Понедельник - воскресенье", "Monday-Sunday"],
+  "workDayspritic": ["Понедельник - воскресенье", "Monday-Sunday"],
+
   "russiyanovaWorkTime": [
     "Круглосуточно, тех.перерыв - 7.00-8.00",
     "Around the clock, technical break - 7AM-8AM"
@@ -122,123 +130,217 @@
     "Круглосуточно, тех.перерыв - 7.00-8.00",
     "Around the clock, technical break - 7AM-8AM"
   ],
+  "priticWorkTime": [
+    "Круглосуточно, тех.перерыв - 7.00-8.00",
+    "Around the clock, technical break - 7AM-8AM"
+  ],
+
   "eventsListRussiyanovaHeader": [
-    "Каждую субботу: 22.00",
-    "Every Saturday 10 PM"
+    "День Рождения WINBET",
+    "WINBET Birthday"
   ],
-  "eventsListRussiyanovaHeader_2": [
-    "Каждый вечер в 21:00",
-    "Every evening at 9 PM"
-  ],
+  "eventsListRussiyanovaHeader_2": [ 
+    "Вечер Джекпотов", 
+    "Jackpot Evening"
+],
+
   "eventsListRussiyanovaHeader_3": [
-    "Каждый вечер в 22:00",
-    "Every evening at 10 PM"
+    "Яйца Судьбы",
+    "Eggs of Destiny"
   ],
-  "eventsListRussiyanovaHeader_4": ["Скреч игра", "The scratch game"],
-
-  "eventsListBogdanovichaHeader": [
-    "Каждую субботу: 22.00",
-    "Every Saturday 10 PM"
+  "eventsListRussiyanovaHeader_4": [
+    "Бонус-клуб",
+    "BONUS CLUB"
   ],
-  "eventsListBogdanovichaHeader_2": [
-    "Каждый вечер в 21:00",
-    "Every evening at 9 PM"
-  ],
-  "eventsListBogdanovichaHeader_3": [
-    "Каждый вечер в 22:00",
-    "Every evening at 10 PM"
-  ],
-  "eventsListBogdanovichaHeader_4": ["Скреч игра", "The scratch game"],
-
-  "eventsListNemigaHeader": ["Каждую субботу: 22.00", "Every Saturday 10 PM"],
-  "eventsListNemigaHeader_2": ["Каждый вечер в 21:00", "Every evening at 9 PM"],
-  "eventsListNemigaHeader_3": [
-    "Каждый вечер в 22:00",
-    "Every evening at 10 PM"
-  ],
-  "eventsListNemigaHeader_4": ["Скреч игра", "The scratch game"],
-  "eventsListKulmanHeader": ["Каждую субботу: 22.00", "Every Saturday 10 PM"],
-  "eventsListKulmanHeader_2": ["Каждый вечер в 21:00", "Every evening at 9 PM"],
-  "eventsListKulmanHeader_3": [
-    "Каждый вечер в 22:00",
-    "Every evening at 10 PM"
-  ],
-  "eventsListKulmanHeader_4": ["Скреч игра", "The scratch game"],
 
   "eventsListRussiyanovaText": [
-    "ЕЖЕНЕДЕЛЬНАЯ БОНУС ИГРА с растущим ДЖЕКПОТОМ. Подробности у персонала зала",
-    "WEEKLY BONUS GAME with a growing JACKPOT. The details have personnel the room"
+  "День Рождения Winbet. Финал 11 июня 2021г. 19:00 по адресу Кульман, 11. 8000 подарков. Подробности у персонала",
+  "WINBET Birthday. The Final June, 11 2021, 19:00 at 11, Kulman str. 8000 gifts. Details from the staff"
   ],
   "eventsListRussiyanovaText_2": [
-    "ЛОКАЛЬНАЯ БОНУС ИГРА с растущим ДЖЕКПОТОМ. Подробности у персонала зала",
-    "LOCAL BONUS GAME with an increasing JACKPOT. The details have personnel the room"
+    "Каждые понедельник, вторник, среда, четверг, суббота 19:00-22:00. Пятница: 20:00-23:00. Подробности у персонала",
+    "Every Monday,Tuesday, Thursday, Saturday 19:00-22:00. Friday: 20:00-23:00. Details from the staff"
   ],
   "eventsListRussiyanovaText_3": [
-    "ОБЪЕДИНЕННАЯ БОНУС ИГРА с растущим ДЖЕКПОТОМ. Подробности у персонала зала",
-    "COMBINED BONUS GAME with a growing JACKPOT. The details have personnel the room"
+    "Каждые понедельник, среда, пятница, воскресенье 14:00-16:00. Подробности у персонала",
+    "Every Monday, Tuesday, Wednesday, Sunday 14:00-16:00. Details from the staff"
   ],
   "eventsListRussiyanovaText_4": [
-    "Каждый день. Время: 12.00-14.00 и 18.00-20.00",
-    "Everyday. Time: 12AM-2PM and 6PM-8PM"
+    "Cashback 10%/15%. Накопление очков. Подробности у персонала",
+    "Cashback 10%/15%. Accumulation of points.  Details from the staff"
   ],
 
-  "eventsListBogdanovichaText": [
-    "ЕЖЕНЕДЕЛЬНАЯ БОНУС ИГРА с растущим ДЖЕКПОТОМ. Подробности у персонала зала",
-    "WEEKLY BONUS GAME with a growing JACKPOT. The details have personnel the room"
+
+  "eventsListBogdanovichaHeader": [
+    "День Рождения нашего Казино",
+    "Our Casino Birthday"
+  ],
+  "eventsListBogdanovichaHeader_2": [
+    "Вечер Джекпотов", 
+    "Jackpot Evening"
+  ],
+  "eventsListBogdanovichaHeader_3": [
+    "Яйца Судьбы",
+    "Eggs of Destiny"
+  ],
+  "eventsListBogdanovichaHeader_4": [
+    "Бонус-клуб",
+    "BONUS CLUB"
+  ],
+
+ "eventsListBogdanovichaText": [
+  "Наш День Рождения. 12августа 2022г. 19:00. В программе: вечеринка в стиле Black and White, Фуршет, Джекпоты х2, Викторина, Непредсказуемый турнир! Подробности у персонала",
+  "Our Birthday. August 12, 2022, 19:00. Program: Black and White style party, Buffet, Jackpots x2, Quiz, Unpredictable Tournament! Details from the staff"
   ],
   "eventsListBogdanovichaText_2": [
-    "ЛОКАЛЬНАЯ БОНУС ИГРА с растущим ДЖЕКПОТОМ. Подробности у персонала зала",
-    "LOCAL BONUS GAME with an increasing JACKPOT. The details have personnel the room"
+    "Каждые понедельник, вторник, среда, четверг, суббота 19:00-22:00. Пятница: 20:00-23:00. Подробности у персонала",
+    "Every Monday,Tuesday, Thursday, Saturday 19:00-22:00. Friday: 20:00-23:00. Details from the staff"
   ],
   "eventsListBogdanovichaText_3": [
-    "ОБЪЕДИНЕННАЯ БОНУС ИГРА с растущим ДЖЕКПОТОМ. Подробности у персонала зала",
-    "COMBINED BONUS GAME with a growing JACKPOT. The details have personnel the room"
+   "Каждые понедельник, среда, пятница, воскресенье 14:00-16:00. Подробности у персонала",
+    "Every Monday, Wednesday, Friday, Sunday 14:00-16:00. Details from the staff"
   ],
   "eventsListBogdanovichaText_4": [
-    "Каждый день. Время: 12.00-14.00 и 18.00-20.00",
-    "Everyday. Time: 12AM-2PM and 6PM-8PM"
+    "Cashback 10%/15%. Накопление очков. Подробности у персонала",
+    "Cashback 10%/15%. Accumulation of points.  Details from the staff"
+  ],
+
+  "eventsListNemigaHeader": [
+    "День Рождения WINBET",
+    "WINBET Birthday"
+  ],
+  "eventsListNemigaHeader_2": [
+    "Вечер Джекпотов", 
+    "Jackpot Evening"
+  ],
+  "eventsListNemigaHeader_3": [
+    "Яйца Судьбы",
+    "Eggs of Destiny"
+  ],
+  "eventsListNemigaHeader_4": [
+    "Бонус-клуб",
+    "BONUS CLUB"
   ],
 
   "eventsListNemigaText": [
-    "ЕЖЕНЕДЕЛЬНАЯ БОНУС ИГРА с растущим ДЖЕКПОТОМ. Подробности у персонала зала",
-    "WEEKLY BONUS GAME with a growing JACKPOT. The details have personnel the room"
+  "День Рождения Winbet. Финал 11 июня 2021г. 19:00 по адресу Кульман, 11. 8000 подарков. Подробности у персонала",
+  "WINBET Birthday. The Final June, 11 2021, 19:00 at 11, Kulman str. 8000 gifts. Details from the staff"
   ],
   "eventsListNemigaText_2": [
-    "ЛОКАЛЬНАЯ БОНУС ИГРА с растущим ДЖЕКПОТОМ. Подробности у персонала зала",
-    "LOCAL BONUS GAME with an increasing JACKPOT. The details have personnel the room"
+    "Каждые понедельник, вторник, среда, четверг, суббота 19:00-22:00. Пятница: 20:00-23:00. Подробности у персонала",
+    "Every Monday,Tuesday, Thursday, Saturday 19:00-22:00. Friday: 20:00-23:00. Details from the staff"
   ],
   "eventsListNemigaText_3": [
-    "ОБЪЕДИНЕННАЯ БОНУС ИГРА с растущим ДЖЕКПОТОМ. Подробности у персонала зала",
-    "COMBINED BONUS GAME with a growing JACKPOT. The details have personnel the room"
+   "Каждые понедельник, среда, пятница, воскресенье 14:00-16:00. Подробности у персонала",
+    "Every Monday, Wednesday, Friday, Sunday 14:00-16:00. Details from the staff"
   ],
   "eventsListNemigaText_4": [
-    "Каждый день. Время: 12.00-14.00 и 18.00-20.00",
-    "Everyday. Time: 12AM-2PM and 6PM-8PM"
+    "Cashback 10%/15%. Накопление очков. Подробности у персонала",
+    "Cashback 10%/15%. Accumulation of points.  Details from the staff"
   ],
+
+   "eventsListKulmanHeader": [
+    "GOLDEN GAMES",
+    "GOLDEN GAMES"
+  ],
+  "eventsListKulmanHeader_2": [
+    "Вечер Джекпотов", 
+    "Jackpot Evening"
+  ],
+  "eventsListKulmanHeader_3": [
+    "Яйца Судьбы",
+    "Eggs of Destiny"
+  ],
+
+  "eventsListKulmanHeader_4": [
+    "Бонус-клуб",
+    "BONUS CLUB"
+  ],
+ 
   "eventsListKulmanText": [
-    "ЕЖЕНЕДЕЛЬНАЯ БОНУС ИГРА с растущим ДЖЕКПОТОМ. Подробности у персонала зала",
-    "WEEKLY BONUS GAME with a growing JACKPOT. The details have personnel the room"
+  "GOLDEN GAMES. 17 августа 2021г. в 19:00. В розыгрыше 10000. Подробности у персонала",
+  "GOLDEN GAMES. THE FINAL. September 17, 19:00.  In the drawing of 10,000. Details from the staff"
+
   ],
   "eventsListKulmanText_2": [
-    "ЛОКАЛЬНАЯ БОНУС ИГРА с растущим ДЖЕКПОТОМ. Подробности у персонала зала",
-    "LOCAL BONUS GAME with an increasing JACKPOT. The details have personnel the room"
+    "Каждые понедельник, вторник, среда, четверг, суббота 19:00-22:00. Пятница: 20:00-23:00. Подробности у персонала",
+    "Every Monday,Tuesday, Thursday, Saturday 19:00-22:00. Friday: 20:00-23:00. Details from the staff"
   ],
   "eventsListKulmanText_3": [
-    "ОБЪЕДИНЕННАЯ БОНУС ИГРА с растущим ДЖЕКПОТОМ. Подробности у персонала зала",
-    "COMBINED BONUS GAME with a growing JACKPOT. The details have personnel the room"
+   "Каждые понедельник, среда, пятница, воскресенье 14:00-16:00. Подробности у персонала",
+    "Every Monday, Wednesday, Friday, Sunday 14:00-16:00. Details from the staff"
   ],
   "eventsListKulmanText_4": [
-    "Каждый день. Время: 12.00-14.00 и 18.00-20.00",
-    "Everyday. Time: 12AM-2PM and 6PM-8PM"
+    "Cashback 10%/15%. Накопление очков. Подробности у персонала",
+    "Cashback 10%/15%. Accumulation of points.  Details from the staff"
+  ],
+
+
+  "eventsListpriticHeader": [
+    "Great Gatsby Party",
+    "Great Gatsby Party"
+  ],
+  "eventsListpriticHeader_2": [
+    "Вечер Джекпотов", 
+    "Jackpot Evening"
+  ],
+  "eventsListpriticHeader_3": [
+    "Яйца Судьбы",
+    "Eggs of Destiny"
+  ],
+
+  "eventsListpriticHeader_4": [
+    "Бонус-клуб",
+    "BONUS CLUB"
+  ],
+
+  "eventsListpriticText": [
+  "18 ноября 2022г. в 19:00. Great Gatsby Party. 30000 залпов. Подробности у персонала",
+  "November, 18, 2022 at 19:00. Great Gatsby Party. 30,000 volleys. Details from the staff"
+  ],
+  "eventsListpriticText_2": [
+    "Каждые понедельник, вторник, среда, четверг, суббота 19:00-22:00. Пятница: 20:00-23:00. Подробности у персонала",
+    "Every Monday,Tuesday, Thursday, Saturday 19:00-22:00. Friday: 20:00-23:00. Details from the staff"
+  ],
+  "eventsListpriticText_3": [
+   "Каждые понедельник, среда, пятница, воскресенье 14:00-16:00. Подробности у персонала",
+    "Every Monday, Wednesday, Friday, Sunday 14:00-16:00. Details from the staff"
+  ],
+  "eventsListpriticText_4": [
+    "Cashback 10%/15%. Накопление очков. Подробности у персонала",
+    "Cashback 10%/15%. Accumulation of points.  Details from the staff"
+  ],
+
+  "newsListHeader2": [
+  "Great Gatsby Party",
+  "Great Gatsby Party"
+  ],
+  "newsListDate2": [
+  "15 августа 2022", 
+  "August 15, 2022"
+  ],
+  "newsListText2": [
+  "18 ноября 2022, Притыцкого 144\n 3000 залпов\n Подробности у персонала",
+  "November 18, 2022, Pritytskogo 144\n 3000 volleys\n Details from the staff "
   ],
 
   "newsListHeader1": [
-    "WINBET подкрепи турнир Масару Опен 2020 RUS",
-    "WINBET подкрепи турнир Масару Опен 2020"
+  "День Рождения казино WINBET на Богдановича, 120Б",
+  "WINBET Casino at Bogdanovicha str. 120B Birthday"
   ],
-  "newsListDate1": ["11 Mar 2020 RUS", "11 Mar 2020"],
+  "newsListDate1": [
+  "26 июля, 2022", 
+  "July 26, 2022"
+  ],
   "newsListText1": [
-    "На 1 март в София се проведе първият международен турнир „Масару Опен 2020“. В три различни категории Pointfighting, Light contact и Kick-light contact се съзтезаваха 180 състезатели от 11 клуба. Всички състезатели играха с много емоция и зарадваха публиката с неподправения си хъс. Пилотното провеждане на Международния турнир „Масару Опен 2020“ в Зала „Универсиада“ беше високооценено от състезателите и от треньорите. Отборът на Клуб „Масару“ София спечели комплексна купа в оспорваната надпревара с цели 47 златни медала в различните категории. \n\n Пожелаваме на турнира да добие широка популярност в и следващите си издания да привлече още съзтезатели! \n\n WINBET подкрепи събитието и поздравява всички състезатели, които взеха участие.",
-    "WINBET подкрепи турнир Масару Опен 2020"
+  "День Рождения казино WINBET на Богдановича, 120Б. 12 августа 2022г. в 19:00.\n\n В программе: вечеринка в стиле Black and White, Фуршет, Джекпоты Х2, Викторина, Непредсказуемый турнир!  Подробности у персонала",
+  "WINBET Casino at Bogdanovicha str. 120B Birthday. August, 12 2022, 19:00. \n\n . Program: Black and White style Party, Buffet, X2 Jackpots, Quiz, Unpredictable Tournament! Details from the staff"
+  ],
+
+
+
+  "weAreInSocial": [
+    "Мы в социальных сетях:",
+    "Our social are:"
   ]
 }

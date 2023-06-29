@@ -254,6 +254,7 @@ export class ViewPage extends React.Component<IProps> {
         <Route exact={true} path="/" render={this.renderHomeContent} />
         <Route exact={true} path="/aboutUs" component={AboutUsContent} />
         <Route exact={true} path="/career" component={CareerContent} />
+
         <Route
           exact={true}
           path="/casinos"

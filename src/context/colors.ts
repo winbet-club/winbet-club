@@ -1,4 +1,4 @@
-export const colors = {
+  export const colors = {
   black: '#000000',
   oil: '#1C1C1C',
   crow: '#353535',
@@ -24,7 +24,7 @@ export const colors = {
   bgSilver: '#434343',
 
   yellow: '#e8c11c',
-  lightellow: '#fff200',
+  lightYellow: '#fff200',
   gold: '#b2975f',
   lightGold: '#ffc000',
 

@@ -19,5 +19,6 @@ export { geoObjectSetings, mapState } from "./geoObjectSetings";
 export { cardImagesList } from "./cardImagesList";
 export { vacancyList } from "./vacancyList";
 export { newsList } from "./newsList";
+export { panaramImagesLink } from "./panaramImagesLink";
 import * as globalTranslations from "./globalTranslations.json";
 export { globalTranslations };

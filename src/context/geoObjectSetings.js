@@ -24,6 +24,12 @@ var bollunProperties = [
         balloonContentHeader: "<h2>Время работы 24/7</h2>",
         hintContent: "<h2>Время работы 24/7  <br> (Тех.перерыв - 7.00-8.00)</h2>",
         iconCaption: " Адрес: ул. Кульман 11"
+    },
+    {
+        balloonContent: "<h2>(Тех.перерыв - 7.00-8.00)<br> ул. Притыцкого 144</h2>",
+        balloonContentHeader: "<h2>Время работы 24/7</h2>",
+        hintContent: "<h2>Время работы 24/7  <br> (Тех.перерыв - 7.00-8.00)</h2>",
+        iconCaption: " Адрес: ул. Притыцкого 144"
     }
 ];
 exports.mapState = {
@@ -32,7 +38,8 @@ exports.mapState = {
         [53.941675, 27.684289],
         [53.935812, 27.582520],
         [53.899509, 27.543101],
-        [53.921854, 27.577246]
+        [53.921854, 27.577246],
+        [53.907488, 27.437966]
     ],
     zoom: 11
 };
@@ -72,6 +79,15 @@ exports.geoObjectSetings = [
         id: 1,
         modules: ["geoObject.addon.balloon", "geoObject.addon.hint"],
         properties: bollunProperties[3]
+    },
+    {
+        geometry: {
+            coordinates: exports.mapState.coordinates[4],
+            type: "Point"
+        },
+        id: 1,
+        modules: ["geoObject.addon.balloon", "geoObject.addon.hint"],
+        properties: bollunProperties[4]
     }
 ];
 //# sourceMappingURL=geoObjectSetings.js.map

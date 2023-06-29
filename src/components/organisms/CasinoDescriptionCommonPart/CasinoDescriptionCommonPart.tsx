@@ -73,6 +73,7 @@ const JackpotCardsListWrapper = styled.div`
 
 const CasinosList = styled.div`
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   background: ${colors.gray2};
   padding: 15px 0;

@@ -21,5 +21,7 @@ export const textConstants = {
 
   aboutUsText: `aboutUsText`,
   careerText: "careerText",
-  gamesAttention: "gamesAttention"
+  gamesAttention: "gamesAttention",
+  weAreInSocial: "weAreInSocial"
+
 };

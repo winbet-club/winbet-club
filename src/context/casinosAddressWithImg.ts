@@ -1,4 +1,4 @@
-import { russiyanova_1, bogdanovicha_1, nemiga_1, kulman_1 } from "images";
+import { russiyanova_1, bogdanovicha_1, nemiga_1, kulman_1, pritic_1 } from "images";
 
 export const casinosAddressWithImg = [
   {
@@ -20,5 +20,10 @@ export const casinosAddressWithImg = [
     img: kulman_1,
     address: "kulmanAdress",
     url: "casinos/kulman"
+  },
+  {
+    img: pritic_1,
+    address: "priticAdress",
+    url: "casinos/pritic"
   }
 ];
